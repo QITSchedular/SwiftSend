@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+
+<!-- Mirrored from themesbrand.com/velzon/html/default/forms-editors.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 09:38:58 GMT -->
+
+<head>
+    <style>
+        #cstmmsg {
+            resize: none;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>Custom Template | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="/assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Template Css-->
+    <link href="/assets/css/template.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-light.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center">
+
+
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <h6 class="dropdown-header">
+                                    Welcome <span class="profilename"></span>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <!--form Start-->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Template</li>
+                            </ol>
+                        </div>
+
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered">
+                            <div class="modal-content border border-0">
+                                <div class="modal-header bg-primary p-3 ">
+                                    <h5 class="modal-title text-light" id="modallbl"></h5>
+                                    <i class="ri-close-line align-middle text-light fs-22" data-bs-dismiss="modal"
+                                        aria-label="Close" id="close-modal" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="modal-body d-flex align-items-center background-image gap-2 scrollbar-custom"
+                                    id="template-body" style="flex-direction: column;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="height: calc(100vh - 220px);">
+                        <div class="card-header d-md-flex align-items-center justify-content-between">
+                            <h4 class="mb-md-2 mb-0">
+                                Templates
+                            </h4>
+                            <div class="d-flex justify-content-end gap-2">
+                                <div class="search-box col-6">
+                                    <input type="text" class="form-control" id="searchtemplate"
+                                        placeholder="Search Template..." />
+                                    <i class="bx bx-search-alt-2 align-middle fs-4 search-icon"></i>
+                                </div>
+                                <div class="btn btn-success" id="redirecttocreate">
+                                    <i class="ri-add-circle-line align-middle me-2"></i>
+                                    Create Template
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table-card mb-1" id="table-fixed-header" data-simplebar
+                                data-simplebar-auto-hide="false" style="max-height: calc(100vh - 290px)">
+                                <table class="table align-middle table-nowrap mb-0" id="customerTable">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Language</th>
+                                            <th class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list form-check-all" id="template-list"></tbody>
+                                </table>
+                                <div class="noresult d-none py-5">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                            colors="primary:#212529,secondary:#405189"
+                                            style="width: 75px; height: 75px">
+                                        </lord-icon>
+                                        <h5 class="mt-2">No Templates Found</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer"></footer>
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="customizer-setting" id="chatbot">
+        <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+            <i class="mdi mdi-robot" id="iconchat"></i>
+        </div>
+    </div>
+
+    <div class="email-chat-detail" id="emailchat-detailElem" style="display: none;">
+        <div class="card mb-0">
+            <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                <div class="flex-grow-1">
+                    <h5 class="fs-15 text-white mb-1 profile-username">SwiftSend ChatBot</h5>
+                    <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-bots fs-1 text-white"></i>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div id="users-chat">
+                    <div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px;">
+                        <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                    </div>
+                </div>
+
+                <div class="border-top border-top-dashed">
+                    <div class="row g-2 mx-3 mt-2 mb-3">
+                        <div class="col">
+                            <div class="position-relative">
+                                <input type="text" class="form-control border-light bg-light message-input"
+                                    placeholder="Enter Message..." id="input">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary" id="sendbotmsg">
+                                <i class="mdi mdi-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="voice_input" class="modal zoomIn">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"></div>
+                <div class="modal-body">
+                    <div class="fs-1 text-center" id="msg" style="resize: none;"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/validate.js"></script>
+    <script src="/assets/js/voiceRecognition.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+    <!-- init js -->
+    <script src="/assets/js/pages/form-editor.init.js"></script>
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+    <script>
+        $(document).ready(function () {
+            chkLogin();
+
+            const iid = document.URL.split("/")[4];
+            let template_list = [];
+
+            function TemplateDataDisplay(val) {
+                if (val.length > 0) {
+                    let data = ``;
+                    $('#template-list').addClass('d-none');
+                    $('.noresult').addClass('d-none');
+                    $('#template-list').removeClass('d-none');
+                    for (var i in val) {
+                        data += `
+                                <tr ${((val[i].status) == "REJECTED" || val[i].admindisabled == "1") ? `class="opacity-50"` : ''}>
+                                    <td class="text-primary fw-semibold w-20 text-truncate" style="max-width: 120px;">
+                                        <div class="mb-1">${val[i].name}</div>
+                                        ${val[i].category == "MARKETING" ? `<div class="badge bg-soft-warning text-warning">MARKETING</div>` : val[i].category == "UTILITY" ? `<div class="badge bg-soft-info text-info">UTILITY</div>` : ``}
+                                    </td>
+                                    <td class="customer_email w-20">
+                                        <h5 class="mb-0">
+                                            <span class="badge border ${(val[i].status) == "PENDING" ? `border-warning text-warning` : (val[i].status) == "REJECTED" ? `border-danger text-danger` : `border-success text-success`}">
+                                                <i class="${(val[i].status) == "PENDING" ? `ri-time-line` : (val[i].status) == "REJECTED" ? `ri-close-circle-line` : `ri-checkbox-circle-line`} align-middle me-1 fw-normal"></i>
+                                                ${val[i].status}
+                                            </span>
+                                        </h5>
+                                        ${val[i].admindisabled == "1" ? `<span class="text-danger">Blocked by Swiftsend</span>` : ''}
+                                    </td>
+                                    <td class="customer_phone w-20 text-truncate" style="max-width: 20px;">
+                                        <h5><span class="badge border border-dark text-dark">${val[i].language.toUpperCase()}</span></h5>
+                                    </td>                                
+                                    <td class="w-20">
+                                        <div class="d-flex justify-content-end gap-2">
+                                            <div class="show">
+                                                <button class="btn btn-sm btn-soft-info show-template-btn fs-12"
+                                                    data-bs-toggle="modal" data-bs-target="#showModal" 
+                                                    data-id="${val[i].id}">
+                                                        <i class="mdi mdi-eye align-bottom me-1"></i>
+                                                        View
+                                                </button>
+                                            </div>
+                                            <div class="remove">
+                                                <button class="btn btn-sm btn-soft-danger remove-item-btn fs-12" 
+                                                    data-id="${val[i].id}" data-name="${val[i].name}" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title="Delete">
+                                                        <i class="mdi mdi-trash-can align-bottom me-1"></i>
+                                                        Remove
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>`;
+                    }
+                    // <div class="edit">
+                    //     <button class="btn btn-sm btn-success edit-item-btn fs-12"
+                    //         data-id="${val[i].id}" ${(val[i].status) == "REJECTED" ? `disabled="true"` : ''}>
+                    //         <i class="mdi mdi-lead-pencil align-bottom me-lg-1"></i>
+                    //         <span class="d-none d-lg-inline-block">Edit</span>
+                    //     </button>
+                    // </div>
+                    $("#template-list").html(data);
+                }
+                else {
+                    $('#template-list').addClass('d-none');
+                    $('.noresult').addClass('d-none');
+                    $('.noresult').removeClass('d-none');
+                    $('#select_all').addClass('d-none');
+                }
+            }
+
+            function GETTemplateAPI() {
+                $.ajax({
+                    url: `/api/template/gettemplate/${iid}`,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("#template-list").html(`<tr class="">
+                                            <td class="text-center py-5" colspan="5">
+                                                <div class="spinner-border text-primary" role="status">
+                                                     <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </td>
+                                        </tr>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            TemplateDataDisplay(val.data);
+                            template_list = val.data;
+                        }
+                    }, error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                        $('#template-list').addClass('d-none');
+                        $('.noresult').addClass('d-none');
+                        $('.noresult').removeClass('d-none');
+                        $('#select_all').addClass('d-none');
+                    }
+                });
+            };
+            GETTemplateAPI();
+
+            $(document).on("click", ".show-template-btn", function () {
+                let id = $(this).attr("data-id");
+                const template = template_list.find(x => x.id == id);
+
+                $('#modallbl').html(`${template.name}`);
+                let result = `<div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                    <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                    Preview
+                                </div>
+                                <div class="message">`;
+
+                const hasFooter = template.components.some(component => component.type === "FOOTER");
+                const hasHeader = template.components.some(component => component.type === "HEADER");
+
+                for (let i in template.components) {
+                    if (template.components[i].type == "HEADER") {
+                        result += `<div class="part-msg">`;
+                        switch (template.components[i].format) {
+                            case "IMAGE": {
+                                result += `<div class="message-header">
+                                                <div class="message-header-media">
+                                                    <i class="ri-image-2-fill align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+                                break;
+                            }
+                            case "TEXT": {
+                                result += `<div class="message-header">${template.components[i].text}</div>`;
+                                break;
+                            }
+                            case "DOCUMENT": {
+                                result += `<div class="message-header">
+                                                <div class="message-header-media">
+                                                    <i class="bx bxs-file-doc align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+                                break;
+                            }
+                        }
+                    }
+                    if (template.components[i].type == "BODY") {
+                        (!hasHeader) ? result += `<div class="part-msg">` : result += ``;
+                        result += `<div class="message-body">${template.components[i].text.replace(/\n/g, '<br>')}</div>`;
+
+                        (!hasHeader) ? result += `</div>` : result += ``;
+                        (!hasFooter) ? result += `</div>` : result += ``;
+                    }
+                    if (template.components[i].type == "FOOTER") {
+                        result += `<div class="message-footer">${template.components[i].text}</div>`;
+
+                        (hasFooter ? result += `</div>` : result += ``)
+                    }
+                    if (template.components[i].type == "BUTTONS") {
+                        result += `<div class="part-link">`;
+                        for (let j in template.components[i].buttons) {
+                            switch (template.components[i].buttons[j].type) {
+                                case "URL": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-share-box-line align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].url}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "PHONE_NUMBER": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-phone-fill align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].phone_number}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "QUICK_REPLY": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "COPY_CODE": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "FLOW": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                            }
+                        }
+                        result += `</div>`;
+                    }
+                }
+                result += `</div>`;
+                $('#template-body').html(result);
+            });
+
+            function countOccurrences(str) {
+                var matches = str.match(/{([^}]*)}/g);
+
+                if (matches) return matches.length;
+                return 0;
+            }
+
+            $(document).on('input', '#message', function () {
+                let count = countOccurrences($('#message').val());
+                $('#field').val(count);
+            })
+
+            $(document).on('click', '.remove-item-btn', function () {
+                const id = $(this).attr("data-id");
+                const name = $(this).attr("data-name");
+                const encodedID = btoa(id);
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to access this anymore..!!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it',
+                    cancelButtonText: 'No, cancel',
+                    confirmButtonClass: 'btn btn-success mx-2',
+                    cancelButtonClass: 'btn btn-outline-danger mx-2',
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        $.ajax({
+                            url: `/api/template/deleteTemplateByID/${encodedID}/${name}/${iid}`,
+                            method: "delete",
+                            beforeSend: () => {
+                                $("#template-list").html(`<tr class="">
+                                            <td class="text-center py-5" colspan="5">
+                                                <lord-icon
+                                                    src="https://cdn.lordicon.com/drxwpfop.json"
+                                                    trigger="loop"
+                                                    state="morph-trash-in"
+                                                    colors="primary:#f06548,secondary:#f06548"
+                                                    style="width:50px;height:50px">
+                                                </lord-icon>
+                                                <div class="text-muted">
+                                                    Deleting Template ...
+                                                </div>
+                                            </td>
+                                        </tr>`);
+                            },
+                            success: function (val) {
+                                if (val.success) {
+                                    swal({
+                                        title: "Template Removed",
+                                        type: "success",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        GETTemplateAPI();
+                                    });
+                                }
+                            }, error: (error) => {
+                                if (error.status === 500) InternalServerError();
+                                if (error.status === 401) InvalidUser();
+                                console.log(error);
+                            }
+                        });
+                    }
+                })
+            });
+
+            $(document).on('input', '#searchtemplate', function () {
+                let val = $('#searchtemplate').val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return template_list.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(val);
+
+                if (val == null || val == "") {
+                    TemplateDataDisplay(template_list)
+                }
+                else {
+                    TemplateDataDisplay(Searchresult)
+                }
+            })
+
+            $(document).on('click', '#redirecttocreate', () => {
+                if (document.URL.split("/")[3] === "iuser") {
+                    location.href = `/iuser/${iid}/createtemplate`;
+                }
+                else if (document.URL.split("/")[3] === "instance") {
+                    location.href = `/instance/${iid}/createtemplate`;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

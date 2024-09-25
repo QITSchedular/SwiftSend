@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+
+<!-- Mirrored from themesbrand.com/velzon/html/default/forms-editors.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 09:38:58 GMT -->
+
+<head>
+    <style>
+        #cstmmsg {
+            resize: none;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>Message Status | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="/assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Template Css-->
+    <link href="/assets/css/template.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-light.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center">
+
+
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <h6 class="dropdown-header">
+                                    Welcome <span class="profilename"></span>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <!--form Start-->
+        <div class="main-content">
+            <div class="page-content pb-0">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Message Status</li>
+                            </ol>
+                        </div>
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="height: calc(100vh - 220px);">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0">
+                                Messages Status
+                            </h4>
+                            <div class="d-flex justify-content-end gap-2">
+                                <div class="search-box">
+                                    <input type="text" class="form-control" id="searchInstance"
+                                        placeholder="Search Message Data ..." />
+                                    <i class="bx bx-search-alt-2 align-middle fs-4 search-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body h-100">
+                            <div class="table-responsive table-card mb-1 scrollbar-custom" id="table-fixed-header"
+                                data-simplebar data-simplebar-auto-hide="false" style="max-height: calc(100vh - 300px)">
+                                <table class="table align-middle table-nowrap mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Sender</th>
+                                            <th>Receiver</th>
+                                            <th>Template</th>
+                                            <th>Status</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list form-check-all" id="MessageTable"></tbody>
+                                </table>
+                                <div class="noresult d-none py-5">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                            colors="primary:#212529,secondary:#405189"
+                                            style="width: 75px; height: 75px">
+                                        </lord-icon>
+                                        <h5 class="mt-2">No Message Found</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer"></footer>
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="customizer-setting" id="chatbot">
+        <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+            <i class="mdi mdi-robot" id="iconchat"></i>
+        </div>
+    </div>
+
+    <div class="email-chat-detail" id="emailchat-detailElem" style="display: none;">
+        <div class="card mb-0">
+            <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                <div class="flex-grow-1">
+                    <h5 class="fs-15 text-white mb-1 profile-username">SwiftSend ChatBot</h5>
+                    <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-bots fs-1 text-white"></i>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div id="users-chat">
+                    <div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px;">
+                        <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                    </div>
+                </div>
+
+                <div class="border-top border-top-dashed">
+                    <div class="row g-2 mx-3 mt-2 mb-3">
+                        <div class="col">
+                            <div class="position-relative">
+                                <input type="text" class="form-control border-light bg-light message-input"
+                                    placeholder="Enter Message..." id="input">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary" id="sendbotmsg">
+                                <i class="mdi mdi-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/validate.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            chkLogin();
+
+            const iid = document.URL.split("/")[4]; let MessageList = [];
+
+            function MessageDisplay(val) {
+                if (val.length > 0) {
+
+                    let data = ``;
+                    $('#MessageTable, .noresult').addClass('d-none');
+                    $('#MessageTable').removeClass('d-none');
+                    for (var i in val) {
+                        const date = new Date(val[i].time);
+
+                        const day = String(date.getDate()).padStart(2, '0');
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const year = date.getFullYear();
+
+                        const hours = String(date.getHours()).padStart(2, '0');
+                        const minutes = String(date.getMinutes()).padStart(2, '0');
+                        const second = String(date.getSeconds()).padStart(2, '0');
+                        const formattedTime = `${day}/${month}/${year} ${hours}:${minutes}:${second}`;
+                        data += `<tr>
+                                    <th class="w-1" scope="row">
+                                        ${parseInt(i) + parseInt(1)}
+                                    </th>
+                                    <td class="w-10 fw-semibold" style="font-family: monospace;">
+                                        ${val[i].phone ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
+                                        ${val[i].phone}` : `-`}
+                                    </td>
+                                    <td class="w-10 fw-semibold" style="font-family: monospace;">
+                                        ${val[i].reciver_number ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
+                                        ${val[i].reciver_number.slice(2)}` : `-`}
+                                    </td>                                    
+                                    <td class="w-10">
+                                        ${val[i].template_name}
+                                    </td>
+                                    <td class="w-10 text-${(val[i].status == "read") ? `info` : ((val[i].status == "delivered")) ? `muted` : ((val[i].status == "sent")) ? `muted` : `danger`}">
+                                        <i class="${(val[i].status == "read") ? `ri-check-double-line` : ((val[i].status == "delivered")) ? `ri-check-double-line` : ((val[i].status == "sent")) ? `ri-check-line` : `ri-error-warning-fill`} fs-17 align-middle"></i>
+                                        <span class="text-muted">${val[i].status}</span>
+                                    </td>
+                                    <td class="w-15 fw-semibold" style="font-family: monospace;">
+                                        ${formattedTime}
+                                    </td>
+                                </tr>`;
+                    }
+                    $("#MessageTable").html(data);
+                }
+                else {
+                    $('#MessageTable, .noresult').addClass('d-none');
+                    $('.noresult').removeClass('d-none');
+                }
+            }
+
+            function GETMessageAdminAPI() {
+                console.log(iid)
+                console.log(btoa(iid))
+                $.ajax({
+                    url: `/api/broadcast/getallmessagestatus/${btoa(iid)}`,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("#MessageTable").html(`<tr class="">
+                                                <td class="text-center py-5" colspan="6">
+                                                    <div class="spinner-border text-primary" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </td>
+                                            </tr>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            MessageDisplay(val.data);
+                            MessageList = val.data;
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    }
+                });
+            };
+            GETMessageAdminAPI();
+
+            $(document).on("input", "#searchInstance", function () {
+
+                let val = $('#searchInstance').val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return MessageList.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(val);
+
+                if (val == null || val == "") {
+                    MessageDisplay(MessageList)
+                }
+                else {
+                    MessageDisplay(Searchresult)
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

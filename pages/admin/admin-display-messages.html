@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+<!-- Mirrored from themesbrand.com/velzon/html/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 09:39:26 GMT -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Message Info | Admin | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center">
+
+
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button" id="logout"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle">
+                                <i class="mdi mdi-logout fs-22"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="60">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" style="height: calc(100vh - 180px);">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">
+                                        Messages
+                                    </h4>
+                                    <div class="d-flex justify-content-end gap-2">
+                                        <div class="search-box">
+                                            <input type="text" class="form-control" id="searchInstance"
+                                                placeholder="Search Message Data ..." />
+                                            <i class="bx bx-search-alt-2 align-middle fs-4 search-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body h-100">
+                                    <div class="table-responsive table-card mb-1 scrollbar-custom"
+                                        id="table-fixed-header" data-simplebar data-simplebar-auto-hide="false"
+                                        style="max-height: calc(100vh - 260px)">
+                                        <table class="table align-middle table-nowrap mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>User Name</th>
+                                                    <th>Instance</th>
+                                                    <th>Sender</th>
+                                                    <th>Receiver</th>
+                                                    <th>Template</th>
+                                                    <th>Status</th>
+                                                    <th>Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all" id="MessageTable"></tbody>
+                                        </table>
+                                        <div class="noresult d-none py-5">
+                                            <div class="text-center">
+                                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                                    colors="primary:#212529,secondary:#405189"
+                                                    style="width: 75px; height: 75px">
+                                                </lord-icon>
+                                                <h5 class="mt-2">No Message Found</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer"></footer>
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/admin.js"></script>
+    <script src="/assets/js/validate.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <script src="/assets/libs/gridjs/gridjs.umd.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let MessageList = [];
+
+            function MessageDisplay(val) {
+                if (val.length > 0) {
+
+                    let data = ``;
+                    $('#MessageTable, .noresult').addClass('d-none');
+                    $('#MessageTable').removeClass('d-none');
+                    for (var i in val) {
+                        const date = new Date(val[i].time);
+
+                        const day = String(date.getDate()).padStart(2, '0');
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const year = date.getFullYear();
+
+                        const hours = String(date.getHours()).padStart(2, '0');
+                        const minutes = String(date.getMinutes()).padStart(2, '0');
+                        const second = String(date.getSeconds()).padStart(2, '0');
+                        const formattedTime = `${day}/${month}/${year} ${hours}:${minutes}:${second}`;
+                        data += `<tr>
+                                    <td class="w-10 text-truncate fw-semibold text-primary" style="max-width: 20px;">${val[i].uname}</td>
+                                    <td class="w-10 text-truncate fw-semibold">
+                                        ${val[i].i_name}
+                                        <i class="ri-star-s-fill align-middle text-warning ${val[i].isRoot ? '' : 'd-none'}"></i>
+                                    </td>
+                                    <td class="w-10 fw-semibold" style="font-family: monospace;">
+                                        ${val[i].phone ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
+                                        ${val[i].phone}` : `-`}
+                                    </td>
+                                    <td class="w-10 fw-semibold" style="font-family: monospace;">
+                                        ${val[i].reciver_number ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
+                                        ${val[i].reciver_number.slice(2)}` : `-`}
+                                    </td>                                    
+                                    <td class="w-10">
+                                        ${val[i].template_name}
+                                    </td>
+                                    <td class="w-10 text-${(val[i].status == "read") ? `info` : ((val[i].status == "delivered")) ? `muted` : ((val[i].status == "sent")) ? `muted` : `danger`}">
+                                        <i class="${(val[i].status == "read") ? `ri-check-double-line` : ((val[i].status == "delivered")) ? `ri-check-double-line` : ((val[i].status == "sent")) ? `ri-check-line` : `ri-error-warning-fill`} fs-17 align-middle"></i>
+                                        <span class="text-muted">${val[i].status}</span>
+                                    </td>
+                                    <td class="w-15 fw-semibold" style="font-family: monospace;">
+                                        ${formattedTime}
+                                    </td>
+                                </tr>`;
+                    }
+                    $("#MessageTable").html(data);
+                }
+                else {
+                    $('#MessageTable, .noresult').addClass('d-none');
+                    $('.noresult').removeClass('d-none');
+                }
+            }
+
+            function GETMessageAdminAPI() {
+                $.ajax({
+                    url: `/api/admin/getallmessage`,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("#MessageTable").html(`<tr class="">
+                                                <td class="text-center py-5" colspan="5">
+                                                    <div class="spinner-border text-primary" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </td>
+                                            </tr>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            MessageDisplay(val.data);
+                            MessageList = val.data;
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    }
+                });
+            };
+            GETMessageAdminAPI();
+
+            $(document).on("input", "#searchInstance", function () {
+
+                let val = $('#searchInstance').val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return MessageList.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(val);
+
+                if (val == null || val == "") {
+                    MessageDisplay(MessageList)
+                }
+                else {
+                    MessageDisplay(Searchresult)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

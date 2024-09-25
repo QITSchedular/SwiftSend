@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Message | SwiftSends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- jsvectormap css -->
+    <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Template Css-->
+    <link href="/assets/css/template.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">
+                                    Welcome <span class="profilename"></span>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Message</li>
+                            </ol>
+                        </div>
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="msgform" style="height: calc(100vh - 215px);">
+                        <h3 class="card-header text-center">Message</h3>
+                        <div class="card-body">
+                            <div class="row h-100">
+                                <div class="col-lg-4 col-md-6 col-sm-12 preview">
+                                    <div class="d-flex align-items-center background-image gap-2 scrollbar-custom"
+                                        id="template-body">
+                                        <div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                            <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                            Template Preview
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-6 col-sm-12 editor px-lg-0 px-md-0">
+                                    <div class="scrollbar-custom mb-5" data-simplebar-auto-hide="true"
+                                        style="max-height: calc(100vh - 360px); overflow-y: scroll;">
+                                        <div class="row mx-0">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 p-0 pe-lg-1 pe-md-1">
+                                                <label for="template" class="form-label">
+                                                    Templates
+                                                    <span class="text-danger">*</span>
+                                                    <span class="text-danger" id="err_template"></span>
+                                                </label>
+                                                <select id="template" class="form-select">
+                                                    <option selected disabled value="null">Select Template</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 p-0 ps-lg-1 ps-md-1">
+                                                <label for="phone" class="form-label">
+                                                    Phone no
+                                                    <span class="text-danger">*</span>
+                                                    <span class="text-danger" id="err_phone"></span>
+                                                </label>
+                                                <div class="form-icon right">
+                                                    <input type="text" class="form-control required mb-2" id="phone"
+                                                        placeholder="xxxxxxxxxx" data-type="phone" />
+                                                    <i class="bx bxs-user-detail align-middle me-0 fs-4 text-primary"
+                                                        data-bs-toggle="modal" data-bs-target="#showContactModal"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Headerdynamic" class="mt-2 row m-0"></div>
+                                        <div id="Bodydynamic" class="mt-2 row m-0"></div>
+                                    </div>
+                                    <div class="sendmsgbtn">
+                                        <button id="sendmsg" class="btn btn-primary btn-load">
+                                            <i class="mdi mdi-send me-2"></i>
+                                            Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="showContactModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-soft-info p-3 mb-3">
+                                    <h5 class="modal-title">
+                                        Select Contact
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-modal-selectContact"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <input type="search" class="searchContactChannel form-control"
+                                        placeholder="Search contacts" id="select_contact_search" />
+                                    <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="primary"
+                                        style="max-height: 300px;" class="mx-n3">
+                                        <ul class="list list-group list-group-flush" id="selectcontact-data"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer"></footer>
+            </div>
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!--start back-to-top-->
+        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!--end back-to-top-->
+
+        <!--preloader-->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner-border text-primary avatar-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="customizer-setting" id="chatbot">
+            <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+                <i class="mdi mdi-robot" id="iconchat"></i>
+            </div>
+        </div>
+
+        <div class="email-chat-detail" id="emailchat-detailElem" style="display: none">
+            <div class="card mb-0">
+                <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                    <div class="flex-grow-1">
+                        <h5 class="fs-15 text-white mb-1 profile-username">
+                            SwiftSend ChatBot
+                        </h5>
+                        <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-bots fs-1 text-white"></i>
+                    </div>
+                </div>
+
+                <div class="card-body p-0">
+                    <div id="users-chat">
+                        <div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px">
+                            <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                        </div>
+                    </div>
+
+                    <div class="border-top border-top-dashed">
+                        <div class="row g-2 mx-3 mt-2 mb-3">
+                            <div class="col">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control border-light bg-light message-input"
+                                        placeholder="Enter Message..." id="input" />
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-info" id="sendbotmsg">
+                                    <i class="mdi mdi-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/validate.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/voiceRecognition.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+
+    <!-- cleave.js -->
+    <script src="/assets/libs/cleave.js/cleave.min.js"></script>
+    <!-- form masks init -->
+    <script src="/assets/js/pages/form-masks.init.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            chkLogin();
+            let template_list = [];
+            const iid = document.URL.split("/")[4];
+            const apikey = getCookie('apikey');
+            var output = "";
+
+            function display_template() {
+                $.ajax({
+                    url: `/api/template/gettemplate/${iid}`,
+                    method: "GET",
+                    success: function (val) {
+                        if (val.success) {
+                            var output = ``;
+                            template_list = val.data.filter(x => x.status == "APPROVED" && x.admindisabled != "1");
+
+                            for (let i in template_list) {
+                                output += `<option value="${template_list[i].id}">${template_list[i].name}</option>`;
+                            }
+                            $("#template").append(output);
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    },
+                });
+            }
+            display_template();
+
+            function countPlaceholders(message) {
+                if (message != null) {
+                    const placeholderRegex = /\{\{\d+\}\}/g;
+                    const matches = message.match(placeholderRegex);
+                    const count = matches ? matches.length : 0;
+
+                    return count;
+                }
+                return 0;
+            }
+
+            function loadTemplatePreview(id) {
+                const template = template_list.find(x => x.id == id);
+
+                $("#Headerdynamic").html(``);
+                $("#Bodydynamic").html(``);
+                let result = `<div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                    <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                    Preview
+                                </div>
+                                <div class="message">`;
+
+                const hasFooter = template.components.some(component => component.type === "FOOTER");
+                const hasHeader = template.components.some(component => component.type === "HEADER");
+                for (let i in template.components) {
+                    if (template.components[i].type == "HEADER") {
+                        let headerCode = ``;
+                        result += `<div class="part-msg">`;
+                        switch (template.components[i].format) {
+                            case "IMAGE": {
+                                $("#Headerdynamic").html("");
+                                result += `<div class="message-header">
+                                                <div class="message-header-media overflow-hidden" id="media-preview" style="object-fit: contain;">
+                                                    <i class="ri-image-2-fill align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+
+                                headerCode += `<hr class="my-1" />`;
+                                headerCode += `<div class="col-12 px-0 mb-3">
+                                    <label for="IMAGE" class="form-label">
+                                        IMAGE
+                                        <span class="text-danger">*</span>
+                                                        <span class="text-danger" id="ere_col"></span>
+                                                    </label>
+                                                <input type="file" id="IMAGE" class="form-control" accept="image/*">
+                                                </div>`;
+                                break;
+                            }
+                            case "TEXT": {
+                                result += `<div class="message-header">${replacePlaceholders(template.components[i].text, 1, "headerDfield")}</div>`;
+                                let headerfields = countPlaceholders(template.components[i].text || null);
+
+                                $("#Headerdynamic").html("");
+                                if (headerfields > 0) {
+                                    headerCode += `<hr class="my-1" />`;
+                                    headerCode += `<div class="col-12 px-0 mb-3">
+                                        <label for="headerDfield1" class="form-label">
+                                                HEADER Dynamic Value
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_headerDfield1"></span>
+                                            </label>
+                                            <input type="text" id="headerDfield1" class="form-control headerDfield" placeholder="Enter dynamic data">
+                                        </div>`;
+                                }
+                                break;
+                            }
+                            case "DOCUMENT": {
+                                $("#Headerdynamic").html("");
+                                result += `<div class="message-header">
+                                                <div class="message-header-media overflow-hidden" id="doc-preview" style="object-fit: contain;">
+                                                    <i class="bx bxs-file-doc align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+
+                                headerCode += `<hr class="my-1" />
+                                                    <div class="col-12 px-0 mb-3">
+                                                        <label for="DOCUMENT" class="form-label">
+                                                            DOCUMENT
+                                                            <span class="text-danger">*</span>
+                                                            <span class="text-danger" id="err_col"></span>
+                                                        </label>
+                                                        <input type="file" id="DOCUMENT" class="form-control" accept="application/*" />
+                                                    </div>`;
+                                break;
+                            }
+
+                            default: {
+                                headerCode += ``;
+                                break;
+                            }
+                        }
+                        $("#Headerdynamic").html(headerCode);
+                    }
+
+                    if (template.components[i].type == "BODY") {
+                        let bodyCode = ``;
+                        let bodyfields = countPlaceholders(template.components[i].text || null);
+                        let modifiedString = template.components[i].text;
+                        for (let i = 1; i <= bodyfields; i++) {
+                            modifiedString = replacePlaceholders(modifiedString, i)
+                        }
+                        (!hasHeader) ? result += `<div class="part-msg">` : result += ``;
+                        result += `<div class="message-body">${modifiedString.replace(/\n/g, '<br>')}</div>`;
+                        if (bodyfields > 0) {
+                            bodyCode += `<hr class="my-1" />`;
+                        }
+                        for (let i = 1; i <= bodyfields; i++) {
+                            bodyCode += `<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                            <label for="body${i}" class="form-label">
+                                                value {{${i}}}
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_body${i}"></span>
+                                            </label>
+                                            <input type="text" id="body${i}" class="form-control dynamicbodyfield" placeholder="value for {{${i}}}"></div>`;
+                        }
+                        (!hasHeader) ? result += `</div>` : result += ``;
+                        $("#Bodydynamic").html(bodyCode);
+                        (!hasFooter ? result += `</div>` : result += ``)
+                    }
+                    if (template.components[i].type == "FOOTER") {
+                        result += `<div class="message-footer">${template.components[i].text}</div>`;
+
+                        (hasFooter ? result += `</div>` : result += ``)
+                    }
+                    if (template.components[i].type == "BUTTONS") {
+                        result += `<div class="part-link">`;
+                        for (let j in template.components[i].buttons) {
+                            switch (template.components[i].buttons[j].type) {
+                                case "URL": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-share-box-line align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].url}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "PHONE_NUMBER": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-phone-fill align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].phone_number}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "QUICK_REPLY": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "COPY_CODE": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "FLOW": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                            }
+                        }
+                        result += `</div>`;
+                    }
+                }
+                result += `</div>`;
+                $('#template-body').html(result);
+            }
+
+            $(document).on("change", "#template", () => {
+                const selectedID = $("#template").val();
+                loadTemplatePreview(selectedID);
+            });
+
+            let mediaID = "", file_name = "";
+            $(document).on("change", "#DOCUMENT, #IMAGE", (e) => {
+                $('#media-preview').css('display', 'flex').css('height', '10rem')
+                mediaID = "";
+                file_name = "";
+                let formData = new FormData(), validtypeMedia = false;
+                if (e.target.id == "DOCUMENT") {
+                    formData.append("image", document.getElementById('DOCUMENT').files[0]);
+                    file_name = document.getElementById('DOCUMENT').files[0].name;
+                    if (document.getElementById('DOCUMENT').files[0].type.split("/")[0] == "application") {
+                        validtypeMedia = true;
+                    }
+                }
+                if (e.target.id == "IMAGE") {
+                    formData.append("image", document.getElementById('IMAGE').files[0]);
+                    file_name = document.getElementById('IMAGE').files[0].name;
+                    if (document.getElementById('IMAGE').files[0].type.split("/")[0] == "image") {
+                        validtypeMedia = true;
+                    }
+                }
+                formData.append("iid", iid);
+                if (validtypeMedia) {
+                    $.ajax({
+                        url: "/api/media/uploadMedia",
+                        method: "POST",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        beforeSend: () => {
+                            $('#media-preview').html(`<div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>`);
+                            $('#doc-preview').html(`<div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>`);
+                        },
+                        success: (result) => {
+                            if (result.success) {
+                                mediaID = result.data.id;
+                                if (e.target.id == "DOCUMENT") {
+                                    previewFile(document.getElementById('DOCUMENT').files[0], "DOCUMENT");
+                                }
+                                if (e.target.id == "IMAGE") {
+                                    previewFile(document.getElementById('IMAGE').files[0], "IMAGE");
+                                }
+                            }
+                        },
+                        error: (error) => {
+                            if (error.status === 401) InvalidUser();
+                            if (error.status === 500) {
+                                if (!error.success) {
+                                    swal({
+                                        title: "Error in upload",
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        if (e.target.id == "DOCUMENT") {
+                                            $('#DOCUMENT').removeClass('form-control-success');
+                                            $('#DOCUMENT').addClass('form-control-danger');
+                                        }
+                                        if (e.target.id == "IMAGE") {
+                                            $('#IMAGE').removeClass('form-control-success');
+                                            $('#IMAGE').addClass('form-control-danger');
+                                        }
+                                    });
+                                }
+                            }
+                            if (error.status === 400) {
+                                if (!error.success) {
+                                    swal({
+                                        title: "Invalid File Type.",
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        if (e.target.id == "DOCUMENT") {
+                                            $('#DOCUMENT').removeClass('form-control-success');
+                                            $('#DOCUMENT').addClass('form-control-danger');
+                                        }
+                                        if (e.target.id == "IMAGE") {
+                                            $('#IMAGE').removeClass('form-control-success');
+                                            $('#IMAGE').addClass('form-control-danger');
+                                        }
+                                    });
+                                }
+                            }
+                        },
+                    });
+                }
+                else {
+                    swal({
+                        title: "Invalid File Type.",
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(function () {
+                        if (e.target.id == "DOCUMENT") {
+                            $('#DOCUMENT').removeClass('form-control-success');
+                            $('#DOCUMENT').addClass('form-control-danger');
+                            $('#doc-preview')
+                                .css('display', 'flex')
+                                .css('height', '10rem')
+                                .html(`<i class="bx bxs-file-doc align-middle fs-2 text-primary"></i>`)
+                        }
+                        if (e.target.id == "IMAGE") {
+                            $('#IMAGE').removeClass('form-control-success');
+                            $('#IMAGE').addClass('form-control-danger');
+                            $('#media-preview')
+                                .css('display', 'flex')
+                                .css('height', '10rem')
+                                .html(`<i class="ri-image-2-fill align-middle fs-2 text-primary"></i>`);
+                        }
+                    });
+                }
+            });
+
+
+            $(document).on("keyup", ".dynamicbodyfield, .headerDfield", function () {
+                if ($(this).val() == "") {
+                    $(`#${$(this).attr('id')}_val`).html(`{{${$(this).attr('id').split("").pop()}}}`)
+                }
+                else {
+                    $(`#${$(this).attr('id')}_val`).html(`${$(this).val()}`)
+                }
+            })
+
+            $(document).on("input", "#phone", function () {
+                oninput_validation('phone');
+            })
+
+            $(document).on("click", "#sendmsg", function () {
+                nullfield_validation("phone");
+                nullfield_validation("template");
+
+                if (objFlag.flag_phone == 0 && objFlag.flag_template == 0) {
+                    oninput_validation('phone');
+                    if (objFlag.flag_phone == 0 && objFlag.flag_template == 0) {
+                        const templateID = $('#template').val();
+                        const phone = $('#phone').val().trim().split(" ").join("");
+                        const template = template_list.find(x => x.id == templateID);
+
+                        let validAllData = false;
+                        let bodyFieldValid = false;
+                        const hasHeader = template.components.some(component => component.type === "HEADER");
+
+                        template.components.forEach(x => {
+                            if (x.type == "HEADER") {
+
+                                switch (x.format) {
+                                    case "IMAGE": {
+                                        nullfield_validation("IMAGE");
+                                        if (objFlag.flag_IMAGE != 0) {
+                                            validAllData = false;
+                                        }
+                                        else {
+                                            validAllData = true;
+                                        }
+                                        break;
+                                    }
+                                    case "TEXT": {
+                                        let headerfields = countPlaceholders(x.text || null);
+                                        if (headerfields > 0) {
+                                            nullfield_validation("headerDfield1");
+                                            if (objFlag.flag_headerDfield1 != 0) {
+                                                validAllData = false;
+                                            }
+                                            else {
+                                                validAllData = true;
+                                            }
+                                        }
+                                        else {
+                                            validAllData = true;
+                                        }
+                                        break;
+                                    }
+                                    case "DOCUMENT": {
+                                        nullfield_validation("DOCUMENT");
+                                        if (objFlag.flag_DOCUMENT != 0) {
+                                            validAllData = false;
+                                        }
+                                        else {
+                                            validAllData = true;
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+                            if (!hasHeader) {
+                                validAllData = true;
+                            }
+
+
+                            if (x.type == "BODY") {
+                                let bodyfields = countPlaceholders(x.text || null);
+
+                                if (bodyfields > 0) {
+                                    for (let i = 1; i <= bodyfields; i++) {
+                                        nullfield_validation(`body${i}`);
+                                    }
+                                    for (let i = 1; i <= bodyfields; i++) {
+                                        if (objFlag[`flag_body${i}`] == 0) {
+                                            bodyFieldValid = true;
+                                        } else {
+                                            bodyFieldValid = false;
+                                            break;
+                                        }
+                                    }
+                                }
+                                else {
+                                    bodyFieldValid = true;
+                                }
+                            }
+                        });
+
+
+                        if (validAllData && bodyFieldValid) {
+                            let payload = {
+                                "to": `91${phone}`,
+                                "iid": iid,
+                                "languageCode": `${template.language}`,
+                                "templateName": `${template.name}`,
+                                "components": []
+                            }
+
+                            template.components.forEach(x => {
+                                if (x.type == "HEADER") {
+                                    let headerOBJ = {
+                                        "type": "header",
+                                        "parameters": []
+                                    }
+
+                                    let paramOBJ = {};
+
+                                    switch (x.format) {
+                                        case "IMAGE": {
+                                            paramOBJ.type = "image";
+                                            paramOBJ.image = {
+                                                "id": mediaID
+                                            };
+                                            headerOBJ.parameters.push(paramOBJ);
+                                            payload.components.push(headerOBJ);
+                                            break;
+                                        }
+                                        case "TEXT": {
+                                            let headerfields = countPlaceholders(x.text || null);
+                                            if (headerfields > 0) {
+                                                paramOBJ.type = "text";
+                                                paramOBJ.text = `${$('#headerDfield1').val()}`;
+                                                headerOBJ.parameters.push(paramOBJ);
+                                                payload.components.push(headerOBJ);
+                                            }
+                                            break;
+                                        }
+                                        case "DOCUMENT": {
+                                            paramOBJ.type = "document";
+                                            paramOBJ.document = {
+                                                "id": mediaID,
+                                                "filename": file_name
+                                            };
+                                            headerOBJ.parameters.push(paramOBJ);
+                                            payload.components.push(headerOBJ);
+                                            break;
+                                        }
+                                    }
+                                }
+
+
+                                if (x.type == "BODY") {
+                                    let bodyOBJ = {
+                                        "type": "body",
+                                        "parameters": []
+                                    }
+
+                                    let bodyfields = countPlaceholders(x.text || null);
+
+                                    if (bodyfields > 0) {
+                                        let arr = [];
+                                        for (let i = 1; i <= bodyfields; i++) {
+                                            let paramOBJ = {};
+                                            paramOBJ.type = "text";
+                                            paramOBJ.text = `${$(`#body${i}`).val()}`;
+                                            bodyOBJ.parameters.push(paramOBJ);
+                                        }
+                                        payload.components.push(bodyOBJ);
+                                    }
+                                }
+                            });
+
+                            // console.log(payload)
+
+                            $.ajax({
+                                url: "/api/message/sendmessage",
+                                method: "POST",
+                                data: payload,
+                                beforeSend: function () {
+                                    $("#sendmsg")
+                                        .prop('disabled', true)
+                                        .removeClass("btn-primary btn-success")
+                                        .addClass("btn-warning")
+                                        .html(`<span class= "d-flex align-items-center">
+                                                        <span class="flex-grow-1 me-2">
+                                                            Sending
+                                                        </span>
+                                                        <span class="spinner-border flex-shrink-0" role="status">
+                                                            <span class="visually-hidden"></span>
+                                                        </span>
+                                                    </span>`);
+                                },
+                                success: (result) => {
+                                    if (result.success) {
+                                        swal({
+                                            title: "Message Sent",
+                                            type: "success",
+                                            timer: 2000,
+                                            showConfirmButton: false,
+                                        }).then(function () {
+                                            $("#sendmsg")
+                                                .prop('disabled', false)
+                                                .removeClass("btn-warning btn-success")
+                                                .addClass("btn-primary")
+                                                .html(`<i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                                    <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                        Send
+                                                    </span>`);
+                                            $('#phone, #template,#IMAGE, #DOCUMENT').val("").removeClass("form-control-success form-control-danger");
+                                            $('#template option[value="null"]').prop('selected', true);
+                                            $('#template-body').html(`<div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                                    <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                                    Template Preview
+                                                </div>`);
+                                            $("#Headerdynamic,#Bodydynamic").html(``);
+                                        });
+                                    }
+                                },
+                                error: (error) => {
+                                    console.log(error);
+                                    if (error.status === 500) InternalServerError();
+                                    if (error.status === 401) InvalidUser();
+                                    if (error.status === 417) {
+                                        if (!error.success) {
+                                            swal({
+                                                title: "Error in sending message",
+                                                text: error.responseJSON.message,
+                                                type: "error",
+                                                timer: 2000,
+                                                showConfirmButton: false,
+                                            })
+                                        }
+                                    }
+                                    if (error.status === 429) {
+                                        if (!error.success) {
+                                            swal({
+                                                title: "Message Limit Exceed of 1000",
+                                                text: error.responseJSON.message,
+                                                type: "error",
+                                                timer: 2000,
+                                                showConfirmButton: false,
+                                            })
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+
+            let contactList = [];
+
+            function displayContactForSelect(contacts) {
+                var data = ``;
+                if (contacts && contacts.length > 0) {
+                    for (var i in contacts) {
+                        if (i % 2 == 0) {
+                            data += `<li class="list-group-item p-2 d-flex">`;
+                        }
+                        data += `<div class="d-flex align-items-center gap-2 w-50 contactSelect" data-phone="${contacts[i].phone}" style="cursor: pointer;">
+                                            <div class="flex-shrink-0 d-flex align-items-center">
+                                                <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${contacts[i].name[0].toUpperCase()}</div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h5 class="fs-13 mb-1" 
+                                                    style="width:95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                    ${contacts[i].name}
+                                                </h5>
+                                                <p class="text-muted mb-0">
+                                                    ${contacts[i].phone}
+                                                </p>
+                                            </div>
+                                        </div>`;
+                        if (i % 2 == 1) {
+                            data += `</li>`;
+                        }
+                    }
+                }
+                else {
+                    data += `<div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                            colors="primary:#212529,secondary:#405189"
+                                            style="width: 75px; height: 75px"></lord-icon>
+                                        <h5 class="mt-2">No Contacts Found</h5>
+                                        <a type="button" class="btn btn-soft-primary mt-2" href="/instance/${iid}/contact-list">
+                                            <i class="ri-add-circle-line align-middle me-1"></i>
+                                            Add contact
+                                        </a>
+                                    </div>
+                                </div>`;
+                }
+                $('#selectcontact-data').html(data);
+            }
+
+            $.ajax({
+                url: "/getData",
+                method: "POST",
+                data: {
+                    obj: {
+                        table: "contact",
+                        paramstr: `instance_id = '${iid}' AND disable = 0`,
+                    }
+                },
+                success: function (val) {
+                    let data = '';
+                    switch (val.status_code) {
+                        case '401': {
+                            InvalidUser();
+                            break;
+                        }
+
+                        case '500': {
+                            InternalServerError();
+                            break;
+                        }
+
+                        default: {
+                            contactList = val;
+                            displayContactForSelect(contactList);
+                        }
+                    }
+
+                    $(document).on('click', '.contactSelect', function () {
+                        const phoneNumber = $(this).attr('data-phone');
+                        $('#phone').val(phoneNumber).blur();
+
+                        $('#close-modal-selectContact').click();
+                    })
+                }
+            })
+
+            $(document).on("input", "#select_contact_search", function () {
+                let search_val = $(`#select_contact_search`).val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return contactList.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(search_val);
+
+                if (search_val == null || search_val == "") {
+                    displayContactForSelect(contactList)
+                }
+                else {
+                    displayContactForSelect(Searchresult)
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

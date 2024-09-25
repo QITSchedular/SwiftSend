@@ -1,0 +1,145 @@
+.message {
+    color: #000;
+    clear: both;
+    line-height: 18px;
+    font-size: 15px;
+    position: relative;
+    margin: 8px 0;
+    max-width: 85%;
+    word-wrap: break-word;
+    background: #fff;
+    border-radius: 0px 5px 5px 5px;
+    float: left;
+    font-family: sans-serif;
+    width: 20vw;
+}
+
+.message .part-msg {
+    padding: .3rem .6rem;
+}
+
+.message-header {
+    font-weight: 600;
+}
+
+.message-header .message-header-media {
+    border-radius: 8px;
+    height: 10rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8d8d8;
+    margin: .4rem 0rem;
+}
+
+.message-body {
+    font-weight: 400;
+    margin: .3rem 0rem;
+}
+
+.message-footer {
+    color: #bbb;
+}
+
+.message-link {
+    padding: .6rem;
+    border-top: 1px solid #e3e3e3;
+    text-align: center;
+}
+
+.message:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+    top: 0;
+    left: -9.5px;
+}
+
+.background-image {
+    position: relative;
+    background-image: url('../../assets/images/whatsappbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.preview-text {
+    background-color: #d5f5f1;
+    color: #54656f;
+}
+
+#template-body {
+    flex-direction: column;
+    height: calc(100vh - 300px);
+    overflow-y: scroll;
+    padding: 1rem 0rem;
+}
+
+.editor {
+    height: calc(100vh - 300px);
+    position: relative;
+}
+
+.sendmsgbtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .message {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .message {
+        width: 50vw;
+    }
+
+    .sendmsgbtn {
+        --vz-gutter-x: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: calc(var(--vz-gutter-x));
+    }
+
+    .sendmsgbtn .btn.btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .message {
+        width: 70vw;
+    }
+
+    .sendmsgbtn {
+        --vz-gutter-x: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: calc(var(--vz-gutter-x));
+        width: calc(100% - var(--vz-gutter-x) - var(--vz-gutter-x));
+    }
+
+    .sendmsgbtn .btn.btn-primary {
+        width: 100%;
+    }
+
+    #back-to-top {
+        display: none !important;
+    }
+}

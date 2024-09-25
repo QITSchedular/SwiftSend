@@ -1,0 +1,201 @@
+/*# sourceMappingURL=custom.min.css.map */
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #D0D6D8;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #D0D6D8;
+}
+
+*[disabled] {
+    cursor: not-allowed;
+    pointer-events: auto !important;
+}
+
+i {
+    cursor: pointer;
+}
+
+/* landing page animation */
+.positivity {
+    padding: 1rem;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.positivity .positivity__alone {
+    font-size: 2rem;
+    font-family: serif;
+    color: #000000;
+}
+
+.positivity .positivity__words .change {
+    opacity: 0;
+    -webkit-animation: changeword 8s linear infinite;
+    animation: changeword 8s linear infinite;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.positivity .positivity__words .change:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.positivity .positivity__words .change:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.positivity .positivity__words .change:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.positivity .positivity__words .change:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+@-webkit-keyframes changeword {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+@keyframes changeword {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+/* ---------------- form validation class -------------*/
+.has-success {
+    color: #28a745;
+}
+
+.form-control-success {
+    border-color: #28a745;
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 20px 20px;
+}
+
+.form-control-success:focus {
+    border-color: #28a745;
+    -webkit-box-shadow: 0px 0px 0px 1px #28a745;
+    -moz-box-shadow: 0px 0px 0px 1px #28a745;
+    box-shadow: 0px 0px 0px 1px #28a745;
+}
+
+.has-warning {
+    color: #ffc107;
+}
+
+.form-control-warning {
+    border-color: #ffc107;
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 20px 20px;
+}
+
+.form-control-warning:focus {
+    border-color: #ffc107;
+    -webkit-box-shadow: 0px 0px 0px 1px #ffc107;
+    -moz-box-shadow: 0px 0px 0px 1px #ffc107;
+    box-shadow: 0px 0px 0px 1px #ffc107;
+}
+
+.has-danger {
+    color: #dc3545;
+}
+
+.form-control-danger {
+    border-color: #dc3545;
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 14px 14px;
+}
+
+.form-control-danger:focus {
+    border-color: #dc3545;
+    -webkit-box-shadow: 0px 0px 0px 1px #dc3545;
+    -moz-box-shadow: 0px 0px 0px 1px #dc3545;
+    box-shadow: 0px 0px 0px 1px #dc3545;
+}
+
+.shadow {
+    box-shadow: 0px 20px 10px -10px var(--vz-gray-400) !important
+}
+
+.customizer-setting {
+    display: none;
+}

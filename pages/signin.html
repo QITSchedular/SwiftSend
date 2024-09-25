@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Sign In | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="../assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="../assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <div class="auth-page-wrapper pt-3">
+        <!-- auth page bg -->
+        <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
+            <div class="bg-overlay"></div>
+
+            <div class="shape">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 1440 120">
+                    <path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- auth page content -->
+        <div class="auth-page-content p-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center mt-sm-2 text-white-50">
+                            <a href="/" class="d-inline-block auth-logo">
+                                <img class="d-none d-md-block d-lg-block" src="../assets/images/logo-dark.svg" alt=""
+                                    height="150">
+                                <img class="d-block d-md-none d-lg-none" src="../assets/images/logo-sm.svg" alt=""
+                                    height="150">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h4 class="text-primary">Sign In</h4>
+                                </div>
+
+                                <div class="p-2">
+                                    <div class="d-lg-flex d-md-flex justify-content-evenly gap-3 mb-2">
+                                        <label
+                                            class="form-check border border-2 border-primary p-2 rounded-3 text-primary text-center bg-light cursor-pointer w-100"
+                                            for="root">
+                                            <input class="form-check-input mx-1" type="radio" name="usertype" id="root"
+                                                value="root" checked hidden>
+                                            <label class="form-check-label fs-15 px-2" for="root">
+                                                <i
+                                                    class="mdi mdi-account-tie-hat me-lg-1 me-md-1 align-middle fs-18"></i>
+                                                <!-- <i class="ri-user-settings-line me-lg-1 me-md-1 align-middle fs-18"></i> -->
+                                                <span class="">Root User</span>
+                                            </label>
+                                        </label>
+                                        <label
+                                            class="form-check border border-2 border-light p-2 rounded-3 text-muted text-center cursor-pointer w-100"
+                                            for="instance">
+                                            <input class="form-check-input mx-1" type="radio" name="usertype"
+                                                id="instance" value="instance" hidden>
+                                            <label class="form-check-label fs-15 px-2" for="instance">
+                                                <i class="mdi mdi-account me-lg-1 me-md-1 align-middle fs-18"></i>
+                                                <span class="">Instance User</span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                    <div class="signin-other-title text-center">
+                                        <h5 class="fs-13 title"></h5>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">
+                                            Email
+                                            <span class="text-danger">*</span>
+                                            <span class="text-danger" id="err_email"></span>
+                                        </label>
+                                        <input type="email" class="form-control required" name="email" id="email"
+                                            placeholder="Enter email address" data-type="email" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="password" class="form-label">
+                                            Password
+                                            <span class="text-danger">*</span>
+                                            <span class="text-danger" id="err_password"></span>
+                                        </label>
+                                        <div class="position-relative auth-pass-inputgroup">
+                                            <input type="password"
+                                                class="form-control pe-5 required password-input-hide-show"
+                                                name="password" placeholder="Enter password" id="password"
+                                                data-type="password" />
+                                            <button class="btn btn-link position-absolute end-0 top-0
+                                                     text-decoration-none text-muted password-addon" type="button"
+                                                id="password-addon">
+                                                <i class="ri-eye-fill align-middle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <div class="col-6 mb-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="remeberme" />
+                                            <label class="form-check-label" for="remeberme">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        <!-- <div class="col-6 mb-2">
+                                            <div class="float-end text-end cursor-pointer">
+                                                <div id="forgot-pwd" class="text-muted">
+                                                    <u>Forgot password?</u>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="mt-4">
+                                        <button id="signin" class="btn btn-primary w-100 btn-load">
+                                            Sign In
+                                        </button>
+                                        <!-- <input type="button" class="" id="" value="" /> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="container my-4 fs-14">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="copy-rights mb-0 d-flex align-items-center gap-1">
+                                        <div>
+                                            <img src="/assets/images/logo-sm.svg" class="mt-n1 me-n1" height="22" />
+                                            <span class="text-primary fw-semibold">
+                                                SwiftSend
+                                            </span>
+                                        </div>
+                                        <span class="text-muted fw-semibold">&#169;</span>
+                                        <span class="text-muted fw-semibold">
+                                            <script> document.write(new Date().getFullYear()) </script>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- JAVASCRIPT -->
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/validate.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/simplebar/simplebar.min.js"></script>
+<script src="../assets/libs/node-waves/waves.min.js"></script>
+<script src="../assets/libs/feather-icons/feather.min.js"></script>
+<script src="../assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+<!-- particles js -->
+<script src="../assets/libs/particles.js/particles.js"></script>
+<!-- particles app js -->
+<script src="../assets/js/pages/particles.app.js"></script>
+<!-- password create init -->
+<script src="../assets/js/pages/passowrd-create.init.js"></script>
+
+<script src="../assets/sweetalert2/sweet-alert.init.js"></script>
+<script src="../assets/sweetalert2/sweetalert2.all.js"></script>
+
+<script>
+    $(document).ready(() => {
+        if (getCookie('apikey') != "" && getCookie('iid')) {
+            $.ajax({
+                url: "/getData",
+                method: "POST",
+                data: {
+                    obj: {
+                        table: `instance`,
+                        paramstr: `instance_id = '${getCookie('iid')}'`
+                    }
+                },
+                success: function (val) {
+                    if (val.length === 1) {
+                        if (!val[0].isRoot) {
+                            location.href = `/iuser/${getCookie('iid')}/template`;
+                        }
+                        else {
+                            location.href = "/dashboard";
+                        }
+                    }
+                    else {
+                        switch (val.status_code) {
+                            case '401':
+                            case '404': {
+                                document.cookie = "apikey=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                                document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                                break;
+                            }
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+                        }
+                    }
+                }
+            })
+        }
+
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+        var remeberme = false;
+
+        if (getCookie('email')) {
+            email.value = getCookie('email');
+        }
+
+        $(".required").on('focusout', function () {
+            onfocusout_validation($(this).attr('id'));
+        });
+
+        $(".required").on('input', function () {
+            nullfield_validation($(this).attr('id'));
+        });
+
+        $(document).on('change', 'input[name="usertype"]', function () {
+            $('input[name="usertype"]').each(function () {
+                if ($(this).is(':checked')) {
+                    $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-primary border-primary bg-light')
+                }
+                else {
+                    $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-muted border-light')
+                }
+            });
+
+            switch ($('input[name="usertype"]:checked').attr('id')) {
+                case 'admin':
+                case 'support': {
+                    $('#forgot-pwd').addClass('d-none');
+                    break;
+                }
+
+                case 'root': {
+                    $('#forgot-pwd').removeClass('d-none');
+                    break;
+                }
+            }
+        })
+
+        let keysPressed = [];
+        let sequence = ['q', 'i', 't'];
+
+        $(document).keydown(function (event) {
+            if (event.altKey) {
+                if (sequence.includes(event.key)) {
+                    keysPressed.push(event.key);
+
+                    if (keysPressed.join('') === sequence.join('')) {
+                        event.preventDefault();
+                        location.href = "/swiftsend/admin/login";
+                        keysPressed = [];
+                    }
+                } else {
+                    keysPressed = [];
+                }
+            } else {
+                keysPressed = [];
+            }
+        });
+
+        $(document).on('click', '#forgot-pwd', function () {
+            localStorage.setItem("email", email.value.trim());
+            location.href = `/password-reset`;
+        })
+
+        focusEvent('email', 'password');
+        enterKeyEvent('password', 'signin');
+
+        $(document).on('click', '#signin', function () {
+            const type = $('input[name="usertype"]:checked').val();
+            nullfield_validation('email');
+            nullfield_validation('password');
+            if (objFlag.flag_email == 0 && objFlag.flag_password == 0) {
+                if ($('input[id="remeberme"]').prop("checked") == true) {
+                    remeberme = true;
+                }
+                else if ($('input[id="remeberme"]').prop("checked") == false) {
+                    remeberme = false;
+                }
+
+                $.ajax({
+                    url: "/api/auth/signin",
+                    method: "POST",
+                    data: {
+                        "type": atob(type),
+                        "email": btoa(email.value),
+                        "password": btoa(password.value),
+                        "rememberme": remeberme
+                    },
+                    beforeSend: () => {
+                        $("#signin")
+                            .prop('disabled', true)
+                            .removeClass("btn-primary btn-success")
+                            .addClass("btn-warning")
+                            .html(`<span class="d-flex align-items-center justify-content-center">
+                                        <span class="me-2">
+                                            Authenticating
+                                        </span>
+                                        <span class="spinner-border flex-shrink-0" role="status">
+                                            <span class="visually-hidden"></span>
+                                        </span>
+                                    </span>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            switch (type) {
+                                case 'root': {
+                                    if (val.data.isRoot == 1) {
+                                        document.cookie = `iid=${val.data.iid};`;
+                                        location.href = "/dashboard";
+                                    }
+                                    break;
+                                }
+
+                                case 'instance': {
+                                    if (val.data.isRoot == 0) {
+                                        document.cookie = `iid=${val.data.iid};`;
+                                        location.href = `/iuser/${val.data.iid}/template`;
+                                    }
+                                    break;
+                                }
+                            }
+                            $("#signin")
+                                .prop('disabled', false)
+                                .removeClass("btn-primary btn-warning btn-success")
+                                .addClass("btn-primary")
+                                .html(`Sign In`);
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 400) {
+                            if (!error.success) {
+                                swal({
+                                    title: "Error in signin",
+                                    text: error.responseJSON.error.detail,
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                })
+                            }
+                        }
+                        if (error.status === 401) {
+                            if (!error.success) {
+                                console.log()
+                                swal({
+                                    title: "Error in signin",
+                                    text: `Check your credential for signin`,
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                })
+                            }
+                        }
+                        $("#signin")
+                            .prop('disabled', false)
+                            .removeClass("btn-primary btn-warning btn-success")
+                            .addClass("btn-primary")
+                            .html(`Sign In`);
+                    }
+                })
+            }
+        })
+    })
+</script>
+
+</html>

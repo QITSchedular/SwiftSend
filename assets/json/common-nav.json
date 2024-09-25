@@ -1,0 +1,64 @@
+[
+    {
+        "page": "Dashboard",
+        "link": "dashboard",
+        "icon": "ri-dashboard-2-line"
+    },
+    {
+        "page": "Instance",
+        "link": "instance",
+        "icon": "ri-apps-2-line",
+        "submenu": [
+            {
+                "page": "Template",
+                "link": "template",
+                "icon": "ri-pages-fill"
+            },
+            {
+                "page": "Message",
+                "link": "wba",
+                "icon": "bx bxs-message-detail"
+            },
+            {
+                "page": "Message status",
+                "link": "messagelist",
+                "icon": "mdi mdi-list-status"
+            },
+            {
+                "page": "Broadcast",
+                "link": "broadcast",
+                "icon": "bx bx-broadcast"
+            },
+            {
+                "page": "Broadcast status",
+                "link": "broadcastlist",
+                "icon": "mdi mdi-list-status"
+            },
+            {
+                "page": "Contacts",
+                "link": "contact-list",
+                "icon": "bx bxs-contact"
+            },
+            {
+                "page": "Channel",
+                "link": "channel",
+                "icon": "mdi mdi-account-group"
+            }
+        ]
+    },
+    {
+        "page": "Support Ticket",
+        "link": "support-ticket",
+        "icon": "mdi mdi-ticket-account"
+    },
+    {
+        "page": "Pricing",
+        "link": "subscription",
+        "icon": "ri-price-tag-3-fill"
+    },
+    {
+        "page": "Profile",
+        "link": "profile",
+        "icon": "ri-profile-line"
+    }
+]

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+	data-sidebar-image="none" data-preloader="disable">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Dashboard | SwiftSends</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="Bulk message services" name="description" />
+	<meta content="Gajjar Harsh" name="author" />
+
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+	<!-- jsvectormap css -->
+	<link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- Layout config Js -->
+	<script src="/assets/js/layout.js"></script>
+	<!-- Bootstrap Css -->
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+	<!-- custom Css-->
+	<link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- Begin page -->
+	<div id="layout-wrapper">
+		<header id="page-topbar">
+			<div class="layout-width">
+				<div class="navbar-header">
+					<div class="d-flex">
+						<!-- LOGO -->
+						<div class="navbar-brand-box horizontal-logo">
+							<a href="/" class="logo logo-dark">
+								<span class="logo-sm">
+									<img src="/assets/images/logo-sm.svg" alt="" height="60" />
+								</span>
+								<span class="logo-lg">
+									<img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+								</span>
+							</a>
+
+
+							<a href="/" class="logo logo-light">
+								<span class="logo-sm">
+									<img src="/assets/images/logo-sm.svg" alt="" height="60" />
+								</span>
+								<span class="logo-lg">
+									<img src="/assets/images/logo-light.svg" alt="" height="100" width="200" />
+								</span>
+							</a>
+						</div>
+
+						<button type="button"
+							class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+							id="topnav-hamburger-icon">
+							<span class="hamburger-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</button>
+					</div>
+
+					<div class="d-flex align-items-center">
+						<div class="dropdown d-md-none topbar-head-dropdown header-item">
+							<button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+								id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">
+								<i class="bx bx-search fs-22"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+								aria-labelledby="page-header-search-dropdown">
+								<form class="p-3">
+									<div class="form-group m-0">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search ..."
+												aria-label="Recipient's username" />
+											<button class="btn btn-primary" type="submit">
+												<i class="mdi mdi-magnify"></i>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="ms-1 header-item">
+							<button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+								data-toggle="fullscreen">
+								<i class="bx bx-fullscreen fs-22"></i>
+							</button>
+						</div>
+
+						<div class="ms-1 header-item">
+							<button type="button"
+								class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+								<i class="bx bx-moon fs-22"></i>
+							</button>
+						</div>
+
+						<div class="dropdown ms-sm-3 header-item topbar-user">
+							<button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="d-flex align-items-center">
+									<div class="profileimg"></div>
+									<span class="text-start ms-xl-2">
+										<span
+											class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+										<span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+											User
+										</span>
+									</span>
+								</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-end">
+								<!-- item-->
+								<h6 class="dropdown-header">
+									Welcome <span class="profilename"></span>
+								</h6>
+								<a class="dropdown-item" href="/profile">
+									<i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>
+									<span class="align-middle">Profile</span>
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" id="logout">
+									<i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+									<span class="align-middle" data-key="t-logout">Logout</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ========== App Menu ========== -->
+		<div class="app-menu navbar-menu">
+			<!-- LOGO -->
+			<div class="navbar-brand-box">
+				<!-- Dark Logo-->
+
+				<a href="/" class="logo logo-dark">
+					<span class="logo-sm">
+						<img src="/assets/images/logo-sm.svg" alt="" height="60" />
+					</span>
+					<span class="logo-lg">
+						<img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+					</span>
+				</a>
+				<!-- Light Logo-->
+				<a href="/" class="logo logo-light">
+					<span class="logo-sm">
+						<img src="/assets/images/logo-sm.svg" alt="" height="60" />
+					</span>
+					<span class="logo-lg">
+						<img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+					</span>
+				</a>
+				<button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+					id="vertical-hover">
+					<i class="ri-record-circle-line"></i>
+				</button>
+			</div>
+
+			<div id="scrollbar">
+				<div class="container-fluid">
+					<div id="two-column-menu"></div>
+					<ul class="navbar-nav" id="navbar-nav"></ul>
+				</div>
+			</div>
+
+			<div class="sidebar-background"></div>
+		</div>
+		<!-- Left Sidebar End -->
+		<!-- Vertical Overlay-->
+		<div class="vertical-overlay"></div>
+
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<!-- ============================================================== -->
+		<div class="main-content">
+			<div class="page-content">
+				<div class="container-fluid">
+					<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+						<div class="page-title">
+							<h4 class="text-center mb-0">Application stats</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div class="avatar-sm flex-shrink-0">
+											<span class="avatar-title bg-light text-primary rounded-circle fs-3">
+												<i class="ri-copper-coin-fill align-middle"></i>
+											</span>
+										</div>
+										<div class="flex-grow-1 ms-3">
+											<p class="text-uppercase fw-semibold fs-12 text-muted mb-1">
+												Total Message
+											</p>
+											<h4 class=" mb-0">
+												<span class="counter-value" data-target="" id="totalMsg">0</span>
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div class="avatar-sm flex-shrink-0">
+											<span class="avatar-title bg-light text-primary rounded-circle fs-3">
+												<i class="ri-message-2-fill align-middle"></i>
+											</span>
+										</div>
+										<div class="flex-grow-1 ms-3">
+											<p class="text-uppercase fw-semibold fs-12 text-muted mb-1">
+												Total Single Message
+											</p>
+											<h4 class=" mb-0">
+												<span class="counter-value" data-target="" id="totalSingleMsg">0</span>
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div class="avatar-sm flex-shrink-0">
+											<span class="avatar-title bg-light text-primary rounded-circle fs-3">
+												<i class="bx bx-broadcast align-middle"></i>
+											</span>
+										</div>
+										<div class="flex-grow-1 ms-3">
+											<p class="text-uppercase fw-semibold fs-12 text-muted mb-1">
+												Total Broadcast
+											</p>
+											<h4 class=" mb-0">
+												<span class="counter-value" data-target=""
+													id="totalBroadcastMsg">0</span>
+											</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="card mb-1">
+								<div class="card-header border-0 align-items-center d-flex">
+									<h4 class="card-title mb-0 flex-grow-1">Template Usage Graph</h4>
+								</div>
+								<div class="card-body">
+									<div id="column_rotated_labels" data-colors='["--vz-primary"]' class="apex-charts"
+										dir="ltr">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card mb-1">
+								<div class="card-header align-items-center justify-content-between d-flex">
+									<h4 class="card-title mb-0">Daily Limit</h4>
+									<select class="form-select form-select-sm" id="instance_balance_list"
+										style="width: 30%;"></select>
+								</div>
+								<div class="card-body py-0">
+									<div class="list-group-item p-0 m-0" id="limit-graph">
+										<div class="p-2" id="daily-limit-graph">
+											<div class="p-5 d-flex align-items-center justify-content-center">
+												<div class="text-muted fw-semibold">
+													No message sent today !
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="list-group list-group-flush border-dashed mb-0">
+										<li class="list-group-item px-0">
+											<div class="d-flex align-items-center">
+												<div class="flex-shrink-0 avatar-xs">
+													<span class="avatar-title bg-light p-1 rounded-circle">
+														<i class="bx bxs-message-detail align-middle text-primary"></i>
+													</span>
+												</div>
+												<div class="flex-grow-1 ms-2">
+													<h6 class="mb-1 text-muted">Single Message</h6>
+												</div>
+												<div class=" flex-shrink-0 text-end">
+													<p class="text-success fs-14 mb-0 fw-semibold" id="dailysinglemsg">
+													</p>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item px-0">
+											<div class="d-flex align-items-center">
+												<div class="flex-shrink-0 avatar-xs">
+													<span class="avatar-title bg-light p-1 rounded-circle">
+														<i class="bx bx-broadcast align-middle text-primary"></i>
+													</span>
+												</div>
+												<div class="flex-grow-1 ms-2">
+													<h6 class="mb-1 text-muted">Send by Broadcast</h6>
+												</div>
+												<div class="flex-shrink-0 text-end">
+													<p class="text-success fs-14 mb-0 fw-semibold" id="dailybroadcast">
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="signin-other-title text-center mt-n4">
+						<h5 class="fs-13 title bg-light">Instance Wise Data</h5>
+					</div>
+					<div class="tab-content text-muted mt-2">
+						<div class="tab-pane active show" id="whatsappcount" role="tabpanel">
+							<div class="record" id="record"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer"></footer>
+		</div>
+	</div>
+
+	<!--start back-to-top-->
+	<button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+		<i class="ri-arrow-up-line"></i>
+	</button>
+	<!--end back-to-top-->
+
+	<!--preloader-->
+	<div id="preloader">
+		<div id="status">
+			<div class="spinner-border text-primary avatar-sm" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="customizer-setting" id="chatbot">
+		<div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+			<i class="mdi mdi-robot" id="iconchat"></i>
+		</div>
+	</div>
+
+	<div class="email-chat-detail" id="emailchat-detailElem" style="display: none">
+		<div class="card mb-0">
+			<div class="card-header align-items-center d-flex bg-primary text-white-50">
+				<div class="flex-grow-1">
+					<h5 class="fs-15 text-white mb-1 profile-username">
+						SwiftSend ChatBot
+					</h5>
+					<p class="mb-0 fs-12 lh-1">Ask here for help</p>
+				</div>
+				<div>
+					<i class="fa-brands fa-bots fs-1 text-white"></i>
+				</div>
+			</div>
+
+			<div class="card-body p-0">
+				<div id="users-chat">
+					<div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px">
+						<ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+					</div>
+				</div>
+
+				<div class="border-top border-top-dashed">
+					<div class="row g-2 mx-3 mt-2 mb-3">
+						<div class="col">
+							<div class="position-relative">
+								<input type="text" class="form-control border-light bg-light message-input"
+									placeholder="Enter Message..." id="input" />
+							</div>
+						</div>
+						<div class="col-auto">
+							<button class="btn btn-primary" id="sendbotmsg">
+								<i class="mdi mdi-send"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JAVASCRIPT -->
+	<script src="/assets/js/jquery.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/validate.js"></script>
+	<script src="/assets/js/chatbot.js"></script>
+
+	<script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="/assets/libs/node-waves/waves.min.js"></script>
+	<script src="/assets/libs/feather-icons/feather.min.js"></script>
+	<script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+	<script src="/assets/js/plugins.js"></script>
+
+	<!-- Sweet Alerts js -->
+	<script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+	<script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+	<!-- Dashboard init -->
+	<script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+	<!-- apexcharts -->
+	<script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+	<!-- App js -->
+	<script src="/assets/js/app.js"></script>
+
+	<script>
+		$(document).ready(() => {
+			chkLogin();
+
+			function DashboardData() {
+				// let obj = {};
+				$.ajax({
+					url: "/api/dashboard/getOverallReportData",
+					method: "GET",
+					success: function (val) {
+						if (val.success) {
+							let totalSingleMsg = 0, totalBroadcastMsg = 0, totalMsg = 0, output = ``, obj = {};
+
+							output += `<div class="row">`;
+							for (var i in val.data) {
+								totalSingleMsg += val.data[i].single_message_count;
+								totalBroadcastMsg += val.data[i].boardcast_number_count;
+								totalMsg += val.data[i].total_count;
+
+								var countmsgarray = new Array();
+
+								countmsgarray.push(val.data[i].single_message_count);
+								countmsgarray.push(val.data[i].boardcast_count);
+								obj[i] = countmsgarray;
+
+								output += `<div class="col-lg-4 col-md-6 col-sm-12">
+													<div class="card card-animate">
+														<div class="card-header">
+															<div class="fw-medium text-primary fs-14">
+																<span class="text-muted">Instance : </span>
+																${val.data[i].i_name}
+															</div>
+														</div>
+														<div id="id_${val.data[i].iid}" class="card-body">
+															<div class="p-0 text-dark fs-15">
+																<div id="message_chart_${i}" class="apex-charts" dir="ltr"></div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-primary align-middle"></i>
+																		Single Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val.data[i].single_message_count}</span>
+																</div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-warning align-middle"></i>	
+																		Bulk Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val.data[i].boardcast_count}</span>
+																</div>
+																<hr />
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">Total</span>
+																	<span class="text-primary fw-semibold">${val.data[i].total_count}</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>`;
+							}
+							output += `</div>`;
+
+							$('#record').html(output);
+							for (let i = 0; i < Object.keys(obj).length; i++) {
+								displayPieChart(obj[i], `message_chart_${i}`);
+							}
+
+							$('#totalSingleMsg').html(totalSingleMsg).prop('data-target', totalSingleMsg);
+							$('#totalBroadcastMsg').html(totalBroadcastMsg).prop('data-target', totalBroadcastMsg);
+							$('#totalMsg').html(totalMsg).prop('data-target', totalMsg);
+
+						}
+
+					}, error: (error) => {
+						if (error.status === 500) InternalServerError();
+					}
+				})
+			}
+			DashboardData();
+
+			function displayPieChart(count, id) {
+				let options = {
+					series: count,
+					chart: {
+						height: 250,
+						width: 250,
+						type: "donut",
+					},
+					legend: {
+						show: false
+					},
+					dataLabels: {
+						dropShadow: {
+							enabled: 2
+						}
+					},
+					labels: [
+						"Single Message",
+						"Broadcast Message",
+					],
+					colors: [
+						'#405189',
+						'#f7b84b'
+					],
+					plotOptions: {
+						pie: {
+							donut: {
+								size: '50%'
+							}
+						}
+					}
+				}
+				chart = new ApexCharts(document.querySelector(`#${id}`), options).render();
+			}
+
+			let DailyReportDataList = null
+			function getDailyReportData() {
+				$.ajax({
+					url: "/api/dashboard/getDailyReportData",
+					method: "GET",
+					success: function (val) {
+						if (val.success) {
+							let total_message = 0, dailySingleMsg = 0, dailyBroadcastMsg = 0;
+							DailyReportDataList = val.data;
+							let ins_list = ``;
+
+							if (val.data)
+
+								for (let i = 0; i < val.data.length; i++) {
+									ins_list += `<option id="${val.data[i].iid}" value="${val.data[i].iid}" class="text-${(val.data[i].i_name == "Main") ? `warning` : `primary`} fw-semibold">
+								${val.data[i].i_name}
+								</option>`
+								}
+							$('#instance_balance_list').html(ins_list);
+							(val.data.length <= 0) ? $('#instance_balance_list').addClass('d-none') : ``;
+
+							const instance_data = val.data.filter(x => x.iid === val.data[0].iid)[0] || null;
+
+							insByLimitGraph(instance_data)
+
+
+						}
+					}, error: (error) => {
+						if (error.status === 500) InternalServerError();
+					}
+				})
+			}
+			getDailyReportData();
+
+			function insByLimitGraph(instanceData) {
+				$('#dailysinglemsg').html(instanceData != null ? instanceData.single_message_count : "0");
+				$('#dailybroadcast').html(instanceData != null ? instanceData.boardcast_count : "0");
+
+				const percentage = (instanceData.total_count * 100) / 1000;
+				let x = null;
+				if (percentage > 90) {
+					x = '["--vz-danger"]';
+				}
+				else if (percentage > 60 && percentage <= 90) {
+					x = '["--vz-warning"]';
+				}
+				else {
+					x = '["--vz-primary"]';
+				}
+
+				$('#limit-graph').html(`<div id="basic_radialbar" data-colors='${x}' class="apex-charts" dir="ltr"></div>`);
+
+				var chartRadialbarBasicColors = getChartColorsArray("basic_radialbar");
+
+				var options = {
+					series: [percentage],
+					chart: {
+						height: 250,
+						type: "radialBar",
+					},
+					plotOptions: {
+						radialBar: {
+							startAngle: 0,
+							endAngle: 360,
+							hollow: {
+								size: '65%',
+							}
+						}
+					},
+					fill: {
+						type: 'gradient',
+					},
+					stroke: {
+						lineCap: 'round'
+					},
+					labels: [`(${instanceData.total_count}/1000)`], colors: chartRadialbarBasicColors
+				}
+				chart = new ApexCharts(document.querySelector("#basic_radialbar"), options).render();
+			}
+
+			$(document).on('change', '#instance_balance_list', function () {
+				const iid = $(this).val();
+				const instance_data = DailyReportDataList.filter(x => x.iid === iid)[0] || null;
+
+				insByLimitGraph(instance_data);
+			});
+
+			function message_filter(startDate, endDate) {
+				$.ajax({
+					url: "/message_filter",
+					method: "POST",
+					data: {
+						startdate: startDate,
+						enddate: endDate
+					},
+					success: function (val) {
+						let output = ``;
+						let obj = {};
+						switch (val.status_code) {
+							case '500': {
+								InternalServerError();
+								break;
+							}
+							case '404': {
+								output += `<div class="text-center">
+                                            <h5 class="p-3">
+												No Message sent from any instance / No Instance created
+                                            </h5>
+                                            <a class="btn btn-soft-success" href="/instance">
+                                                Create Instance
+                                            </a>
+                                        </div>`;
+								break;
+							}
+
+							default: {
+								output += `<div class="row">`;
+
+								for (let i = 0; i < val.length; i++) {
+									var countmsgarray = new Array();
+									countmsgarray.push(val[i].single_message_count);
+									countmsgarray.push(val[i].single_document_count);
+									countmsgarray.push(val[i].bulk_message_template_count);
+									countmsgarray.push(val[i].bulk_message_custom_count);
+									countmsgarray.push(val[i].bulk_message_channel_count);
+									obj[i] = countmsgarray;
+									const total =
+										val[i].single_message_count +
+										val[i].single_document_count +
+										val[i].bulk_message_template_count +
+										val[i].bulk_message_custom_count +
+										val[i].bulk_message_channel_count;
+									output += `<div class="col-lg-4 col-md-6 col-sm-12">
+													<div class="card card-animate">
+														<div class="card-header">
+															<div class="fw-medium text-primary fs-18">${val[i].i_name}</div>
+														</div>
+														<div id="id_${val[i].iid}" class="card-body">
+															<div class="p-0 text-dark fs-15">
+																<div id="message_chart_${i}" class="apex-charts" dir="ltr"></div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-primary align-middle"></i>
+																		Single Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val[i].single_message_count}</span>
+																</div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-danger align-middle"></i>	
+																		Document Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val[i].single_document_count}</span>
+																</div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-warning align-middle"></i>	
+																		Template Bulk Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val[i].bulk_message_template_count}</span>
+																</div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-info align-middle"></i>	
+																		Custom Bulk Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val[i].bulk_message_custom_count}</span>
+																</div>
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">
+																		<i class="ri-record-circle-fill text-success align-middle"></i>	
+																		Channel Bulk Message
+																	</span>
+																	<span class="text-primary fw-semibold">${val[i].bulk_message_channel_count}</span>
+																</div>
+																<hr />
+																<div class="d-flex justify-content-between">
+																	<span class="text-muted fw-medium">Total</span>
+																	<span class="text-primary fw-semibold">${total}</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>`;
+								}
+								output += `</div>`;
+							}
+						}
+						$('#record').html(output);
+						for (let i = 0; i < Object.keys(obj).length; i++) {
+							displayPieChart(obj[i], `message_chart_${i}`, "whatsapp");
+						}
+					}
+				})
+			}
+
+			function getTemplateDataGraph() {
+				$.ajax({
+					url: "/api/dashboard/getTemplateReportData",
+					method: "GET",
+					success: function (val) {
+						if (val.success) {
+							const templates = val.data.map(item => item.template);
+							const usageCounts = val.data.map(item => item.total_usage);
+
+							chartBarColors = getChartColorsArray("bar_chart")
+
+							let baroptions = {
+								chart: { height: 310, type: "bar", toolbar: { show: !1 } },
+								plotOptions: { bar: { horizontal: !1 } },
+								dataLabels: { enabled: 1 },
+								series: [{ data: usageCounts }],
+								colors: ["#405189"],
+								grid: { borderColor: "#405189" },
+								xaxis: { categories: templates },
+							}
+							let chart = new ApexCharts(document.querySelector("#column_rotated_labels"), baroptions).render();
+
+						}
+					}
+				});
+			}
+			getTemplateDataGraph();
+
+			$(document).on("click", "#Filter", function () {
+				const timePeriodValue = $("#time_period").val();
+
+				if (timePeriodValue != "" || timePeriodValue != '') {
+					const timePeriodArray = timePeriodValue.split('to');
+					const startDate = timePeriodArray[0].trim();
+					const endDate = timePeriodArray[1].trim();
+
+					$('#clrfilter').removeClass('d-none');
+
+					message_filter(startDate, endDate);
+				}
+			})
+
+			$(document).on('click', '#clrfilter', function () {
+				$("#time_period").val("")
+				$('#clrfilter').addClass('d-none');
+
+				message_summary();
+			});
+		});
+	</script>
+</body>
+
+</html>

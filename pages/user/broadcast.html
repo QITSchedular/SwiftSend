@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Broadcast | SwiftSends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- jsvectormap css -->
+    <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Template Css-->
+    <link href="/assets/css/template.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">
+                                    Welcome <span class="profilename"></span>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Broadcast</li>
+                            </ol>
+                        </div>
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" id="msgform">
+                        <h3 class="card-header text-center">Broadcast</h3>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="d-flex justify-content-evenly gap-3 mb-4">
+                                        <label
+                                            class="form-check border border-2 border-primary p-2 rounded-3 text-primary text-center bg-light cursor-pointer d-flex align-items-center justify-content-center w-100"
+                                            for="users">
+                                            <input class="form-check-input mx-1" type="radio" name="usertype" id="users"
+                                                value="csv" checked hidden>
+                                            <label class="form-check-label fs-15 px-2" for="users">
+                                                <i class="bx bxs-file me-lg-1 me-md-1 align-middle"></i>
+                                                <span
+                                                    class="d-none d-lg-inline-block d-md-inline-block align-middle">CSV
+                                                    File</span>
+                                            </label>
+                                        </label>
+                                        <label
+                                            class="form-check border border-2 border-light p-2 rounded-3 text-muted text-center cursor-pointer  d-flex align-items-center justify-content-center w-100"
+                                            for="admin">
+                                            <input class="form-check-input mx-1" type="radio" name="usertype" id="admin"
+                                                value="channel" hidden>
+                                            <label class="form-check-label fs-15 px-2" for="admin">
+                                                <i class="mdi mdi-account-group me-lg-1 me-md-1 align-middle "></i>
+                                                <span class="d-none d-lg-inline-block d-md-inline-block">Channels</span>
+                                            </label>
+                                        </label>
+                                    </div>
+                                    <div id="csvtab" class="">
+                                        <div
+                                            class="bg-info bg-opacity-10 border border-info p-2 rounded-3 text-info mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="ri-error-warning-line align-middle me-2 fs-18"></i>
+                                                <div class="vr"></div>
+                                                <p class="fs-14 fw-medium mb-0 ms-2" style="text-align: justify;">
+                                                    Only <span class="text-danger">CSV</span>
+                                                    File Allowed and only first <span class="text-danger">200
+                                                        Data</span> will be considered.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="datafile" class="form-label">
+                                                Select File
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_datafile"></span>
+                                            </label>
+                                            <input type="file" id="datafile" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div id="channeltab" class="d-none">
+                                        <div class="mb-3">
+                                            <label class="form-label">
+                                                Channel
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_channel_list"></span>
+                                            </label>
+                                            <select class="form-select required" id="channel_list"
+                                                data-type="message"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <label>Contact Data</label>
+                                        </div>
+                                    </div>
+                                    <div class="card" data-simplebar data-simplebar-auto-hide="false"
+                                        style="height: 40vh;">
+                                        <ul class="list list-group list-group-flush" id="contact_data">
+                                            <h5 class="text-muted text-center p-5">
+                                                Preview of the data will show here after you select csv file
+                                            </h5>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12 preview">
+                                    <div class="d-flex align-items-center background-image gap-2 scrollbar-custom"
+                                        id="template-body">
+                                        <div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                            <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                            Template Preview
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-6 col-sm-12 editor px-lg-0 px-md-0">
+                                    <div class="scrollbar-custom" style="max-height: 50vh; overflow-y: scroll;">
+                                        <div class="row mx-0">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 p-0 pe-1">
+                                                <label for="template" class="form-label">
+                                                    Templates
+                                                    <span class="text-danger">*</span>
+                                                    <span class="text-danger" id="err_template"></span>
+                                                </label>
+                                                <select id="template" class="form-select">
+                                                    <option selected disabled value="null">Select Template</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="Headerdynamic" class="mt-2 row m-0"></div>
+                                        <div id="Bodydynamic" class="mt-2 row m-0"></div>
+                                    </div>
+                                    <div class="sendmsgbtn ms-sm-1">
+                                        <button id="sendmsg" class="btn btn-primary btn-load">
+                                            <i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                            <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                Send
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer"></footer>
+                </div>
+            </div>
+            <!-- END layout-wrapper -->
+
+            <!--start back-to-top-->
+            <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+                <i class="ri-arrow-up-line"></i>
+            </button>
+            <!--end back-to-top-->
+
+            <!--preloader-->
+            <div id="preloader">
+                <div id="status">
+                    <div class="spinner-border text-primary avatar-sm" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customizer-setting" id="chatbot">
+                <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+                    <i class="mdi mdi-robot" id="iconchat"></i>
+                </div>
+            </div>
+
+            <div class="email-chat-detail" id="emailchat-detailElem" style="display: none">
+                <div class="card mb-0">
+                    <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                        <div class="flex-grow-1">
+                            <h5 class="fs-15 text-white mb-1 profile-username">
+                                SwiftSend ChatBot
+                            </h5>
+                            <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-bots fs-1 text-white"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div id="users-chat">
+                            <div class="chat-conversation p-3" id="chat-conversation" data-simplebar
+                                style="height: 250px">
+                                <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                            </div>
+                        </div>
+
+                        <div class="border-top border-top-dashed">
+                            <div class="row g-2 mx-3 mt-2 mb-3">
+                                <div class="col">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control border-light bg-light message-input"
+                                            placeholder="Enter Message..." id="input" />
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-info" id="sendbotmsg">
+                                        <i class="mdi mdi-send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/validate.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/voiceRecognition.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+
+    <!-- cleave.js -->
+    <script src="/assets/libs/cleave.js/cleave.min.js"></script>
+    <!-- form masks init -->
+    <script src="/assets/js/pages/form-masks.init.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            chkLogin();
+            let template_list = [];
+            const iid = document.URL.split("/")[4];
+            const apikey = getCookie('apikey');
+            var output = "";
+
+            $(document).on('change', 'input[name="usertype"]', function () {
+                $('#channeltab, #csvtab').addClass('d-none');
+                $('#contact_data').html(`<h5 class="text-muted text-center p-5">
+                                                Preview of the data will show here after you select csv file
+                                            </h5>`);
+                $('input[name="usertype"]').each(function () {
+                    if ($(this).is(':checked')) {
+                        $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-primary border-primary bg-light')
+                    }
+                    else {
+                        $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-muted border-light')
+                    }
+                });
+                if ($(this).val() == "channel") {
+
+                    displayChannelList();
+                    $('#channeltab').removeClass('d-none');
+                }
+                if ($(this).val() == "csv") {
+                    $('#csvtab').removeClass('d-none');
+                }
+            })
+
+            let limitObject = {};
+            function getlimitandbalance() {
+                $.ajax({
+                    url: `/api/dashboard/GetLimitandbalance/${iid}`,
+                    method: "GET",
+                    success: function (val) {
+                        if (val.success) {
+                            limitObject = val;
+                            console.log(limitObject)
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    },
+                });
+            }
+            getlimitandbalance();
+            function display_template() {
+                $.ajax({
+                    url: `/api/template/gettemplate/${iid}`,
+                    method: "GET",
+                    success: function (val) {
+                        if (val.success) {
+                            var output = ``;
+                            template_list = val.data.filter(x => x.status == "APPROVED" && x.admindisabled != "1");
+
+                            for (let i in template_list) {
+                                output += `<option value="${template_list[i].id}">${template_list[i].name}</option>`;
+                            }
+                            $("#template").append(output);
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    },
+                });
+            }
+            display_template();
+
+            function displayChannelList() {
+                $.ajax({
+                    url: "/getData",
+                    method: "POST",
+                    data: {
+                        obj: {
+                            table: "channel",
+                            paramstr: `instance_id = '${iid}'`,
+                        }
+                    },
+                    success: function (val) {
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+                            case '404': {
+                                let output = `<div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                                        <div class="text-center">
+                                                            <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                                trigger="loop" colors="primary:#f06548"
+                                                                state="morph-intro-cross" style="width:70px;height:70px">
+                                                            </lord-icon>
+                                                            <h5 class="mt-2">No Channels Created</h5>
+                                                            <a class="btn btn-soft-primary" href="/instance/${iid}/channel">
+                                                                Create Channel
+                                                            </a>
+                                                        </div>
+                                                    </div>`;
+                                $('#contact_data').html(output);
+                                break;
+                            }
+
+                            default: {
+                                let data = `<option value = "null" selected disabled> Select Channel</option>`;
+                                for (var i in val) {
+                                    data += `<option value = "${val[i].channel_id}"> ${val[i].channelName}</option>`;
+                                }
+                                $("#channel_list").html(data);
+                            }
+                        }
+                    }
+                });
+            }
+
+            function channelcontactdata(channel_id, contacts) {
+                $.ajax({
+                    url: "/get-channel-active-contact",
+                    method: "POST",
+                    data: {
+                        "channel_id": channel_id,
+                        "iid": iid
+                    },
+                    success: function (val) {
+                        ch_data = val;
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+                            case '404': {
+                                let data = `<div class= "noresult pt-5">
+                                            <div class="text-center">
+                                                <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                    trigger="loop" colors="primary:#f06548"
+                                                    state="morph-intro-cross" style="width:70px;height:70px">
+                                                </lord-icon>
+                                                <h5 class="mt-2">No Active Contact in this channel</h5>
+                                            </div>
+                                        </div>`;
+                                $("#contact_data").html(data);
+                                break;
+                            }
+
+                            default: {
+                                let valid_channel_contact_list = val.filter(contact => String(contact.phone).length === 10);
+                                displayContactForSelect(valid_channel_contact_list);
+                            }
+                        }
+                    }
+                });
+            }
+
+            let contacts = new Array();
+            let ch_data = new Array();
+            $(document).on("change", "#channel_list", function () {
+                contacts = [];
+                const channel_id = $("#channel_list").val();
+
+                channelcontactdata(channel_id, contacts);
+            });
+
+            var matchingColumn = null;
+            function localfiledata(frmdata) {
+                $.ajax({
+                    type: "POST",
+                    url: "/file",
+                    data: frmdata,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function () {
+                        $("#contact_data").html(`<div class="text-center py-3">
+                                                        <div class="spinner-border text-primary" role="status">
+                                                            <span class="sr-only">Loading...</span>
+                                                        </div>
+                                                        <h5 class="mt-2">Fetching Data</h5>
+                                                    </div>`);
+                    },
+                    success: function (val) {
+                        if (val.status_code == 406) {
+                            swal({
+                                title: "Invalid File selected",
+                                html: `Only <span class="text-danger">CSV</span> File allowed.`,
+                                type: 'error',
+                                timer: 2500,
+                                showConfirmButton: false,
+                            }).then(() => {
+                                $('#datafile').val('').addClass('form-control-danger');
+                            })
+                        }
+                        else {
+                            if (val.json.length > 0) {
+                                colnames = Object.keys(val.json[0]);
+
+                                let allRequiredColumnsIncluded = ["name", "phone"].every(reqCol =>
+                                    colnames.some(col => col.toLowerCase() === reqCol)
+                                );
+
+                                if (allRequiredColumnsIncluded) {
+                                    matchingColumn = colnames.find(c => c.toLowerCase() === "phone");
+
+                                    let valid_contact_list = val.json.filter(x => x[matchingColumn].length == 10);
+                                    displayContactForSelect(valid_contact_list);
+                                }
+                                else {
+                                    $('#contact_data')
+                                        .html(`<div class="d-flex justify-content-center text-danger text-center pt-5">
+                                                <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                    trigger="loop" colors="primary:#f06548"
+                                                    state="morph-intro-cross" style="width:70px;height:70px">
+                                                </lord-icon>
+                                            </div>
+                                            <p class="fs-15 text-center text-muted">
+                                                There is no such column like name, email, phone in this CSV File
+                                            </p>`);
+                                    $('#datafile').addClass('form-control-danger');
+                                }
+                            }
+                            else {
+                                $("#localfile_data").html(`<div class="d-flex justify-content-center text-danger text-center pt-5">
+                                                <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                    trigger="loop" colors="primary:#f06548"
+                                                    state="morph-intro-cross" style="width:70px;height:70px">
+                                                </lord-icon>
+                                            </div>
+                                            <p class="fs-15 text-center text-muted">
+                                                There is no data in this CSV File
+                                            </p>`);
+                            }
+                        }
+                    }
+                });
+            }
+
+            // load data from local file event  
+            $("#datafile").on("change", function () {
+                $('#datafile').removeClass('form-control-success form-control-danger');
+                const filedata = document.getElementById("datafile").files[0];
+
+                if (filedata && filedata.type == 'text/csv') {
+                    $('#datafile').addClass('form-control-success');
+
+                    let frmdata = new FormData();
+                    frmdata.append("csvfile", filedata);
+
+                    localfiledata(frmdata);
+                }
+                else {
+                    swal({
+                        title: "Select Different File",
+                        html: `Only <span class="text-danger">CSV</span> File allowed.`,
+                        type: 'error',
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(() => {
+                        $('#datafile').val('').addClass('form-control-danger');
+                    })
+                }
+            });
+
+            function countPlaceholders(message) {
+                if (message != null) {
+                    const placeholderRegex = /\{\{\d+\}\}/g;
+                    const matches = message.match(placeholderRegex);
+                    const count = matches ? matches.length : 0;
+
+                    return count;
+                }
+                return 0;
+            }
+
+            function loadTemplatePreview(id) {
+                const template = template_list.find(x => x.id == id);
+
+                $("#Headerdynamic").html(``);
+                $("#Bodydynamic").html(``);
+                let result = `<div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                    <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                    Preview
+                                </div>
+                                <div class="message">`;
+
+                const hasFooter = template.components.some(component => component.type === "FOOTER");
+                const hasHeader = template.components.some(component => component.type === "HEADER");
+
+                for (let i in template.components) {
+                    if (template.components[i].type == "HEADER") {
+                        let headerCode = ``;
+                        result += `<div class="part-msg">`;
+                        switch (template.components[i].format) {
+                            case "IMAGE": {
+                                $("#Headerdynamic").html("");
+                                result += `<div class="message-header">
+                                                <div class="message-header-media overflow-hidden" id="media-preview" style="object-fit: contain;">
+                                                    <i class="ri-image-2-fill align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+
+                                headerCode += `<hr class="my-1" />`;
+                                headerCode += `<div class="col-12 px-0 mb-3">
+                                    <label for="IMAGE" class="form-label">
+                                        IMAGE
+                                        <span class="text-danger">*</span>
+                                                        <span class="text-danger" id="ere_col"></span>
+                                                    </label>
+                                                <input type="file" id="IMAGE" class="form-control" accept="image/*" />
+                                                </div>`;
+                                break;
+                            }
+                            case "TEXT": {
+                                result += `<div class="message-header">${replacePlaceholders(template.components[i].text, 1, "headerDfield")}</div>`;
+                                let headerfields = countPlaceholders(template.components[i].text || null);
+
+                                $("#Headerdynamic").html("");
+                                if (headerfields > 0) {
+                                    headerCode += `<hr class="my-1" />`;
+                                    headerCode += `<div class="col-12 px-0 mb-3">
+                                        <label for="headerDfield1" class="form-label">
+                                                HEADER Dynamic Value
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_headerDfield1"></span>
+                                            </label>
+                                            <input type="text" id="headerDfield1" class="form-control headerDfield" placeholder="Enter dynamic data">
+                                        </div>`;
+                                }
+                                break;
+                            }
+                            case "DOCUMENT": {
+                                $("#Headerdynamic").html("");
+                                result += `<div class="message-header">
+                                                <div class="message-header-media overflow-hidden" id="doc-preview" style="object-fit: contain;">
+                                                    <i class="bx bxs-file-doc align-middle fs-2 text-primary"></i>
+                                                </div>
+                                            </div>`;
+
+                                headerCode += `<hr class="my-1" />
+                                                    <div class="col-12 px-0 mb-3">
+                                                        <label for="DOCUMENT" class="form-label">
+                                                            DOCUMENT
+                                                            <span class="text-danger">*</span>
+                                                            <span class="text-danger" id="err_col"></span>
+                                                        </label>
+                                                        <input type="file" id="DOCUMENT" class="form-control" accept="application/*" />
+                                                    </div>`;
+                                break;
+                            }
+
+                            default: {
+                                headerCode += ``;
+                                break;
+                            }
+                        }
+                        $("#Headerdynamic").html(headerCode);
+                    }
+                    if (template.components[i].type == "BODY") {
+                        let bodyCode = ``;
+                        let bodyfields = countPlaceholders(template.components[i].text || null);
+                        let modifiedString = template.components[i].text;
+                        for (let i = 1; i <= bodyfields; i++) {
+                            modifiedString = replacePlaceholders(modifiedString, i)
+                        }
+                        (!hasHeader) ? result += `<div class="part-msg">` : result += ``;
+                        result += `<div class="message-body">${modifiedString.replace(/\n/g, '<br>')}</div>`;
+                        if (bodyfields > 0) {
+                            bodyCode += `<hr class="my-1" />`;
+                        }
+                        for (let i = 1; i <= bodyfields; i++) {
+                            bodyCode += `<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                                            <label for="body${i}" class="form-label">
+                                                value {{${i}}}
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_body${i}"></span>
+                                            </label>
+                                            <input type="text" id="body${i}" class="form-control dynamicbodyfield" placeholder="value for {{${i}}}"
+                                                 ></div>`;
+                        }
+                        (!hasHeader) ? result += `</div>` : result += ``;
+                        $("#Bodydynamic").html(bodyCode);
+                        (!hasFooter ? result += `</div>` : result += ``)
+                    }
+                    if (template.components[i].type == "FOOTER") {
+                        result += `<div class="message-footer">${template.components[i].text}</div>`;
+
+                        (hasFooter ? result += `</div>` : result += ``)
+                    }
+                    if (template.components[i].type == "BUTTONS") {
+                        result += `<div class="part-link">`;
+                        for (let j in template.components[i].buttons) {
+                            switch (template.components[i].buttons[j].type) {
+                                case "URL": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-share-box-line align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].url}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "PHONE_NUMBER": {
+                                    result += `<div class="message-link text-primary">
+                                                <i class="ri-phone-fill align-middle"></i>
+                                                <span title="${template.components[i].buttons[j].phone_number}">${template.components[i].buttons[j].text}</span>
+                                            </div>`;
+                                    break;
+                                }
+                                case "QUICK_REPLY": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "COPY_CODE": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                                case "FLOW": {
+                                    result += `<div class="message-header">${template.components[i].text}</div>`;
+                                    break;
+                                }
+                            }
+                        }
+                        result += `</div>`;
+                    }
+                }
+                result += `</div>`;
+                $('#template-body').html(result);
+            }
+
+            $(document).on("change", "#template", () => {
+                const selectedID = $("#template").val();
+                loadTemplatePreview(selectedID);
+            });
+
+            let mediaID = "", file_name = "";
+            $(document).on("change", "#DOCUMENT, #IMAGE", (e) => {
+                $('#media-preview').css('display', 'flex').css('height', '10rem')
+                mediaID = "";
+                file_name = "";
+                let formData = new FormData(), validtypeMedia = false;
+                if (e.target.id == "DOCUMENT") {
+                    formData.append("image", document.getElementById('DOCUMENT').files[0]);
+                    file_name = document.getElementById('DOCUMENT').files[0].name;
+                    if (document.getElementById('DOCUMENT').files[0].type.split("/")[0] == "application") {
+                        validtypeMedia = true;
+                    }
+                }
+                if (e.target.id == "IMAGE") {
+                    formData.append("image", document.getElementById('IMAGE').files[0]);
+                    file_name = document.getElementById('IMAGE').files[0].name;
+                    if (document.getElementById('IMAGE').files[0].type.split("/")[0] == "image") {
+                        validtypeMedia = true;
+                    }
+                }
+                formData.append("iid", iid);
+                if (validtypeMedia) {
+                    $.ajax({
+                        url: "/api/media/uploadMedia",
+                        method: "POST",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        beforeSend: () => {
+                            $('#media-preview').html(`<div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>`);
+                            $('#doc-preview').html(`<div class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>`);
+                        },
+                        success: (result) => {
+                            if (result.success) {
+                                mediaID = result.data.id;
+                                if (e.target.id == "DOCUMENT") {
+                                    previewFile(document.getElementById('DOCUMENT').files[0], "DOCUMENT");
+                                }
+                                if (e.target.id == "IMAGE") {
+                                    previewFile(document.getElementById('IMAGE').files[0], "IMAGE");
+                                }
+                            }
+                        },
+                        error: (error) => {
+                            if (error.status === 401) InvalidUser();
+                            if (error.status === 500) {
+                                if (!error.success) {
+                                    swal({
+                                        title: "Error in upload",
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        if (e.target.id == "DOCUMENT") {
+                                            $('#DOCUMENT').removeClass('form-control-success');
+                                            $('#DOCUMENT').addClass('form-control-danger');
+                                        }
+                                        if (e.target.id == "IMAGE") {
+                                            $('#IMAGE').removeClass('form-control-success');
+                                            $('#IMAGE').addClass('form-control-danger');
+                                        }
+                                    });
+                                }
+                            }
+                            if (error.status === 400) {
+                                if (!error.success) {
+                                    swal({
+                                        title: "Invalid File Type.",
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        if (e.target.id == "DOCUMENT") {
+                                            $('#DOCUMENT').removeClass('form-control-success');
+                                            $('#DOCUMENT').addClass('form-control-danger');
+                                        }
+                                        if (e.target.id == "IMAGE") {
+                                            $('#IMAGE').removeClass('form-control-success');
+                                            $('#IMAGE').addClass('form-control-danger');
+                                        }
+                                    });
+                                }
+                            }
+                        },
+                    });
+                }
+                else {
+                    swal({
+                        title: "Invalid File Type.",
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(function () {
+                        if (e.target.id == "DOCUMENT") {
+                            $('#DOCUMENT').removeClass('form-control-success');
+                            $('#DOCUMENT').addClass('form-control-danger');
+                            $('#doc-preview')
+                                .css('display', 'flex')
+                                .css('height', '10rem')
+                                .html(`<i class="bx bxs-file-doc align-middle fs-2 text-primary"></i>`)
+                        }
+                        if (e.target.id == "IMAGE") {
+                            $('#IMAGE').removeClass('form-control-success');
+                            $('#IMAGE').addClass('form-control-danger');
+                            $('#media-preview')
+                                .css('display', 'flex')
+                                .css('height', '10rem')
+                                .html(`<i class="ri-image-2-fill align-middle fs-2 text-primary"></i>`);
+                        }
+                    });
+                }
+            });
+
+            $(document).on("keyup", ".dynamicbodyfield, .headerDfield", function () {
+                if ($(this).val() == "") {
+                    $(`#${$(this).attr('id')}_val`).html(`{{${$(this).attr('id').split("").pop()}}}`)
+                }
+                else {
+                    $(`#${$(this).attr('id')}_val`).html(`${$(this).val()}`)
+                }
+            })
+
+            $(document).on("input", "#phone", function () {
+                oninput_validation('phone');
+            })
+
+            $(document).on("click", "#sendmsg", function () {
+                nullfield_validation("template");
+
+                if (objFlag.flag_template == 0) {
+                    const templateID = $('#template').val();
+                    const template = template_list.find(x => x.id == templateID);
+                    const hasHeader = template.components.some(component => component.type === "HEADER");
+
+                    let validAllData = false;
+                    let bodyFieldValid = false;
+
+                    template.components.forEach(x => {
+                        if (x.type == "HEADER") {
+
+                            switch (x.format) {
+                                case "IMAGE": {
+                                    nullfield_validation("IMAGE");
+                                    if (objFlag.flag_IMAGE != 0) {
+                                        validAllData = false;
+                                    }
+                                    else {
+                                        validAllData = true;
+                                    }
+                                    break;
+                                }
+                                case "TEXT": {
+                                    let headerfields = countPlaceholders(x.text || null);
+                                    if (headerfields > 0) {
+                                        nullfield_validation("headerDfield1");
+                                        if (objFlag.flag_headerDfield1 != 0) {
+                                            validAllData = false;
+                                        }
+                                        else {
+                                            validAllData = true;
+                                        }
+                                    }
+                                    else {
+                                        validAllData = true;
+                                    }
+                                    break;
+                                }
+                                case "DOCUMENT": {
+                                    nullfield_validation("DOCUMENT");
+                                    if (objFlag.flag_DOCUMENT != 0) {
+                                        validAllData = false;
+                                    }
+                                    else {
+                                        validAllData = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (!hasHeader) {
+                            validAllData = true;
+                        }
+
+                        if (x.type == "BODY") {
+                            let bodyfields = countPlaceholders(x.text || null);
+
+                            if (bodyfields > 0) {
+                                for (let i = 1; i <= bodyfields; i++) {
+                                    nullfield_validation(`body${i}`);
+                                }
+                                for (let i = 1; i <= bodyfields; i++) {
+                                    if (objFlag[`flag_body${i}`] == 0) {
+                                        bodyFieldValid = true;
+                                    } else {
+                                        bodyFieldValid = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            else {
+                                bodyFieldValid = true;
+                            }
+                        }
+                    });
+
+                    if (validAllData && bodyFieldValid && contactList.length > 0) {
+                        if (contactList.length <= limitObject.remaining) {
+                            let payload = {
+                                "iid": iid,
+                                "numberList": contactList.filter(contact => contact.phone).map(contact => `91${contact.phone}`),
+                                "languageCode": `${template.language}`,
+                                "templateName": `${template.name}`,
+                                "components": []
+                            }
+
+                            template.components.forEach(x => {
+                                if (x.type == "HEADER") {
+                                    let headerOBJ = {
+                                        "type": "header",
+                                        "parameters": []
+                                    }
+
+                                    let paramOBJ = {};
+
+                                    switch (x.format) {
+                                        case "IMAGE": {
+                                            paramOBJ.type = "image";
+                                            paramOBJ.image = {
+                                                "id": mediaID
+                                            };
+                                            headerOBJ.parameters.push(paramOBJ);
+                                            payload.components.push(headerOBJ);
+                                            break;
+                                        }
+                                        case "TEXT": {
+                                            let headerfields = countPlaceholders(x.text || null);
+                                            if (headerfields > 0) {
+                                                paramOBJ.type = "text";
+                                                paramOBJ.text = `${$('#headerDfield1').val()}`;
+                                                headerOBJ.parameters.push(paramOBJ);
+                                                payload.components.push(headerOBJ);
+                                            }
+                                            break;
+                                        }
+                                        case "DOCUMENT": {
+                                            paramOBJ.type = "document";
+                                            paramOBJ.document = {
+                                                "id": mediaID,
+                                                "filename": file_name
+                                            };
+                                            headerOBJ.parameters.push(paramOBJ);
+                                            payload.components.push(headerOBJ);
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                if (x.type == "BODY") {
+                                    let bodyOBJ = {
+                                        "type": "body",
+                                        "parameters": []
+                                    }
+
+                                    let bodyfields = countPlaceholders(x.text || null);
+
+                                    if (bodyfields > 0) {
+                                        let arr = [];
+                                        for (let i = 1; i <= bodyfields; i++) {
+                                            let paramOBJ = {};
+                                            paramOBJ.type = "text";
+                                            paramOBJ.text = `${$(`#body${i}`).val()}`;
+                                            bodyOBJ.parameters.push(paramOBJ);
+                                        }
+                                        payload.components.push(bodyOBJ);
+                                    }
+                                }
+                            });
+                            console.log(payload);
+
+                            $.ajax({
+                                url: "/api/message/sendinbulk",
+                                method: "POST",
+                                data: payload,
+                                beforeSend: function () {
+                                    $("#sendmsg")
+                                        .prop('disabled', true)
+                                        .removeClass("btn-primary btn-success")
+                                        .addClass("btn-warning")
+                                        .html(`<span class= "d-flex align-items-center">
+                                                    <span class="flex-grow-1 me-2">
+                                                        Sending
+                                                    </span>
+                                                    <span class="spinner-border flex-shrink-0" role="status">
+                                                        <span class="visually-hidden"></span>
+                                                    </span>
+                                                </span>`);
+                                },
+                                success: (result) => {
+                                    if (result.success) {
+                                        swal({
+                                            title: "Message Sent",
+                                            type: "success",
+                                            timer: 2000,
+                                            showConfirmButton: false,
+                                        }).then(function () {
+                                            $("#sendmsg")
+                                                .prop('disabled', false)
+                                                .removeClass("btn-warning btn-success")
+                                                .addClass("btn-primary")
+                                                .html(`<i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                                <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                    Send
+                                                </span>`);
+                                            $('#phone, #template,#IMAGE, #DOCUMENT,#datafile').val("").removeClass("form-control-success form-control-danger");
+                                            $('#template option[value="null"]').prop('selected', true);
+                                            $('#channel_list option[value="null"]').prop('selected', true);
+                                            $('#template-body').html(`<div class="px-3 py-1 rounded-3 fw-semibold preview-text">
+                                                <i class="ri-information-fill align-middle fw-normal me-1"></i>
+                                                Template Preview
+                                            </div>`);
+                                            $("#Headerdynamic,#Bodydynamic").html(``);
+                                            $('#contact_data').html(`<h5 class="text-muted text-center p-5">
+                                                Preview of the data will show here after you select csv file
+                                            </h5>`);
+                                        });
+                                    }
+                                },
+                                error: (error) => {
+                                    console.log(error);
+                                    if (error.status === 500) InternalServerError();
+                                    if (error.status === 401) InvalidUser();
+                                    if (error.status === 417) {
+                                        if (!error.success) {
+                                            swal({
+                                                title: "Error in sending message",
+                                                text: error.responseJSON.message,
+                                                type: "error",
+                                                timer: 2000,
+                                                showConfirmButton: false,
+                                            })
+                                        }
+                                    }
+                                    if (error.status === 429) {
+                                        if (!error.success) {
+                                            swal({
+                                                title: "Message Limit Exceed of 1000",
+                                                text: error.responseJSON.message,
+                                                type: "error",
+                                                timer: 2000,
+                                                showConfirmButton: false,
+                                            })
+                                        }
+                                    }
+                                    $("#sendmsg")
+                                        .prop('disabled', false)
+                                        .removeClass("btn-warning btn-success")
+                                        .addClass("btn-primary")
+                                        .html(`<i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                                <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                    Send
+                                                </span>`);
+                                },
+                            });
+                        }
+                        else {
+                            swal({
+                                title: "Message Limit",
+                                text: "You don't have enough message balance",
+                                type: "error",
+                                timer: 2000,
+                                showConfirmButton: false,
+                            })
+                        }
+                    }
+                    else {
+                        swal({
+                            title: "No contact selected",
+                            type: "error",
+                            timer: 2000,
+                            showConfirmButton: false,
+                        })
+                    }
+                }
+            });
+
+            let contactList = [];
+
+            function displayContactForSelect(contacts) {
+                var data = ``;
+                if (contacts && contacts.length > 0) {
+                    contactList = contacts;
+                    for (var i in contacts) {
+                        if (i % 2 == 0) {
+                            data += `<li class="list-group-item p-2 d-flex">`;
+                        }
+                        data += `<div class="d-flex align-items-center gap-2 w-50 contactSelect" data-phone="${contacts[i].phone}" style="cursor: pointer;">
+                                            <div class="flex-shrink-0 d-flex align-items-center">
+                                                <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${contacts[i].name[0].toUpperCase()}</div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h5 class="fs-13 mb-1" 
+                                                    style="width:95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                    ${contacts[i].name}
+                                                </h5>
+                                                <p class="text-muted mb-0">
+                                                    ${contacts[i].phone}
+                                                </p>
+                                            </div>
+                                        </div>`;
+                        if (i % 2 == 1) {
+                            data += `</li>`;
+                        }
+                    }
+                }
+                else {
+                    data += `<div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                            colors="primary:#212529,secondary:#405189"
+                                            style="width: 75px; height: 75px"></lord-icon>
+                                        <h5 class="mt-2">No valid Contacts Found</h5>
+                                        <a type="button" class="btn btn-soft-primary mt-2" href="/instance/${iid}/contact-list">
+                                            <i class="ri-add-circle-line align-middle me-1"></i>
+                                            Add contact
+                                        </a>
+                                    </div>
+                                </div>`;
+                }
+                $('#contact_data').html(data);
+            }
+        });
+    </script>
+</body>
+
+</html>

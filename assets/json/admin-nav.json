@@ -1,0 +1,67 @@
+[
+    {
+        "page": "Dashboard",
+        "link": "adminDashboard",
+        "icon": "ri-dashboard-2-line"
+    },
+    {
+        "page": "Users",
+        "link": "usersData",
+        "icon": "ri-shield-user-fill"
+    },
+    {
+        "page": "Users Credential",
+        "link": "user-cred",
+        "icon": "bx bxs-key"
+    },
+    {
+        "page": "Template",
+        "link": "templatelist",
+        "icon": "mdi mdi-dots-hexagon"
+    },
+    {
+        "page": "Instances",
+        "link": "instanceData",
+        "icon": "ri-apps-2-line"
+    },
+    {
+        "page": "Messages",
+        "link": "messageData",
+        "icon": "bx bxs-message-alt-detail"
+    },
+    {
+        "page": "Company",
+        "link": "CompanyDetails",
+        "icon": "ri-building-2-fill"
+    },
+    {
+        "page": "Contacts",
+        "link": "contactData",
+        "icon": "bx bxs-contact"
+    },
+    {
+        "page": "Channels",
+        "link": "channelData",
+        "icon": "mdi mdi-account-group"
+    },
+    {
+        "page": "Plans",
+        "link": "planData",
+        "icon": "ri-price-tag-3-fill"
+    },
+    {
+        "page": "Subscriptions",
+        "link": "subscriptionData",
+        "icon": "ri-secure-payment-fill"
+    },
+    {
+        "page": "Support Tickets",
+        "link": "ticketData",
+        "icon": "mdi mdi-ticket-account"
+    },
+    {
+        "page": "Support Agents",
+        "link": "agentsData",
+        "icon": "bx bx-support"
+    }
+]

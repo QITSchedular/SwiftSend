@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Create Template | SwiftSends</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Swiftsend Bulk Messaging services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- jsvectormap css -->
+    <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="/assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .position-relative {
+            position: relative;
+        }
+
+        .character-counter {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body class="p-0">
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="60" />
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="bx bx-search fs-22"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username" />
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="mdi mdi-magnify"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <h6 class="dropdown-header">
+                                    Welcome <span class="profilename"></span>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div id="scrollbar">
+                    <div class="container-fluid">
+                        <div id="two-column-menu"></div>
+                        <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+            <!-- Vertical Overlay-->
+            <!-- <div class="vertical-overlay"></div> -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Template</li>
+                            </ol>
+                        </div>
+
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Create Template</h4>
+                        </div>
+                        <div class="card-body form-steps">
+                            <div class="vertical-navs-step">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="nav flex-column custom-nav nav-pills" role="tablist"
+                                            aria-orientation="vertical">
+                                            <button class="nav-link active" id="v-pills-bill-info-tab"
+                                                data-bs-target="#v-pills-bill-info" type="button" role="tab"
+                                                aria-controls="v-pills-bill-info" aria-selected="true">
+                                                <span class="step-title me-2">
+                                                    <i class="ri-record-circle-line align-middle text-primary me-2"></i>
+                                                    Step 1
+                                                </span>
+                                                Name & Category
+                                            </button>
+                                            <button class="nav-link" id="v-pills-bill-address-tab"
+                                                data-bs-target="#v-pills-bill-address" type="button" role="tab"
+                                                aria-controls="v-pills-bill-address" aria-selected="false">
+                                                <span class="step-title me-2">
+                                                    <i class="ri-record-circle-line align-middle text-primary me-2"></i>
+                                                    Step 2
+                                                </span>
+                                                Template Data
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 mt-lg-0 mt-md-3 mt-sm-3">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade show active" id="v-pills-bill-info"
+                                                role="tabpanel" aria-labelledby="v-pills-bill-info-tab">
+                                                <div class="mb-3">
+                                                    <label for="document_file" class="form-label fw-semibold mb-1">
+                                                        Category
+                                                        <span class="text-danger">*</span>
+                                                        <span class="text-danger" id="err_document_file"></span>
+                                                    </label>
+                                                    <div class="mb-2">
+                                                        <span class="fs-12 text-muted">
+                                                            Choose a category that best describe your template.
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-lg-flex d-md-flex justify-content-start gap-2 mb-2"
+                                                        style="user-select: none;">
+                                                        <label
+                                                            class="d-flex align-items-center border border-2 border-light rounded-3 text-muted text-center cursor-pointer"
+                                                            for="marketingRadio" style="height: 100px; flex: 50%;">
+                                                            <input class="form-check-input mx-1" type="radio"
+                                                                name="category" id="marketingRadio" value="marketing"
+                                                                hidden>
+                                                            <div class="d-flex align-items-center mb-0"
+                                                                for="marketingRadio">
+                                                                <div class="mx-2">
+                                                                    <div class="avatar-sm flex-shrink-0">
+                                                                        <span
+                                                                            class="avatar-title bg-light text-dark rounded-circle fs-3">
+                                                                            <i
+                                                                                class="bx bxs-volume-full align-middle"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-muted text-start">
+                                                                    <div class="fw-semibold text-dark">
+                                                                        Marketing
+                                                                    </div>
+                                                                    <div class="fs-12 me-2">
+                                                                        Promotions or information about your business,
+                                                                        products or services. Or any message that isn't
+                                                                        utility or
+                                                                        authentication.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <label
+                                                            class="d-flex align-items-center border border-2 border-light rounded-3 text-muted text-center cursor-pointer"
+                                                            for="utilityRadio" style="height: 100px; flex: 50%;">
+                                                            <input class="form-check-input mx-1" type="radio"
+                                                                name="category" id="utilityRadio" value="utility"
+                                                                hidden>
+                                                            <div class="d-flex align-items-center mb-0"
+                                                                for="utilityRadio">
+                                                                <div class="mx-2">
+                                                                    <div class="avatar-sm flex-shrink-0">
+                                                                        <span
+                                                                            class="avatar-title bg-light text-dark rounded-circle fs-3">
+                                                                            <i class="bx bxs-bell align-middle"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="text-muted text-start">
+                                                                    <div class="fw-semibold text-dark">
+                                                                        Utility
+                                                                    </div>
+                                                                    <div class="fs-12 me-2">
+                                                                        Messages about a specific transaction, account,
+                                                                        order or customer request.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="document_Name" class="form-label fw-semibold mb-1">
+                                                        Template Name
+                                                        <span class="text-danger">*</span>
+                                                        <span class="text-danger" id="err_document_Name"></span>
+                                                    </label>
+                                                    <div class="mb-2">
+                                                        <span class="fs-12 text-muted">Name your
+                                                            message
+                                                            template.</span>
+                                                    </div>
+                                                    <div class="position-relative">
+                                                        <input type="text" id="document_Name"
+                                                            class="form-control pe-5 required" data-type="message">
+                                                        <div class="text-end mt-1 character-counter">
+                                                            <span id="characterCounter"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="selectedlang" class="form-label fw-semibold mb-1">
+                                                        Language
+                                                        <span class="text-danger">*</span>
+                                                        <span class="text-danger" id="err_selectedlang"></span>
+                                                    </label>
+                                                    <div class="mb-2">
+                                                        <span class="fs-12 text-muted">Choose language for
+                                                            your message template.</span>
+                                                    </div>
+                                                    <div class="position-relative" id="templatelang">
+                                                        <select id="selectedlang" class="form-select"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-start gap-3">
+                                                    <button type="button" id="switchToEditTemplateButton"
+                                                        class="btn btn-success btn-label right ms-auto nexttab nexttab"
+                                                        data-nexttab="v-pills-bill-address-tab"><i
+                                                            class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Next</button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade mb-3 " id="v-pills-bill-address" role="tabpanel"
+                                                aria-labelledby="v-pills-bill-address-tab">
+                                                <div class="mb-3">
+                                                    <h4 for="document_Header" class="form-label mb-1">
+                                                        Header
+                                                        <span class="badge bg-light text-body fs-10">Optional</span>
+                                                        <span class="text-danger" id="err_Header"></span>
+                                                    </h4>
+                                                    <div class="mb-2">
+                                                        <span class="fs-12 text-muted">
+                                                            Add a title or choose which type of media you'll use for
+                                                            this header.
+                                                        </span>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <select id="headertype" class="form-select">
+                                                            <option value="None">None</option>
+                                                            <option value="Text">Text</option>
+                                                            <option value="Media">Media</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="d-none" id="headerText">
+                                                        <label for="document_headertext" class="form-label">
+                                                            Header Text
+                                                        </label>
+                                                        <div class="position-relative mb-3">
+                                                            <input type="text" id="Headermsg"
+                                                                class="form-control pe-5 required" data-type="message">
+                                                            <div class="text-end mt-1 character-counter">
+                                                                <span id="HeadercharacterCounter"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <button class="btn btn-soft-primary"
+                                                                id="header_dfield_add_btn" data-bs-toggle="tooltip"
+                                                                data-bs-placement="right"
+                                                                title="Only one dynamic field allowed">
+                                                                <i class="bx bx-plus align-middle me-1"></i>
+                                                                Add Field
+                                                            </button>
+                                                        </div>
+                                                        <div id="header_dfield_box"></div>
+                                                    </div>
+                                                    <div class="d-none" id="headerMedia">
+                                                        <label for="document_headermedia" class="form-label">
+                                                            Media Type
+                                                            <span class="text-danger">*</span>
+                                                            <span class="text-danger"
+                                                                id="err_document_headermedia"></span>
+                                                        </label>
+
+                                                        <div
+                                                            class="d-lg-flex d-md-flex d-sm-flex d-xs-inline justify-content-lg-start justify-content-md-start justify-content-sm-center gap-3">
+                                                            <label
+                                                                class="d-flex align-items-center justify-content-center border border-2 border-light rounded-3 text-muted text-center bg-light cursor-pointer px-4"
+                                                                for="imageRadio" style="height: 100px;">
+                                                                <input type="radio" id="imageRadio" name="MediaCategory"
+                                                                    class="form-check-input" value="IMAGE"
+                                                                    data-type="radio" hidden>
+                                                                <div class="d-flex align-items-center justify-content-center mb-0 flex-column"
+                                                                    for="imageRadio">
+                                                                    <i class="bx bxs-file-image align-middle"
+                                                                        style="font-size: 3rem;"></i>
+                                                                    Image
+                                                                </div>
+                                                            </label>
+                                                            <!-- <label
+                                                                class="d-flex align-items-center justify-content-center border border-2 border-light rounded-3 text-muted text-center bg-light cursor-pointer px-4"
+                                                                for="videoRadio" style="height: 100px;">
+                                                                <input class="form-check-input" type="radio"
+                                                                    id="videoRadio" name="MediaCategory"
+                                                                    value="DOCUMENT" data-type="radio" hidden>
+                                                                <div class="d-flex align-items-center justify-content-center mb-0 flex-column"
+                                                                    for="videoRadio">
+                                                                    <i class="bx bx-play-circle align-middle"
+                                                                        style="font-size: 3rem;"></i>
+                                                                    Video
+                                                                </div>
+                                                            </label> -->
+                                                            <label
+                                                                class="d-flex align-items-center justify-content-center border border-2 border-light rounded-3 text-muted text-center bg-light cursor-pointer px-3"
+                                                                for="documentRadio" style="height: 100px;">
+                                                                <input class="form-check-input" type="radio"
+                                                                    id="documentRadio" name="MediaCategory"
+                                                                    value="DOCUMENT" data-type="radio" hidden>
+                                                                <div class="d-flex align-items-center justify-content-center mb-0 flex-column"
+                                                                    for="documentRadio">
+                                                                    <i class="bx bxs-file-doc align-middle"
+                                                                        style="font-size: 3rem;"></i>
+                                                                    Document
+                                                                </div>
+                                                            </label>
+                                                            <!-- <label
+                                                                class="d-flex align-items-center justify-content-center border border-2 border-light rounded-3 text-muted text-center bg-light cursor-pointer px-4"
+                                                                for="mapRadio" style="height: 100px;">
+                                                                <input class="form-check-input" type="radio"
+                                                                    id="mapRadio" name="MediaCategory" value="DOCUMENT"
+                                                                    data-type="radio" hidden>
+                                                                <div class="d-flex align-items-center justify-content-center mb-0 flex-column"
+                                                                    for="mapRadio">
+                                                                    <i class="bx bxs-map align-middle"
+                                                                        style="font-size: 3rem;"></i>
+                                                                    Location
+                                                                </div>
+                                                            </label> -->
+                                                        </div>
+                                                        <div class="mb-2" id="imageField">
+                                                            <label for="Image" class="form-label">
+                                                                Image
+                                                                <span class="text-danger">*</span>
+                                                                <span class="text-danger" id="err_Image"></span>
+                                                            </label>
+                                                            <input type="file" class="form-control mb-3"
+                                                                style="resize: none" id="image" data-type="message"
+                                                                accept="image/*">
+                                                        </div>
+                                                        <div class="mb-2" id="documentField">
+                                                            <label for="Document" class="form-label">
+                                                                Document
+                                                                <span class="text-danger">*</span>
+                                                                <span class="text-danger" id="err_Document"></span>
+                                                            </label>
+                                                            <input type="file" class="form-control mb-3"
+                                                                style="resize: none" id="document" data-type="message"
+                                                                accept="application/*">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <h4 for="document_Body mb-1" class="form-label mb-1">
+                                                        Body
+                                                        <span class="text-danger" id="err_Header"></span>
+                                                    </h4>
+                                                    <div class="mb-2">
+                                                        <span class="fs-12 text-muted">Enter the text for
+                                                            your message in the language that you've
+                                                            selected.</span>
+                                                    </div>
+                                                    <div class="mb-3 position-relative">
+                                                        <textarea class="form-control scrollbar-custom" id="bodymsg"
+                                                            rows="5" style="resize: none;"></textarea>
+                                                        <div class="text-end mt-1 character-counter">
+                                                            <span id="BodycharacterCounter"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-2">
+                                                        <button class="btn btn-soft-primary" id="addInputFieldButton">
+                                                            <i class="bx bx-plus align-middle me-1"></i>
+                                                            Add Field
+                                                        </button>
+                                                    </div>
+                                                    <div id="body_dfield_box">
+                                                        <div class="signin-other-title text-center mt-2 d-none">
+                                                            <h5 class="fs-13 title">Body Sample Text</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h4 for="document_Footer" class="form-label">
+                                                        Footer
+                                                        <span class="badge bg-light text-body fs-10">Optional</span>
+                                                        <span class="text-danger" id="err_Header"></span>
+                                                    </h4>
+                                                    <div class="mb-3">
+                                                        <input type="text" id="footertext"
+                                                            class="form-control pe-5 required" data-type="message">
+                                                    </div>
+                                                </div>
+                                                <div class="">
+                                                    <!-- <button type="button" class="btn btn-warning bg-gradient waves-effect waves-light" id="addquickreply">Add Quick Reply</button> -->
+                                                    <button type="button" class="btn btn-soft-primary"
+                                                        id="addphonenumber" data-type="PHONE_NUMER">
+                                                        <i class="ri-phone-fill align-middle me-1"></i>
+                                                        Add Phone Number
+                                                    </button>
+                                                    <button type="button" class="btn btn-soft-primary" id="addurl"
+                                                        data-type="URL">
+                                                        <i class="mdi mdi-link-variant align-middle me-1"></i>
+                                                        Add URL
+                                                    </button>
+                                                </div>
+                                                <div id="phoneContainer" class="d-none">
+                                                    <div class="signin-other-title text-center mt-2">
+                                                        <h5 class="fs-13 title">Phone button</h5>
+                                                    </div>
+                                                </div>
+                                                <div id="urlContainer" class="d-none">
+                                                    <div class="signin-other-title text-center mt-2">
+                                                        <h5 class="fs-13 title">URL button</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-start justify-content-between mt-3">
+                                                    <button type="button"
+                                                        class="btn btn-light btn-label nexttab nexttab"
+                                                        data-nexttab="v-pills-bill-info-tab" id="backButton">
+                                                        <i class="ri-arrow-left-line label-icon align-middle fs-16"></i>
+                                                        Back
+                                                    </button>
+                                                    <button type="button" id="submitforapproval"
+                                                        class="btn btn-primary btn-load nexttab nexttab"
+                                                        data-nexttab="v-pills-bill-address-tab">
+                                                        <i class="mdi mdi-send me-2"></i>
+                                                        Submit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <footer class="footer"></footer>
+                </div>
+            </div>
+        </div>
+
+        <!--start back-to-top-->
+        <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!--end back-to-top-->
+
+        <!--preloader-->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner-border text-primary avatar-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="customizer-setting" id="chatbot">
+            <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+                <i class="mdi mdi-robot" id="iconchat"></i>
+            </div>
+        </div>
+
+        <div class="email-chat-detail" id="emailchat-detailElem" style="display: none">
+            <div class="card mb-0">
+                <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                    <div class="flex-grow-1">
+                        <h5 class="fs-15 text-white mb-1 profile-username">
+                            SwiftSend ChatBot
+                        </h5>
+                        <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-bots fs-1 text-white"></i>
+                    </div>
+                </div>
+
+                <div class="card-body p-0">
+                    <div id="users-chat">
+                        <div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px">
+                            <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                        </div>
+                    </div>
+
+                    <div class="border-top border-top-dashed">
+                        <div class="row g-2 mx-3 mt-2 mb-3">
+                            <div class="col">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control border-light bg-light message-input"
+                                        placeholder="Enter Message..." id="input" />
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary" id="sendbotmsg">
+                                    <i class="mdi mdi-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/validate.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <script src="/assets/libs/list.js/list.min.js"></script>
+    <script src="/assets/libs/list.pagination.js/list.pagination.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            chkLogin();
+
+            const iid = document.URL.split("/")[4];
+
+            let result;
+            let templatedata;
+            function gettemplate() {
+                $.ajax({
+                    url: `/api/template/gettemplate/${iid}`,
+                    method: `GET`,
+                    data: result,
+                    success: function (result) {
+                        if (result.success) {
+                            templatedata = result.data;
+                        }
+                    }, error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                        if (error.status === 404) {
+                            templatedata = [];
+                        }
+                    }
+                })
+            }
+            gettemplate();
+
+            let duplicateTemplateName = false;
+            $(document).on('input', '#document_Name', function () {
+                var originalValue = $(this).val();
+                var lowercaseValue = originalValue.toLowerCase().replace(/\s/g, '_');
+                $(this).val(lowercaseValue);
+
+                var maxLength = 50;
+                var currentLength = lowercaseValue.length;
+                var remainingLength = maxLength - currentLength;
+
+                $('#characterCounter').html(`(<span class="fw-semibold text-primary">${currentLength}</span>/${maxLength})`);
+
+                if (currentLength >= maxLength) {
+                    $(this).val(lowercaseValue.substr(0, (maxLength - 1)));
+                    remainingLength = 0;
+                }
+
+                if (templatedata.length > 0) {
+                    for (let i = 0; i < templatedata.length; i++) {
+                        if ($("#document_Name").val() == templatedata[i].name) {
+                            $('#err_document_Name').html('Template name already exist');
+                            $('#document_Name').removeClass('form-control-danger form-control-success').addClass('form-control-danger')
+                            duplicateTemplateName = false;
+                            break;
+                        }
+                        else {
+                            $('#err_document_Name').html('');
+                            $('#document_Name').removeClass('form-control-danger form-control-success').addClass('form-control-success')
+                            duplicateTemplateName = true;
+                        }
+                    }
+                }
+            });
+
+            $(`#Headermsg`).on('input', function () {
+                var originalValue = $(this).val();
+
+                var maxLength = 60;
+                var currentLength = $(this).val().length;
+                var remainingLength = maxLength - currentLength;
+
+                $('#HeadercharacterCounter').html(`(<span class="fw-semibold text-primary">${currentLength}</span>/${maxLength})`);
+
+                if (currentLength > maxLength) {
+                    $(this).val($(this).val().substr(0, (maxLength - 1)));
+                    remainingLength = 0;
+                }
+            });
+
+            $('#bodymsg').on('input', function () {
+                var originalValue = $(this).val();
+
+                var maxLength = 1024;
+                var currentLength = $(this).val().length;
+                var remainingLength = maxLength - currentLength;
+
+                $('#BodycharacterCounter').html(`(<span class="fw-semibold text-primary">${currentLength}</span>/${maxLength})`);
+
+                if (currentLength > maxLength) {
+                    $(this).val($(this).val().substr(0, (maxLength - 1)));
+                    remainingLength = 0;
+                }
+            });
+
+            const langarray = [
+                { code: 'af', language: 'Afrikaans' },
+                { code: 'sq', language: 'Albanian' },
+                { code: 'ar', language: 'Arabic' },
+                { code: 'az', language: 'Azerbaijani' },
+                { code: 'bn', language: 'Bengali' },
+                { code: 'bg', language: 'Bulgarian' },
+                { code: 'ca', language: 'Catalan' },
+                { code: 'zh_CN', language: 'Chinese (CHN)' },
+                { code: 'zh_HK', language: 'Chinese (HKG)' },
+                { code: 'zh_TW', language: 'Chinese (TAI)' },
+                { code: 'hr', language: 'Croatian' },
+                { code: 'cs', language: 'Czech' },
+                { code: 'da', language: 'Danish' },
+                { code: 'nl', language: 'Dutch' },
+                { code: 'en', language: 'English' },
+                { code: 'en_GB', language: 'English (UK)' },
+                { code: 'en_US', language: 'English (US)' },
+                { code: 'et', language: 'Estonian' },
+                { code: 'fil', language: 'Filipino' },
+                { code: 'fi', language: 'Finnish' },
+                { code: 'fr', language: 'French' },
+                { code: 'ka', language: 'Georgian' },
+                { code: 'de', language: 'German' },
+                { code: 'el', language: 'Greek' },
+                { code: 'gu', language: 'Gujarati' },
+                { code: 'ha', language: 'Hausa' },
+                { code: 'he', language: 'Hebrew' },
+                { code: 'hi', language: 'Hindi' },
+                { code: 'hu', language: 'Hungarian' },
+                { code: 'id', language: 'Indonesian' },
+                { code: 'ga', language: 'Irish' },
+                { code: 'it', language: 'Italian' },
+                { code: 'ja', language: 'Japanese' },
+                { code: 'kn', language: 'Kannada' },
+                { code: 'kk', language: 'Kazakh' },
+                { code: 'rw_RW', language: 'Kinyarwanda' },
+                { code: 'ko', language: 'Korean' },
+                { code: 'ky_KG', language: 'Kyrgyz (Kyrgyzstan)' },
+                { code: 'lo', language: 'Lao' },
+                { code: 'lv', language: 'Latvian' },
+                { code: 'lt', language: 'Lithuanian' },
+                { code: 'mk', language: 'Macedonian' },
+                { code: 'ms', language: 'Malay' },
+                { code: 'ml', language: 'Malayalam' },
+                { code: 'mr', language: 'Marathi' },
+                { code: 'nb', language: 'Norwegian' },
+                { code: 'fa', language: 'Persian' },
+                { code: 'pl', language: 'Polish' },
+                { code: 'pt_BR', language: 'Portuguese (BR)' },
+                { code: 'pt_PT', language: 'Portuguese (POR)' },
+                { code: 'pa', language: 'Punjabi' },
+                { code: 'ro', language: 'Romanian' },
+                { code: 'ru', language: 'Russian' },
+                { code: 'sr', language: 'Serbian' },
+                { code: 'sk', language: 'Slovak' },
+                { code: 'sl', language: 'Slovenian' },
+                { code: 'es', language: 'Spanish' },
+                { code: 'es_AR', language: 'Spanish (ARG)' },
+                { code: 'es_ES', language: 'Spanish (SPA)' },
+                { code: 'es_MX', language: 'Spanish (MEX)' },
+                { code: 'sw', language: 'Swahili' },
+                { code: 'sv', language: 'Swedish' },
+                { code: 'ta', language: 'Tamil' },
+                { code: 'te', language: 'Telugu' },
+                { code: 'th', language: 'Thai' },
+                { code: 'tr', language: 'Turkish' },
+                { code: 'uk', language: 'Ukrainian' },
+                { code: 'ur', language: 'Urdu' },
+                { code: 'uz', language: 'Uzbek' },
+                { code: 'vi', language: 'Vietnamese' },
+                { code: 'zu', language: 'Zulu' }
+            ]
+
+            function language() {
+                let output = `<option value="null" selected disabled>Select Language</option>`;
+                for (let i = 0; i < langarray.length; i++) {
+                    output += `<option value="${langarray[i].code}">${langarray[i].language}</option>`;
+                }
+                $('#selectedlang').html(output);
+            }
+            language();
+
+            $(document).on('click', '#switchToEditTemplateButton', function () {
+                nullfield_validation(`document_Name`);
+                nullfield_validation(`selectedlang`);
+
+                let flag = false;
+
+                if (!$('input[type=radio][name="category"]:checked').val()) {
+                    $('#err_document_file').text("Please select a category.").addClass('text-danger');
+                    flag = false;
+                }
+                else {
+                    $('#err_document_file').text("");
+                    flag = true;
+                }
+
+                if (objFlag.flag_document_Name == 0 && objFlag.flag_selectedlang == 0 && flag) {
+                    if (duplicateTemplateName) {
+                        $('#err_document_file').text("").removeClass('text-danger');
+
+                        $('#v-pills-bill-address-tab').addClass('active').attr('aria-selected', 'true').attr('aria-expanded', 'true');
+                        $('#v-pills-bill-info-tab').removeClass('active').attr('aria-selected', 'false').attr('aria-expanded', 'false');
+
+                        $('#v-pills-bill-address').addClass('show active');
+                        $('#v-pills-bill-info').removeClass('show active');
+                    }
+                    else {
+                        $('#err_document_Name').html('Template name already exist');
+                        $('#document_Name').removeClass('form-control-danger form-control-success').addClass('form-control-danger');
+                        duplicateTemplateName = false;
+                    }
+                }
+            });
+
+            $(document).on('click', '#backButton', function () {
+                // Activate Step 1
+                $('#v-pills-bill-info-tab').addClass('active').attr('aria-selected', 'true');
+                $('#v-pills-bill-info').addClass('show active');
+
+                // Deactivate Step 2
+                $('#v-pills-bill-address-tab').removeClass('active').attr('aria-selected', 'false');
+                $('#v-pills-bill-address').removeClass('show active');
+            });
+
+            var payload, headerPayload, bodyPayload, footerPayload, phonePayload, urlPayload;
+            var selectedCategory, selectedHeader = null, selectedMediaCategory;
+            var buttons = [];
+            var component = [];
+            var compare_object = new Object();
+            compare_object.header = null;
+            compare_object.body = null;
+            compare_object.footer = null;
+            compare_object.Buttons = [];
+
+            function addHeaderField(variableName) {
+                const lbltxt = $('<span>', {
+                    class: 'input-group-text fw-semibold',
+                    text: `{{${variableName}}}`
+                });
+
+                const inputbox = $('<input>', {
+                    class: 'form-control',
+                    placeholder: `Sample value for {{${variableName}}}`,
+                    type: `text`,
+                    name: `Headerinput${variableName}`,
+                    id: `Headerinput${variableName}`
+                });
+
+                const removeBtn = $('<button>', {
+                    class: 'input-group-text bg-soft-danger text-danger fw-semibold',
+                    type: "button"
+                }).on('click', function () {
+                    mainBox.remove();
+                    hrlinetxt.remove();
+                    let headettext = $('#Headermsg').val().trim();
+                    $('#Headermsg').val(headettext.replace("{{1}}", "").trim()).focus();
+                    $('#header_dfield_add_btn').prop('disabled', false).removeClass('d-none');
+                    compare_object.header.dfield = 0;
+                    isheaderdfield = false;
+                }).append(`<i class="bx bxs-trash-alt align-middle text-danger me-1"></i> Remove`);
+
+                const mainBox = $('<div>', {
+                    class: 'input-group',
+                }).append(lbltxt, inputbox, removeBtn);
+
+                const hrlinetxt = $('<div>', {
+                    class: 'signin-other-title text-center mt-2',
+                }).append($('<h5>', {
+                    class: 'fs-13 title',
+                    text: `Header Sample Text`
+                }));
+
+                $('#header_dfield_box').append(hrlinetxt, mainBox);
+            }
+
+            let isheaderdfield = false;
+            $(document).on('click', '#header_dfield_add_btn', () => {
+                compare_object.header.dfield = 1;
+                if (!isheaderdfield) {
+                    addHeaderField('1');
+                    insertTextAtCursor('Headermsg', `{{${1}}}`)
+                    $('#header_dfield_add_btn').prop('disabled', true).addClass('d-none');
+                    isheaderdfield = true;
+                }
+                else {
+                    $('#header_dfield_add_btn').prop('disabled', false).removeClass('d-none');
+                    isheaderdfield = false;
+                }
+            })
+
+            $(document).on('input', '#Headermsg', () => {
+                const matches = $('#Headermsg').val().match(/\{\{(\w+)\}\}/g);
+
+                if ($("#Headermsg").val() == '') {
+                    $('#header_dfield_add_btn').prop('disabled', false).removeClass('d-none');
+                    isheaderdfield = false;
+                }
+                if (matches) {
+                    if (matches.length == 1) {
+                        if (!isheaderdfield) {
+                            isheaderdfield = true;
+                            addHeaderField(1);
+                            $('#header_dfield_add_btn').prop('disabled', true).addClass('d-none');
+                        }
+                    }
+                    else {
+                        let sortedmatches = matches.sort((a, b) => {
+                            let numA = parseInt(a.replace(/[{}]/g, ''));
+                            let numB = parseInt(b.replace(/[{}]/g, ''));
+                            return numA - numB;
+                        });
+                        for (let i = 1; i < sortedmatches.length; i++) {
+                            let headettext = $('#Headermsg').val().trim();
+                            $('#Headermsg').val(headettext.replace(sortedmatches[i], "").trim());
+                        }
+                    }
+                }
+                else {
+                    $('#header_dfield_box').html('');
+                    $('#header_dfield_add_btn').prop('disabled', false).removeClass('d-none');
+                    isheaderdfield = false;
+                }
+            })
+
+            $(document).on('change', '#headertype', function () {
+                if ($("#headertype").val() === "Text") {
+                    $('#headerMedia').addClass('d-none');
+                    $('#headerText').removeClass('d-none');
+                } else if ($("#headertype").val() === "Media") {
+                    $('#headerText').addClass('d-none');
+                    $('#headerMedia').removeClass('d-none');
+                } else if ($("#headertype").val() === "None") {
+                    $('#headerText').addClass('d-none');
+                    $('#headerMedia').addClass('d-none');
+                }
+                selectedHeader = $(this).val();
+                compare_object.header = {
+                    format: selectedHeader,
+                    dfield: 0
+                }
+            })
+
+            $("#documentField, #imageField").hide();
+            $(document).on('change', 'input[type=radio][name="MediaCategory"]', function () {
+                $('input[name="MediaCategory"]').each(function () {
+                    if ($(this).is(':checked')) {
+                        // alert($(this).val());
+                        $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-primary border-primary bg-light')
+                    }
+                    else {
+                        $(this).parent().removeClass('text-muted text-primary border-primary border-light bg-light').addClass('text-muted border-light')
+                    }
+                });
+
+                $("#imageField, #documentField, #videoField").hide();
+                if (this.id === "imageRadio") {
+                    $("#imageField").show();
+                } else if (this.id === "documentRadio") {
+                    $("#documentField").show();
+                } else if (this.id === "videoRadio") {
+                    $("#videoField").show();
+                }
+                selectedMediaCategory = $(this).val();
+                compare_object.header.type = selectedMediaCategory;
+            })
+
+            $(document).on('change', 'input[type=radio][name="category"]', function () {
+                $('input[name="category"]').each(function () {
+                    const $this = $(this);
+                    const isChecked = $this.is(':checked');
+
+                    // Determine classes based on checked state
+                    const parentClassesToRemove = 'text-muted text-primary border-primary border-light bg-light';
+                    const parentClassesToAdd = isChecked ? 'text-primary border-primary bg-light' : 'text-muted border-light';
+                    const siblingInnerClassesToRemove = 'text-primary text-dark';
+                    const siblingInnerClassesToAdd = isChecked ? 'text-primary' : 'text-dark';
+
+                    // Update parent classes
+                    $this.parent().removeClass(parentClassesToRemove).addClass(parentClassesToAdd);
+
+                    // Update siblings' classes
+                    const siblingFirstChild = $this.siblings().children().eq(1).children().eq(0);
+                    const siblingSecondChild = $this.siblings().children().eq(0).children().eq(0).children().eq(0);
+
+                    siblingFirstChild.removeClass(siblingInnerClassesToRemove).addClass(siblingInnerClassesToAdd);
+                    siblingSecondChild.removeClass(siblingInnerClassesToRemove).addClass(siblingInnerClassesToAdd).addClass('bg-white');
+                });
+
+                selectedCategory = $(this).val()
+            })
+
+            function getFileType(mimeType) {
+                if (mimeType.startsWith('image')) {
+                    return 'image';
+                } else if (mimeType.startsWith('application')) {
+                    return 'doc';
+                } else {
+                    return 'other';
+                }
+            }
+
+            let mediavalue = "";
+            $(document).on('change', '#image , #document', (e) => {
+                let formData = new FormData();
+                let validfile = false;
+
+                if (e.target.id === 'image') {
+                    if (getFileType(document.getElementById('image').files[0].type) == "image") {
+                        validfile = true;
+                        formData.append('file', document.getElementById('image').files[0]);
+                    } else {
+                        validfile = false;
+                    }
+                }
+                if (e.target.id === 'document') {
+                    if (getFileType(document.getElementById('document').files[0].type) == "doc") {
+                        validfile = true;
+                        formData.append('file', document.getElementById('document').files[0]);
+                    } else {
+                        validfile = false;
+                    }
+                }
+
+                formData.append('iid', iid);
+                if (validfile) {
+                    $.ajax({
+                        url: "/api/template/mediaidfortemplate",
+                        method: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (value) {
+                            if (value.success) {
+                                mediavalue = value.data.h;
+                                compare_object.header.Hmedia = mediavalue;
+                            }
+                        },
+                        error: function (error) {
+                            if (error.status === "400") {
+                                swal({
+                                    title: "Invalid File Type.",
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                }).then(function () {
+                                    if (e.target.id === "image") {
+                                        $('#image').removeClass('form-control-success');
+                                        $('#image').addClass('form-control-danger');
+                                    }
+                                    if (e.target.id === "document") {
+                                        $('#document').removeClass('form-control-success');
+                                        $('#document').addClass('form-control-danger');
+                                    }
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    swal({
+                        title: "Invalid File Type.",
+                        type: "error",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(function () {
+                        if (e.target.id == "image") {
+                            $('#image').removeClass('form-control-success');
+                            $('#image').addClass('form-control-danger');
+                        }
+                        if (e.target.id == "document") {
+                            $('#document').removeClass('form-control-success');
+                            $('#document').addClass('form-control-danger');
+                        }
+                    });
+                }
+            });
+
+            $(document).on('keydown', '#Headermsg', function (event) {
+
+                let textarea = this;
+                let start = textarea.selectionStart;
+                let end = textarea.selectionEnd;
+                let selectedText = textarea.value.substring(start, end);
+
+                if ((event.ctrlKey || event.metaKey) && (event.key === 'b')) {
+                    event.preventDefault();
+                    if (selectedText) {
+                        let wrappedText = `*${selectedText}*`;
+                        textarea.value = textarea.value.substring(0, start) + wrappedText + textarea.value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd = start + wrappedText.length;
+                    }
+                }
+                if ((event.ctrlKey || event.metaKey) && (event.key === 'i')) {
+                    event.preventDefault();
+                    if (selectedText) {
+                        // Wrap the selected text with asterisks
+                        let wrappedText = `_${selectedText}_`;
+                        textarea.value = textarea.value.substring(0, start) + wrappedText + textarea.value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd = start + wrappedText.length;
+                    }
+                }
+            });
+
+            $('#bodymsg').on('keydown', function (event) {
+
+                let textarea = this;
+                let start = textarea.selectionStart;
+                let end = textarea.selectionEnd;
+                let selectedText = textarea.value.substring(start, end);
+
+                if ((event.ctrlKey || event.metaKey) && (event.key === 'b')) {
+                    event.preventDefault();
+                    if (selectedText) {
+                        let wrappedText = `*${selectedText}*`;
+                        textarea.value = textarea.value.substring(0, start) + wrappedText + textarea.value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd = start + wrappedText.length;
+                    }
+                }
+                if ((event.ctrlKey || event.metaKey) && (event.key === 'i')) {
+                    event.preventDefault();
+                    if (selectedText) {
+                        // Wrap the selected text with asterisks
+                        let wrappedText = `_${selectedText}_`;
+                        textarea.value = textarea.value.substring(0, start) + wrappedText + textarea.value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd = start + wrappedText.length;
+                    }
+                }
+            });
+
+            //dynamic fields for body
+            const body_dfield_box = document.getElementById('body_dfield_box');
+            const addInputFieldButton = document.getElementById('addInputFieldButton');
+            const dynamicVariableField = document.getElementById('bodymsg');
+            let counter = 0;
+            let dfieldcount = 0;
+            // Function to add input text field
+            compare_object.body = {
+                bfield: dfieldcount
+            }
+
+            function insertTextAtCursor(textareaId, text) {
+                var textarea = document.getElementById(textareaId);
+                var startPos = textarea.selectionStart;
+                var endPos = textarea.selectionEnd;
+                var scrollTop = textarea.scrollTop;
+
+                textarea.value = textarea.value.substring(0, startPos) + text + textarea.value.substring(endPos, textarea.value.length);
+                textarea.selectionStart = textarea.selectionEnd = startPos + text.length;
+                textarea.scrollTop = scrollTop;
+                textarea.focus();
+            }
+
+            function addBodyField() {
+                dfieldcount++;
+                const lbltxt = $('<span>', {
+                    class: 'input-group-text fw-semibold',
+                    style: "font-family: 'monospace';",
+                    text: `{{${dfieldcount}}}`,
+                    id: `bodyinput${dfieldcount}lbl`
+                });
+
+                const inputbox = $('<input>', {
+                    class: 'form-control',
+                    placeholder: `Sample value for {{${dfieldcount}}}`,
+                    type: `text`,
+                    name: `bodyinput${dfieldcount}`,
+                    id: `bodyinput${dfieldcount}`
+                });
+
+                const removeBtn = $('<button>', {
+                    class: 'input-group-text bg-soft-danger text-danger fw-semibold',
+                    type: "button",
+                    id: `bodyinput${dfieldcount}deletebtn`,
+                    "data-id": `${dfieldcount}`
+                }).on('click', function () {
+                    mainBox.remove();
+                    let id = $(this).attr('data-id');
+
+                    for (let i = parseInt(id - 1); i < dfieldcount; i++) {
+                        let bodytext = $('#bodymsg').val().trim();
+                        let currentId = i;
+                        let nextId = currentId + 1;
+                        let prevId = currentId - 1;
+
+                        $(`#bodyinput${nextId}`).attr("placeholder", `Sample value for {{${currentId}}}`);
+                        $(`#bodyinput${nextId}lbl`).text(`{{${currentId}}}`);
+                        $(`#bodyinput${nextId}deletebtn`).attr("data-id", `${currentId}`);
+                        $(`#bodyboxid${nextId}`).attr('data-id', `${currentId}`);
+
+                        $(`#bodyinput${nextId}`).attr("id", `bodyinput${currentId}`);
+                        $(`#bodyinput${nextId}lbl`).attr("id", `bodyinput${currentId}lbl`);
+                        $(`#bodyinput${nextId}deletebtn`).attr("id", `bodyinput${currentId}deletebtn`);
+                        $(`#bodyboxid${nextId}`).attr("id", `bodyboxid${currentId}`);
+
+                        $('#bodymsg').val(bodytext.replace(`{{${nextId + 1}}}`, `{{${currentId + 1}}}`).trim()).focus();
+                    }
+                    let bodytext = $('#bodymsg').val().trim();
+                    $('#bodymsg').val(bodytext.replace(`{{${id}}}`, "").trim()).focus();
+                    dfieldcount--;
+                    compare_object.body.bfield = dfieldcount;
+                    if (dfieldcount == 0) {
+                        $('#body_dfield_box').children().eq(0).addClass('d-none')
+                    }
+                }).append(`<i class="bx bxs-trash-alt align-middle text-danger me-1"></i> Remove`);
+
+                const mainBox = $('<div>', {
+                    class: 'input-group mb-2',
+                    id: `bodyboxid${dfieldcount}`,
+                    "data-id": `${dfieldcount}`
+                }).append(lbltxt, inputbox, removeBtn);
+
+                if (dfieldcount == 1) {
+                    $('#body_dfield_box').children().eq(0).removeClass('d-none')
+                }
+                $('#body_dfield_box').append(mainBox);
+
+                compare_object.body.bfield = dfieldcount;
+            }
+
+            $('#addInputFieldButton').on('click', () => {
+                if (dfieldcount < 10) {
+                    addBodyField();
+                    insertTextAtCursor('bodymsg', `{{${dfieldcount}}}`)
+                }
+            })
+
+            // $(document).on('input', '#bodymsg', () => {
+            //     const matches = $('#bodymsg').val().match(/\{\{(\w+)\}\}/g);
+
+            //     if (matches) {
+            //         if (matches.length <= 3) {
+            //             if (matches.length != dfieldcount) {
+            //                 addBodyField();
+            //             }
+            //             else {
+            //                 dfieldcount
+            //             }
+            //             let str = $('#bodymsg').val().trim();
+            //             console.log(str)
+
+            //             // $('#bodymsg').val(`${str.replace(`{{${dfieldcount}}}`, "").trim()}{{${dfieldcount}}}`);
+            //         }
+            //         else {
+            //             let sortedmatches = matches.sort((a, b) => {
+            //                 let numA = parseInt(a.replace(/[{}]/g, ''));
+            //                 let numB = parseInt(b.replace(/[{}]/g, ''));
+            //                 return numA - numB;
+            //             });
+            //             for (let i = (sortedmatches.length - 1); i >= (sortedmatches.length - dfieldcount); i--) {
+            //                 let bodytext = $('#bodymsg').val().trim();
+            //                 $('#bodymsg').val(bodytext.replace(sortedmatches[i], "").trim());
+            //             }
+            //         }
+            //     }
+            //     else {
+            //         $('#body_dfield_box').html('');
+            //     }
+            // })
+
+            // Event listener for changes in the dynamic variable field
+            // dynamicVariableField.addEventListener('blue', function () {
+            //     const dynamicVariableValue = dynamicVariableField.value;
+            //     const dynamicVariableRegex = /\{\{(\d+)\}\}/g;
+            //     const matches = dynamicVariableValue.match(dynamicVariableRegex);
+
+            //     // Remove existing input fields
+            //     body_dfield_box.innerHTML = '';
+
+            //     if (matches) {
+            //         matches.forEach(match => {
+            //             const inputFieldContainer = document.createElement('div');
+
+            //             // Create label element for variable
+            //             const variableLabel = document.createElement('label');
+            //             const matchIndex = match.substring(2, match.length - 2);
+            //             variableLabel.textContent = match;
+            //             inputFieldContainer.appendChild(variableLabel);
+
+            //             const inputField = document.createElement('input');
+            //             inputField.type = 'text';
+            //             inputField.name = 'bodyinput' + matchIndex; // Unique name for each input field
+            //             inputField.id = 'bodyinput' + matchIndex; // Unique ID for each input field
+            //             inputField.classList.add('form-control'); // Add the form-control class
+
+            //             inputFieldContainer.appendChild(inputField);
+            //             body_dfield_box.appendChild(inputFieldContainer);
+            //         });
+            //         // Update counter to the last index + 1
+            //         counter = parseInt(matches[matches.length - 1].substring(2, matches[matches.length - 1].length - 2)) + 1;
+            //         compare_object.body.bfield = counter - 1;
+            //     } else {
+            //         // If there are no matches, reset the counter to 1
+            //         counter = 1;
+            //         compare_object.body.bfield = counter - 1;
+            //     }
+            // });
+
+            //   var replycounter = 1
+
+            //   $(document).on('click', "#addquickreply", () => {
+            //     // Check if the number of existing dynamic fields is less than 7
+            //     if ($('.quick-reply-input').length <= 7) {
+            //         // Generate unique ID for the new input field
+            //         const uniqueId = 'quickReplyField' + counter;
+
+            //         // Create a new label element
+            //         const label = $('<label>', {
+            //             for: uniqueId,
+            //             text: 'Quick Reply ' + ($('.quick-reply-input').length + 1)
+            //         });
+
+            //         // Create a new input field element
+            //         const newInputField = $('<input>', {
+            //             type: 'text',
+            //             class: 'mb-3 form-control quick-reply-input',
+            //             id: uniqueId,
+            //             placeholder: 'Quick Reply ' + ($('.quick-reply-input').length + 1)
+            //         });
+
+            //         // Create a remove button
+            //         const removeButton = $('<button>', {
+            //             type: 'button',
+            //             class: 'btn btn-danger btn-sm remove-quick-reply',
+            //             text: 'Remove',
+            //             click: function() {
+            //                 $(this).parent().remove(); // Remove the entire div containing label, input field, and remove button
+            //             }
+            //         });
+
+            //         // Create a div to wrap the label, input field, and remove button
+            //         const fieldWrapper = $('<div>', {
+            //             class: 'mb-3'
+            //         });
+
+            //         // Append the label, input field, and remove button to the field wrapper
+            //         fieldWrapper.append(label, newInputField, removeButton);
+
+            //         // Append the field wrapper to the container
+            //         $('#quickReplyContainer').append(fieldWrapper);
+            //     } else {
+            //         alert('You can only add up to 7 dynamic fields.');
+            //     }
+            // });
+
+            let phonebtn = false;
+
+
+            $(document).on('click', '#addphonenumber', () => {
+                // Check if the button has already been clicked
+                if (!phonebtn) {
+                    // Set flag to true
+                    phonebtn = true;
+
+
+                    compare_object.Buttons.push({
+                        type: "phone",
+                        pfield: 2,
+                    });
+
+                    const label1 = $('<label>', {
+                        class: 'form-label',
+                        text: 'Button Text:'
+                    });
+
+                    // Create first input field and label
+                    const input1 = $('<input>', {
+                        type: 'text',
+                        class: 'form-control w-100',
+                        id: 'phone_btn_text',
+                        placeholder: 'Button Text'
+                    });
+
+                    const label2 = $('<label>', {
+                        class: 'form-label',
+                        text: 'Phone Number:'
+                    });
+
+                    // Create second input field and label
+                    const input2 = $('<input>', {
+                        type: 'text',
+                        class: 'form-control w-100',
+                        id: 'phn_number',
+                        placeholder: 'Phone Number ex. 91xxxxxxxxxx'
+                    });
+
+                    // Create remove button
+                    const removeBtn = $('<button>', {
+                        class: 'btn btn-soft-danger'
+                    }).on('click', function () {
+                        div1.remove();
+                        div2.remove();
+                        div3.remove();
+
+                        $('#phoneContainer').addClass('d-none')
+
+                        compare_object.Buttons.pop({
+                            type: "phone",
+                            pfield: 2,
+                        });
+                        // Set flag back to false
+                        phonebtn = false;
+                    }).append(`<i class="ri-close-fill align-middle me-1"></i> Remove`);
+
+                    const div1 = $('<div>', {
+                        style: 'flex-grow: 2;'
+                    }).append(input1);
+
+                    const div2 = $('<div>', {
+                        style: 'flex-grow: 2;'
+                    }).append(input2);
+
+                    const div3 = $('<div>').append(removeBtn);
+
+                    const mainDiv = $('<div>', {
+                        class: 'd-flex align-items-end gap-2 mb-2'
+                    }).append(div1, div2, div3)
+
+                    $('#phoneContainer').append(mainDiv).removeClass('d-none');
+
+                } else {
+                    swal({
+                        title: "Only one phone-number field is allowed",
+                        type: "info",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    })
+                    return;
+                }
+            });
+
+            let addUrlBtnClicked = false;
+
+            $(document).on('click', '#addurl', () => {
+                if (addUrlBtnClicked) {
+                    swal({
+                        title: "Only one URL field is allowed",
+                        type: "info",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    })
+                    return;
+                }
+
+                compare_object.Buttons.push({
+                    type: "URL",
+                    ufield: 2
+                });
+
+                // Set flag to true to indicate button has been clicked
+                addUrlBtnClicked = true;
+
+                // Create input fields, labels, and remove button
+                const label1 = $('<label>', {
+                    class: 'form-label',
+                    text: 'Button Text:'
+                });
+                const input1 = $('<input>', {
+                    type: 'text',
+                    class: 'form-control w-100',
+                    id: 'url_btn_text',
+                    placeholder: 'Button Text'
+                });
+                const label2 = $('<label>', {
+                    class: 'form-label',
+                    text: 'URL:'
+                });
+                const input2 = $('<input>', {
+                    type: 'text',
+                    class: 'form-control w-100',
+                    id: 'url',
+                    placeholder: 'https://swift-send.click'
+                });
+
+                const removeBtn = $('<button>', {
+                    class: 'btn btn-soft-danger',
+                }).on('click', function () {
+                    // Remove input fields, labels, and button
+                    div1.remove();
+                    div2.remove();
+                    div3.remove();
+
+                    $('#urlContainer').addClass('d-none');
+
+                    compare_object.Buttons.pop({
+                        type: "URL",
+                        ufield: 2
+                    });
+                    // Reset flag to allow button click again
+                    addUrlBtnClicked = false;
+                }).append(`<i class="ri-close-fill align-middle me-1"></i> Remove`);
+
+                const div1 = $('<div>', {
+                    style: 'flex-grow: 2;'
+                }).append(input1);
+
+                const div2 = $('<div>', {
+                    style: 'flex-grow: 2;'
+                }).append(input2);
+
+                const div3 = $('<div>').append(removeBtn);
+
+                const mainDiv = $('<div>', {
+                    class: 'd-flex align-items-end gap-2 mb-2'
+                }).append(div1, div2, div3)
+
+                // Append elements to container
+                $('#urlContainer').append(mainDiv).removeClass('d-none');
+
+            });
+
+            $(document).on('change', '#phone_btn_text', function () {
+                nullfield_validation(`phone_btn_text`);
+                if (objFlag[`flag_phone_btn_text`] == 0) {
+                    phonePayload = {
+                        "type": "PHONE_NUMBER",
+                        "text": $('#phone_btn_text').val(),
+                        "phone_number": $('#phn_number').val(),
+                    }
+                }
+            })
+
+            $(document).on('change', '#phn_number', function () {
+                nullfield_validation(`phn_number`);
+                if (objFlag[`flag_phn_number`] == 0) {
+                    phonePayload = {
+                        "type": "PHONE_NUMBER",
+                        "text": $('#phone_btn_text').val(),
+                        "phone_number": $('#phn_number').val(),
+                    }
+                }
+            })
+
+            $(document).on('change', '#url_btn_text', function () {
+                nullfield_validation(`url_btn_text`);
+                if (objFlag[`flag_url_btn_text`] == 0) {
+                    urlPayload = {
+                        "type": "URL",
+                        "text": $('#url_btn_text').val(),
+                        "url": $('#url').val(),
+                    }
+                }
+            })
+
+            $(document).on('change', '#url', function () {
+                nullfield_validation(`url`);
+                if (objFlag[`flag_url`] == 0) {
+                    urlPayload = {
+                        "type": "URL",
+                        "text": $('#url_btn_text').val(),
+                        "url": $('#url').val(),
+                    }
+                }
+            })
+            var bodytext = "";
+            $(document).on('click', '#submitforapproval', () => {
+                component = [];
+                if (!$("input[name='MediaCategory']:checked").val()) {
+                    $('#err_document_headermedia').text("Please select a Media category.").addClass('text-danger');
+                }
+                else {
+                    $('#err_document_headermedia').text("").removeClass('text-danger');
+                }
+
+                let validHeader = false, validBody = false, validFooter = false, validButton = false;
+
+                let sampleArr = Object.keys(compare_object);
+
+                for (var i in sampleArr) {
+                    if (sampleArr[i] === "header") {
+                        if (compare_object[`${sampleArr[i]}`] != null) {
+                            switch (selectedHeader) {
+                                case "Text": {
+                                    if (compare_object[`${sampleArr[i]}`].dfield <= 0) {
+                                        nullfield_validation(`Headermsg`);
+                                        if (objFlag[`flag_Headermsg`] == 0) {
+                                            validHeader = true;
+                                        }
+                                        else {
+                                            validHeader = false;
+                                        }
+                                    } else {
+                                        for (var j = 1; j <= compare_object[`${sampleArr[i]}`].dfield; j++) {
+                                            nullfield_validation(`Headerinput1`);
+                                            if (objFlag[`flag_Headerinput1`] == 0) {
+                                                validHeader = true;
+                                            }
+                                            else {
+                                                validHeader = false;
+                                            }
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                case "Media": {
+                                    console.log("selectedMediaCategory : ", selectedMediaCategory)
+                                    switch (selectedMediaCategory) {
+                                        case "IMAGE":
+                                            if (compare_object[`${sampleArr[i]}`].Hmedia != "" || null) {
+                                                nullfield_validation(`image`);
+                                                if (objFlag[`flag_image`] == 0) {
+                                                    validHeader = true;
+                                                } else {
+                                                    validHeader = false;
+                                                }
+                                            }
+                                            break;
+                                        case "DOCUMENT":
+                                            if (compare_object[`${sampleArr[i]}`].Hmedia != "" || null) {
+                                                nullfield_validation(`document`);
+                                                if (objFlag[`flag_document`] == 0) {
+                                                    validHeader = true;
+                                                } else {
+                                                    validHeader = false;
+                                                }
+                                            }
+                                            break;
+                                        default: {
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    validHeader = true;
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            validHeader = true
+                        }
+                    }
+
+                    if (sampleArr[i] === "body") {
+                        if (compare_object[`${sampleArr[i]}`] != null) {
+                            if (compare_object[`${sampleArr[i]}`].bfield <= 0) {
+                                nullfield_validation(`bodymsg`);
+                                if (objFlag[`flag_bodymsg`] != 0) {
+                                    validBody = false;
+                                }
+                                else {
+                                    validBody = true;
+                                }
+                            }
+                            else {
+                                for (var j = 1; j <= compare_object[`${sampleArr[i]}`].bfield; j++) {
+                                    nullfield_validation(`bodyinput${(j)}`);
+                                }
+                                for (var j = 1; j <= compare_object[`${sampleArr[i]}`].bfield; j++) {
+                                    if (objFlag[`flag_bodyinput${(j)}`] == 0) {
+                                        validBody = true;
+                                    } else {
+                                        validBody = false;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            validBody = true
+                        }
+                    }
+
+                    if (sampleArr[i] == "Buttons") {
+                        if (compare_object[`${sampleArr[i]}`].length > 0) {
+
+                            for (let k = 0; k < compare_object[`${sampleArr[i]}`].length; k++) {
+                                if (compare_object[`${sampleArr[i]}`][k].type == "phone") {
+                                    nullfield_validation(`phone_btn_text`);
+                                    nullfield_validation(`phn_number`);
+
+                                    if (objFlag[`flag_phn_number`] == 0 && objFlag[`flag_phone_btn_text`] == 0) {
+                                        validButton = true;
+                                    }
+                                    else {
+                                        validButton = false;
+                                    }
+                                }
+                                if (compare_object[`${sampleArr[i]}`][k].type == "URL") {
+                                    nullfield_validation(`url_btn_text`);
+                                    nullfield_validation(`url`);
+
+                                    if (objFlag[`flag_url`] == 0 && objFlag[`flag_url_btn_text`] == 0) {
+                                        validButton = true;
+                                    }
+                                    else {
+                                        validButton = false;
+                                    }
+                                }
+                            }
+
+                        }
+                        else {
+                            validButton = true
+                        }
+                    }
+                }
+
+                if (validHeader && validBody && validButton) {
+                    for (var i in sampleArr) {
+                        if (sampleArr[i] === "header") {
+                            switch (selectedHeader) {
+                                case "Text": {
+                                    if (compare_object[`${sampleArr[i]}`].dfield <= 0) {
+                                        headerPayload = {
+                                            "type": "HEADER",
+                                            "format": "TEXT",
+                                            "text": $('#Headermsg').val(),
+                                            "example": {
+                                                "header_text": []
+                                            }
+                                        };
+                                        component.push(headerPayload);
+                                    }
+                                    else {
+                                        for (var j = 1; j <= compare_object[`${sampleArr[i]}`].dfield; j++) {
+                                            headerPayload = {
+                                                "type": "HEADER",
+                                                "format": "TEXT",
+                                                "text": $('#Headermsg').val(),
+                                                "example": {
+                                                    "header_text": []
+                                                }
+                                            }
+                                            const regex = /\{\{1\}\}/g;
+                                            const matches = (headerPayload.text.match(regex) || []);
+
+                                            for (let i = 0; i < matches.length; i++) {
+                                                headerPayload.example.header_text.push($('#Headerinput1').val());
+                                                component.push(headerPayload);
+                                            }
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                case "Media": {
+                                    switch (selectedMediaCategory) {
+                                        case "IMAGE":
+                                            if (compare_object[`${sampleArr[i]}`].Hmedia != "" || null) {
+                                                headerPayload = {};
+                                                headerPayload = {
+                                                    "type": "HEADER",
+                                                    "format": "IMAGE",
+                                                    "example": {
+                                                        "header_handle": mediavalue,
+                                                    }
+                                                };
+                                                component.push(headerPayload);
+                                            }
+                                            break;
+                                        case "DOCUMENT":
+                                            if (compare_object[`${sampleArr[i]}`].Hmedia != "" || null) {
+                                                headerPayload = {};
+                                                headerPayload = {
+                                                    "type": "HEADER",
+                                                    "format": "DOCUMENT",
+                                                    "example": {
+                                                        "header_handle": mediavalue,
+                                                    }
+                                                };
+                                                component.push(headerPayload);
+                                            }
+                                            break;
+                                        default: {
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (sampleArr[i] === "body") {
+                            if (compare_object[`${sampleArr[i]}`] != null) {
+                                if (compare_object[`${sampleArr[i]}`].bfield <= 0) {
+                                    bodyPayload = {
+                                        "type": "BODY",
+                                        "text": $("#bodymsg").val().trim(),
+                                        "example": {
+                                            "body_text": [],
+                                        }
+                                    }
+                                    component.push(bodyPayload);
+                                }
+                                else {
+                                    for (var j = 1; j <= compare_object[`${sampleArr[i]}`].bfield; j++) {
+                                        if (objFlag[`flag_bodyinput${(j)}`] == 0) {
+                                            bodyPayload = {
+                                                "type": "BODY",
+                                                "text": $("#bodymsg").val().trim(),
+                                                "example": {
+                                                    "body_text": [[]],
+                                                }
+                                            }
+                                            const regex = /\{\{\d+\}\}/g;
+                                            const matches = (bodyPayload.text.match(regex) || []);
+                                            for (let i = 0; i < matches.length; i++) {
+                                                bodyPayload.example.body_text[0].push($(`#bodyinput${i + 1}`).val());
+                                            }
+                                            component.push(bodyPayload);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (sampleArr[i] == "Buttons") {
+                            buttons = [];
+                            if (compare_object[`${sampleArr[i]}`].length > 0) {
+                                for (let k = 0; k < compare_object[`${sampleArr[i]}`].length; k++) {
+                                    if (compare_object[`${sampleArr[i]}`][k].type == "phone") {
+                                        buttons.push(phonePayload);
+                                    }
+                                    if (compare_object[`${sampleArr[i]}`][k].type == "URL") {
+                                        buttons.push(urlPayload);
+                                    }
+                                    var buttonpayLoad = {
+                                        "type": "BUTTONS",
+                                        "buttons": buttons
+                                    }
+                                }
+                                component.push(buttonpayLoad);
+                            }
+                        }
+
+                    }
+
+                    footerPayload = {
+                        "type": "FOOTER",
+                        "text": $("#footertext").val(),
+                    }
+                    if ($("#footertext").val() != "") {
+                        component.push(footerPayload);
+                    }
+
+                    payload = {
+                        "iid": iid,
+                        "name": $('#document_Name').val(),
+                        "language": $("#selectedlang").val(),
+                        "category": selectedCategory,
+                        "components": component,
+                    };
+
+                    //console.log(payload);
+
+                    $.ajax({
+                        url: "/api/template/createtemplate",
+                        method: "post",
+                        data: payload,
+                        beforeSend: function () {
+                            $("#submitforapproval")
+                                .prop('disabled', true)
+                                .removeClass("btn-primary btn-success")
+                                .addClass("btn-warning")
+                                .html(`<span class= "d-flex align-items-center">
+                                                        <span class="flex-grow-1 me-2">
+                                                            Sending
+                                                        </span>
+                                                        <span class="spinner-border flex-shrink-0" role="status">
+                                                            <span class="visually-hidden"></span>
+                                                        </span>
+                                                    </span>`);
+                        },
+                        success: function (val) {
+                            if (val.success) {
+                                swal({
+                                    title: "Template Created Successfully!!!",
+                                    type: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                }).then(function () {
+                                    $("#submitforapproval")
+                                        .prop('disabled', false)
+                                        .removeClass("btn-warning btn-success")
+                                        .addClass("btn-primary")
+                                        .html(`<i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                                    <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                        submit for approval
+                                                    </span>`);
+                                    $('#v-pills-bill-info-tab').addClass('active').attr('aria-selected', 'true');
+                                    $('#v-pills-bill-info').addClass('show active');
+
+                                    $('#v-pills-bill-address-tab').removeClass('active').attr('aria-selected', 'false');
+                                    $('#v-pills-bill-address').removeClass('show active');
+
+                                    $('#document_Name').val("");
+                                    $("#selectedlang").val("");
+                                    $('#Headermsg').val("");
+                                    $('#Headerinput1').val("");
+
+                                    mediavalue = "";
+                                    $('#image').val("");
+                                    $('#document').val("");
+                                    $('#bodymsg').text("");
+                                    $("#footertext").val("");
+
+                                    $('#phone_btn_text').val("");
+                                    $('#phn_number').val("");
+                                    $('#url_btn_text').val("");
+                                    $('#url').val("");
+
+                                    if (document.referrer.split("/")[3] === "iuser") {
+                                        location.href = `/iuser/${iid}/template`;
+                                    }
+                                    location.href = `/instance/${iid}/template`;
+                                });
+                            }
+                        },
+                        error: (error) => {
+                            if (error.status == "406") {
+                                swal({
+                                    title: "Template not accepted!!!",
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                }).then(function () {
+                                    $('#v-pills-bill-info-tab').addClass('active').attr('aria-selected', 'true');
+                                    $('#v-pills-bill-info').addClass('show active');
+
+                                    $('#v-pills-bill-address-tab').removeClass('active').attr('aria-selected', 'false');
+                                    $('#v-pills-bill-address').removeClass('show active');
+                                });
+                            }
+                            if (error.status == "500") { internalservererror(); }
+
+                            $("#submitforapproval")
+                                .prop('disabled', false)
+                                .removeClass("btn-warning btn-success")
+                                .addClass("btn-primary")
+                                .html(`<i class="mdi mdi-send me-lg-2 me-md-2"></i>
+                                                    <span class="d-none d-lg-inline-block d-md-inline-block">
+                                                        submit for approval
+                                                    </span>`);
+                        }
+                    })
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

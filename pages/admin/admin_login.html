@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Sign In | Admin | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="/assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<style>
+    .logo-bg {
+        background-color: #f3f3f9;
+    }
+</style>
+
+<body>
+    <div class="auth-page-wrapper d-flex align-items-center min-vh-100 logo-bg">
+        <canvas class="bg-overlay opacity-100"></canvas>
+        <div class="container">
+            <div class="row mx-5">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="p-lg-5 auth-one-bg h-100 d-flex align-items-center justify-content-center">
+                                    <div class="bg-overlay" id="auth-particles"></div>
+
+                                    <div class="text-center mt-sm-2 text-white-50">
+                                        <a class="d-inline-block auth-logo">
+                                            <img class="d-none d-md-block d-lg-block" src="/assets/images/logo-dark.svg"
+                                                alt="" height="150">
+                                            <img class="d-block d-md-none d-lg-none" src="/assets/images/logo-sm.svg"
+                                                alt="" height="150">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="p-lg-5 p-4">
+                                    <div class="text-center">
+                                        <h4 class="text-primary">
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                            Are You Admin ?
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                            <i class="ri-star-s-fill align-middle text-warning"></i>
+                                        </h4>
+                                        <!-- <h6 class="text-muted">Then Prove it</h6> -->
+                                    </div>
+                                    <div class="signin-other-title text-center">
+                                        <h5 class="fs-13 title">Then Prove it</h5>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">
+                                            Email
+                                            <span class="text-danger">*</span>
+                                            <span class="text-danger" id="err_email"></span>
+                                        </label>
+                                        <input type="email" class="form-control required" name="email" id="email"
+                                            placeholder="Enter email address" data-type="email" autocomplete="off" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="password" class="form-label">
+                                            Password
+                                            <span class="text-danger">*</span>
+                                            <span class="text-danger" id="err_password"></span>
+                                        </label>
+                                        <div class="position-relative auth-pass-inputgroup">
+                                            <input type="password"
+                                                class="form-control pe-5 required password-input-hide-show"
+                                                name="password" placeholder="Enter password" id="password"
+                                                data-type="password" />
+                                            <button
+                                                class="btn btn-link position-absolute end-0 top-0
+                                                                                                         text-decoration-none text-muted password-addon"
+                                                type="button" id="password-addon">
+                                                <i class="ri-eye-fill align-middle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <input type="button" class="btn btn-primary w-100" id="signin"
+                                            value="Sign In" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- JAVASCRIPT -->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/validate.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="/assets/libs/node-waves/waves.min.js"></script>
+<script src="/assets/libs/feather-icons/feather.min.js"></script>
+<script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+<!-- particles js -->
+<script src="/assets/libs/particles.js/particles.js"></script>
+<!-- particles app js -->
+<script src="/assets/js/pages/particles.app.js"></script>
+<!-- password create init -->
+<script src="/assets/js/pages/passowrd-create.init.js"></script>
+
+<script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+<script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+<script>
+    $(document).ready(() => {
+        $('#email').focus();
+        const START_COLOR = '#405189';
+        const END_COLOR = '#299cdb';
+        const WAVES = [
+            {
+                offset: .25,
+                speed: .3,
+                width: 500,
+                height: 50
+            },
+            {
+                offset: .5,
+                speed: -.4,
+                width: 500,
+                height: 50
+            },
+            {
+                offset: .75,
+                speed: .5,
+                width: 500,
+                height: 50
+            }
+        ];
+
+        const $canvas = document.querySelector('canvas');
+        const ctx = $canvas.getContext('2d');
+
+        function resize() {
+            $canvas.width = innerWidth;
+            $canvas.height = innerHeight;
+            update(false);
+        }
+        addEventListener('resize', resize);
+        resize();
+
+        async function update(loop = true) {
+
+            // background
+
+            let grad = ctx.createLinearGradient(
+                0, 0,
+                0, innerHeight
+            );
+            grad.addColorStop(0, START_COLOR);
+            grad.addColorStop(1, END_COLOR);
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, innerWidth, innerHeight);
+
+            // waves
+
+            for (let { offset, speed, width, height } of WAVES) {
+
+                // draw
+
+                ctx.beginPath();
+
+                let y = innerHeight * offset;
+
+                ctx.moveTo(0, y);
+
+                for (let x = 0; x <= innerWidth; x++) {
+                    ctx.lineTo(x, Math.sin(
+                        (x - Date.now() * speed) * Math.PI /
+                        (2 * width)
+                    ) * height + y);
+                }
+
+                ctx.lineTo(innerWidth, innerHeight);
+                ctx.lineTo(0, innerHeight);
+
+                // gradient
+
+                let grad = ctx.createLinearGradient(0, y - height, 0, innerHeight);
+                grad.addColorStop(0, START_COLOR);
+                grad.addColorStop(1, END_COLOR);
+                ctx.fillStyle = grad;
+                ctx.fill();
+
+            }
+
+            if (loop) requestAnimationFrame(update);
+        }
+        update();
+
+
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+
+        $(".required").on('focusout', function () {
+            onfocusout_validation($(this).attr('id'));
+        });
+
+        $(".required").on('input', function () {
+            nullfield_validation($(this).attr('id'));
+        });
+
+        focusEvent('email', 'password');
+        enterKeyEvent('password', 'signin');
+
+        $(document).on('click', '#signin', function () {
+            nullfield_validation('email');
+            nullfield_validation('password');
+            if (objFlag.flag_email == 0 && objFlag.flag_password == 0) {
+                $.ajax({
+                    url: "/api/auth/adminlogin",
+                    method: "POST",
+                    data: {
+                        "email": btoa(email.value.trim()),
+                        "password": btoa(password.value.trim()),
+                    },
+                    beforeSend: () => {
+                        $("#signin")
+                            .prop('disabled', true)
+                            .removeClass("btn-primary btn-success")
+                            .addClass("btn-warning")
+                            .html(`<span class="d-flex align-items-center justify-content-center">
+                                        <span class="me-2">
+                                            Authenticating
+                                        </span>
+                                        <span class="spinner-border flex-shrink-0" role="status">
+                                            <span class="visually-hidden"></span>
+                                        </span>
+                                    </span>`);
+                    },
+                    success: function (result) {
+                        if (result.success) {
+                            location.href = "/adminDashboard";
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 400) {
+                            if (!error.success) {
+                                swal({
+                                    title: "Error in signin",
+                                    text: error.responseJSON.error.detail,
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                })
+                            }
+                        }
+                        if (error.status === 401) {
+                            if (!error.success) {
+                                console.log()
+                                swal({
+                                    title: "Error in signin",
+                                    text: `Check your credential for signin`,
+                                    type: "error",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                })
+                            }
+                        }
+                        $("#signin")
+                            .prop('disabled', false)
+                            .removeClass("btn-primary btn-warning btn-success")
+                            .addClass("btn-primary")
+                            .html(`Sign In`);
+                    }
+                })
+            }
+        })
+    })
+</script>
+
+</html>

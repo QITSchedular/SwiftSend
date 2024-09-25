@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+<!-- Mirrored from themesbrand.com/velzon/html/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Jan 2023 09:39:26 GMT -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>User Credential | Admin | SwiftSend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class="bx bx-fullscreen fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class="bx bx-moon fs-22"></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button" id="logout"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle">
+                                <i class="mdi mdi-logout fs-22"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="60">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu"></div>
+                    <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card" style="height: calc(100vh - 180px);">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">
+                                        Credential
+                                    </h4>
+                                    <div class="d-flex justify-content-end gap-2">
+                                        <div class="search-box">
+                                            <input type="text" class="form-control" id="searchInstance"
+                                                placeholder="Search credential Data ..." />
+                                            <i class="bx bx-search-alt-2 align-middle fs-4 search-icon"></i>
+                                        </div>
+                                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#transferModal">
+                                            <span>
+                                                <i class="mdi mdi-plus align-bottom me-1"></i>
+                                                Add
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body h-100">
+                                    <div class="table-responsive table-card mb-1 scrollbar-custom"
+                                        id="table-fixed-header" data-simplebar data-simplebar-auto-hide="false"
+                                        style="max-height: calc(100vh - 260px)">
+                                        <table class="table align-middle table-nowrap mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>User Name</th>
+                                                    <th>Instance</th>
+                                                    <th>Phone</th>
+                                                    <th>WABA ID</th>
+                                                    <th>Phone ID</th>
+                                                    <th>APP ID</th>
+                                                    <th class="text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="list form-check-all" id="UserCredTable"></tbody>
+                                        </table>
+                                        <div class="noresult d-none py-5">
+                                            <div class="text-center">
+                                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                                    colors="primary:#212529,secondary:#405189"
+                                                    style="width: 75px; height: 75px">
+                                                </lord-icon>
+                                                <h5 class="mt-2">No Instance Found</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-light p-3">
+                                    <h5 class="modal-title" id="modallbl">Add user credential</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-addusercred-modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="userlist" class="form-label">
+                                                User
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_userlist"></span>
+                                            </label>
+                                            <select class="form-select" id="userlist"></select>
+                                        </div>
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="userlist" class="form-label">
+                                                Instance
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_instancelist"></span>
+                                            </label>
+                                            <select class="form-select" id="instancelist">
+                                                <option value="" selected disabled>Select Instance</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="phone" class="form-label">
+                                                Phone Number
+                                                <span class="text-danger" id="err_phone"></span>
+                                            </label>
+                                            <input type="text" class="form-control required" id="phone"
+                                                data-type="number" disabled readonly />
+                                        </div>
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="wabaid" class="form-label">
+                                                WABA ID
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_wabaid"></span>
+                                            </label>
+                                            <input type="number" class="form-control required" id="wabaid"
+                                                data-type="number" />
+                                        </div>
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="phoneid" class="form-label">
+                                                Phone ID
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_phoneid"></span>
+                                            </label>
+                                            <input type="number" class="form-control required" id="phoneid"
+                                                data-type="number" />
+                                        </div>
+                                        <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
+                                            <label for="appid" class="form-label">
+                                                App ID
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_appid"></span>
+                                            </label>
+                                            <input type="number" class="form-control required" id="appid"
+                                                data-type="number" />
+                                        </div>
+                                        <div class="mb-3 col-12">
+                                            <label for="tkn" class="form-label">
+                                                Token
+                                                <span class="text-danger">*</span>
+                                                <span class="text-danger" id="err_tkn"></span>
+                                            </label>
+                                            <textarea class="form-control scrollbar-custom" id="tkn" rows="5"
+                                                style="resize: none;"></textarea>
+                                        </div>
+                                        <div id="err_wabacred"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="hstack gap-2 justify-content-end">
+                                        <button class="btn btn-primary" id="addCred">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="tokenshowModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-light p-3">
+                                    <h5 class="modal-title" id="modallbl">Token</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-transferModal-modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label id="permtoken" class="text-muted fs-16"
+                                        style="word-break: break-all; font-family: monospace;">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer"></footer>
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/admin.js"></script>
+    <script src="/assets/js/validate.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <script src="/assets/libs/gridjs/gridjs.umd.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            let UserCredDataList = [], UserInstanceDataList = [], issubinstance = true;
+
+            function getTransferData() {
+                $.ajax({
+                    url: `/api/admin/gettransferdata`,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("#userlist").html(`<div class="spinner-border text-primary" role="status">
+                                                <span class="sr-only">Loading...</span>
+                                            </div>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            let output = ``;
+
+                            output += `<option value="" selected disabled>Select User</option>`;
+                            Object.keys(val.data).forEach(apikey => {
+                                output += `<option value="${apikey}">${val.data[apikey][0].uname} - ${apikey}</option>`;
+                            });
+                            UserInstanceDataList = val.data;
+                            $('#userlist').html(output);
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    }
+                });
+            }
+            getTransferData();
+
+            $(document).on('change', '#userlist', function () {
+                let apikey = $(this).val();
+
+                let output = `<option value="" selected disabled>Select Instance</option>`;
+                for (var i in UserInstanceDataList[apikey]) {
+                    output += `<option value="${UserInstanceDataList[apikey][i].instance_id}">${UserInstanceDataList[apikey][i].i_name}</option>`;
+                }
+                $('#instancelist').html(output);
+            })
+
+            $(document).on('change', '#instancelist', function () {
+                const apikey = $('#userlist').val();
+                const instanceid = $(this).val();
+
+                const index = UserInstanceDataList[apikey].findIndex(instance => instance.instance_id === instanceid);
+
+                if (index !== -1) {
+                    $('#phone').val(UserInstanceDataList[apikey][index].phone);
+                }
+            })
+
+            $(document).on("click", "#addCred", function () {
+                nullfield_validation('userlist');
+                nullfield_validation('instancelist');
+                nullfield_validation('wabaid');
+                nullfield_validation('phoneid');
+                nullfield_validation('phone');
+                nullfield_validation('appid');
+                nullfield_validation('tkn');
+
+                if (objFlag.flag_userlist == 0 && objFlag.flag_instancelist == 0 && objFlag.flag_wabaid == 0 && objFlag.flag_phoneid == 0 && objFlag.flag_phone == 0 && objFlag.flag_appid == 0 && objFlag.flag_tkn == 0) {
+                    $.ajax({
+                        url: `/api/admin/addwabacred`,
+                        method: "POST",
+                        data: {
+                            "userlist": $('#userlist').val().trim(),
+                            "instancelist": $('#instancelist').val().trim(),
+                            "wabaid": $('#wabaid').val().trim(),
+                            "phone": $('#phone').val().trim(),
+                            "phoneid": $('#phoneid').val().trim(),
+                            "appid": $('#appid').val().trim(),
+                            "token": $('#tkn').val().trim(),
+                        },
+                        success: function (val) {
+                            if (val.success) {
+                                $('#close-addusercred-modal').click();
+                                swal({
+                                    title: "Credential Added.",
+                                    type: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                }).then(function () {
+                                    GETUserCredAdminAPI();
+                                    $('#instancelist, #userlist, #wabaid, #phoneid, #appid, #tkn').val("").removeClass('form-control-danger form-control-success')
+                                });
+
+                            }
+                        },
+                        error: (error) => {
+                            if (error.status === 500) InternalServerError();
+                            if (error.status === 401) InvalidUser();
+                            if (error.status === 406) {
+                                $('#err_wabacred').html(`<div class="alert alert-danger mb-0" role="alert">
+                                        Check all the details properly
+                                    </div>`);
+                            }
+                            if (error.status === 409) {
+                                $('#err_wabacred').html(`<div class="alert alert-danger mb-0" role="alert">
+                                        You have already addes the credential for : <strong class="text-success">${$('#phone').val().trim()}</strong>
+                                    </div>`);
+                            }
+                        }
+                    });
+                }
+            })
+
+            function UserCredDataDisplay(val) {
+                if (val.length > 0) {
+
+                    let data = ``;
+                    $('#UserCredTable, .noresult').addClass('d-none');
+                    $('#UserCredTable').removeClass('d-none');
+                    for (var i in val) {
+                        data += `<tr>
+                                    <td class="w-15 text-truncate fw-semibold text-primary" style="max-width: 20px;">${val[i].uname}</td>
+                                    <td class="w-10 text-truncate fw-semibold">
+                                        ${val[i].i_name}
+                                        <i class="ri-star-s-fill align-middle text-warning ${val[i].isRoot ? '' : 'd-none'}"></i>
+                                    </td>
+                                    <td class="w-15 fw-semibold" style="font-family: monospace;">
+                                        ${val[i].phoneNumber ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
+                                        ${val[i].phoneNumber}` : `-`}
+                                    </td>
+                                    <td class="w-15" style="font-family: monospace;">
+                                        ${val[i].wabaID}
+                                    </td>
+                                    <td class="w-15" style="font-family: monospace;">
+                                        ${val[i].phoneID}
+                                    </td>
+                                    <td class="w-15" style="font-family: monospace;">
+                                        ${val[i].appID}
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-soft-success fs-12 viewToken me-1" data-token="${val[i].permanentToken}" data-bs-toggle="modal" data-bs-target="#tokenshowModal">
+                                            <i class="mdi mdi-eye align-middle me-1"></i>
+                                            Token
+                                        </button>
+                                        <button class="btn btn-sm btn-soft-danger fs-12 deleteCredRecord ms-1" data-id="${val[i].id}">
+                                            <i class="mdi mdi-delete align-middle"></i>
+                                        </button>
+                                    </td>
+                                </tr>`;
+                    }
+                    $("#UserCredTable").html(data);
+                }
+                else {
+                    $('#UserCredTable, .noresult').addClass('d-none');
+                    $('.noresult').removeClass('d-none');
+                }
+            }
+
+            function GETUserCredAdminAPI() {
+                $.ajax({
+                    url: `/api/admin/getallusercred`,
+                    method: "GET",
+                    beforeSend: () => {
+                        $("#UserCredTable").html(`<tr class="">
+                                                <td class="text-center py-5" colspan="5">
+                                                    <div class="spinner-border text-primary" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </td>
+                                            </tr>`);
+                    },
+                    success: function (val) {
+                        if (val.success) {
+                            UserCredDataDisplay(val.data);
+                            UserCredDataList = val.data;
+                        }
+                    },
+                    error: (error) => {
+                        if (error.status === 500) InternalServerError();
+                        if (error.status === 401) InvalidUser();
+                    }
+                });
+            };
+            GETUserCredAdminAPI();
+
+            $(document).on('click', '.viewToken', function () {
+                const token = $(this).attr('data-token');
+                $('#permtoken').html(token);
+            })
+
+            $(document).on('click', '.deleteCredRecord', function () {
+                const id = $(this).attr('data-id');
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to access this anymore..!!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it',
+                    cancelButtonText: 'No, cancel',
+                    confirmButtonClass: 'btn btn-success mx-2',
+                    cancelButtonClass: 'btn btn-outline-danger mx-2',
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        $.ajax({
+                            url: `/api/admin/deletecredrecord/${id}`,
+                            method: "DELETE",
+                            success: function (val) {
+                                if (val.success) {
+                                    swal({
+                                        title: "Credential Removed.",
+                                        type: "success",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    }).then(function () {
+                                        GETUserCredAdminAPI();
+                                    });
+                                }
+                            }, error: (error) => {
+                                if (error.status === 500) InternalServerError();
+                                if (error.status === 404) {
+                                    swal({
+                                        title: "Invalid Data",
+                                        text: "User Not Found, check Apikey",
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    });
+                                }
+                            }
+                        });
+                    }
+                })
+            })
+
+            $(document).on("input", "#searchInstance", function () {
+
+                let val = $('#searchInstance').val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return UserCredDataList.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(val);
+
+                if (val == null || val == "") {
+                    UserCredDataDisplay(UserCredDataList)
+                }
+                else {
+                    UserCredDataDisplay(Searchresult)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

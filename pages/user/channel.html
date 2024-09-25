@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Channels | SwiftSends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Bulk message services" name="description" />
+    <meta content="Gajjar Harsh" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- jsvectormap css -->
+    <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="/assets/libs/aos/aos.css" />
+    <!-- Layout config Js -->
+    <script src="/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="p-0">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="60">
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="/assets/images/logo-sm.svg" alt="" height="60">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button"
+                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
+                            id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown d-md-none topbar-head-dropdown header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="bx bx-search fs-22"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="mdi mdi-magnify"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
+                                data-toggle="fullscreen">
+                                <i class='bx bx-fullscreen fs-22'></i>
+                            </button>
+                        </div>
+
+                        <div class="ms-1 header-item">
+                            <button type="button"
+                                class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                                <i class='bx bx-moon fs-22'></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown ms-sm-3 header-item topbar-user">
+                            <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="d-flex align-items-center">
+                                    <div class="profileimg"></div>
+                                    <span class="text-start ms-xl-2">
+                                        <span
+                                            class="d-none d-xl-inline-block ms-1 fw-medium user-name-text profilename"></span>
+                                        <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">
+                                            User
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <h6 class="dropdown-header">Welcome <span class="profilename"></span></h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="logout">
+                                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+                                    <span class="align-middle" data-key="t-logout">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/assets/images/logo-sm.svg" alt="" height="60" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/assets/images/logo-dark.svg" alt="" height="100" width="200" />
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+                    id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div id="scrollbar">
+                    <div class="container-fluid">
+                        <div id="two-column-menu"></div>
+                        <ul class="navbar-nav" id="navbar-nav" data-aos="fade-right" data-aos-duration="1000"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <!--  <div class="vertical-overlay"></div>-->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <div class="page-title">
+                            <ol class="breadcrumb m-0" id="api_path">
+                                <li class="breadcrumb-item">
+                                    <span>Instance</span>
+                                </li>
+                                <li class="breadcrumb-item" id="i_name"></li>
+                                <li class="breadcrumb-item active">Channels</li>
+                            </ol>
+                        </div>
+                        <div class="hstack flex-wrap gap-2">
+                            <div class="fw-semibold fs-14 d-flex align-items-center gap-2 text-muted"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Message Limit : </span>
+                                <span>
+                                    [<span class="text-primary" id="daily-limit-count">-</span>/1000]
+                                </span>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end mt-3 p-0">
+                                <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
+                                    <div class="text-center">
+                                        <h6 class="m-0 fs-16 fw-semibold">Today's Messages</h6>
+                                    </div>
+                                </div>
+                                <div class="p-2" id="daily-limit-graph">
+                                    <div class="p-5 text-muted fw-semibold">
+                                        No message sent today !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="search-box col-4">
+                            <input type="text" class="form-control" id="searchChannel"
+                                placeholder="Search Channel..." />
+                            <i class="bx bx-search-alt-2 align-middle fs-4 search-icon ms-3"></i>
+                        </div>
+                        <div class="d-flex justify-content-end col-8">
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createchannelmodal"
+                                id="addchannelmodalbtn">
+                                <i class="ri-add-circle-line align-middle me-1"></i>
+                                Add Channel
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="createchannelmodal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-soft-info p-3">
+                                    <h5 class="modal-title">Create Channel</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="create_channel_close_btn"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="channel_name" class="form-label">
+                                        Channel Name
+                                        <span class="text-danger">*</span>
+                                        <span class="text-danger" id="err_channel_name"></span>
+                                    </label>
+                                    <input type="text" class="form-control required" id="channel_name"
+                                        placeholder="Enter channel name" data-type="name" autofocus />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="createChannel">
+                                        Create
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="channelData"></div>
+
+                    <div class="modal fade" id="addcontactmodal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-soft-info p-3">
+                                    <h5 class="modal-title">
+                                        Add Contact to <span class="channel_name text-primary"></span>
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-modal-add"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row mb-2 px-1" id="search-and-addbtn-box">
+                                        <div class="col-auto px-0">
+                                            <button type="button" class="btn btn-info custom-toggle"
+                                                data-bs-toggle="button" id="selectall-toggle-btn">
+                                                <span class="icon-on" id="all">
+                                                    <i class="ri-checkbox-fill align-bottom me-1"></i>
+                                                    Select All
+                                                </span>
+                                                <span class="icon-off" id="none">
+                                                    <i class="ri-checkbox-blank-line align-bottom me-1"></i>
+                                                    Diselect All
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="col px-2">
+                                            <div>
+                                                <input type="search" class="form-control searchaddcontact"
+                                                    placeholder="Search contacts" />
+                                            </div>
+                                        </div>
+                                        <div class="col-auto px-0">
+                                            <button class="btn btn-primary" id="addcontact" data-id="">
+                                                <i class="bx bx-user-plus align-middle fs-4"></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div data-simplebar data-simplebar-auto-hide="true" style="max-height: 60vh;"
+                                        class="mx-n3">
+                                        <ul class="list list-group list-group-flush" id="addcontact-data"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="importcontactmodal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-soft-info p-3">
+                                    <h5 class="modal-title">
+                                        Import Contact to <span class="channel_name text-primary"></span>
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-modal-import"></button>
+                                </div>
+                                <div class="modal-body py-1">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-12">
+                                            <label for="csvfile" class="form-label w-100">
+                                                Select CSV File
+                                                <span class="text-danger">*</span>
+                                                <i class="ri-information-line align-middle fs-18 text-info"
+                                                    for="csvfiles" data-bs-placement="right" data-bs-toggle="tooltip"
+                                                    data-bs-html="true"
+                                                    title='<div class="d-flex align-items-center px-2"><p class="fs-14 fw-medium mb-0" style="text-align: justify;">Only <span class="text-danger">CSV</span> File Allowed and File must have column name like<span class="text-primary"> name, phone.</span> Only <span class="text-danger">200</span> data will be added.</p></div>'></i>
+                                                <span class="text-danger" id="err_csvfile"></span>
+                                            </label>
+                                            <input type="file" id="csvfile" class="form-control mb-2">
+                                            <div id="import-contact-status" class="mt-3"></div>
+                                        </div>
+                                        <div class="col-lg-8 col-sm-12">
+                                            <div class="row align-items-center">
+                                                <div class="col-lg-6">
+                                                    <label>Contact Data</label>
+                                                </div>
+                                            </div>
+                                            <div class="card my-0" data-simplebar data-simplebar-auto-hide="false"
+                                                style="height: 60vh;">
+                                                <ul class="list list-group list-group-flush" id="tblcsvdata">
+                                                    <h5
+                                                        class="d-flex justify-content-center text-muted text-center p-5">
+                                                        Preview of the data will show here after you select the
+                                                        CSV File
+                                                    </h5>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-primary" id="importcontactbtn" value="Import"
+                                        data-id="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer"></footer>
+        </div>
+    </div>
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status"></div>
+            <span class="sr-only">Loading ...</span>
+        </div>
+    </div>
+
+    <div class="customizer-setting" id="chatbot">
+        <div class="btn-info btn-rounded shadow-lg btn btn-icon btn-lg p-2">
+            <i class="mdi mdi-robot" id="iconchat"></i>
+        </div>
+    </div>
+
+    <div class="email-chat-detail" id="emailchat-detailElem" style="display: none">
+        <div class="card mb-0">
+            <div class="card-header align-items-center d-flex bg-primary text-white-50">
+                <div class="flex-grow-1">
+                    <h5 class="fs-15 text-white mb-1 profile-username">
+                        SwiftSend ChatBot
+                    </h5>
+                    <p class="mb-0 fs-12 lh-1">Ask here for help</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-bots fs-1 text-white"></i>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                <div id="users-chat">
+                    <div class="chat-conversation p-3" id="chat-conversation" data-simplebar style="height: 250px">
+                        <ul class="list-unstyled chat-conversation-list chat-sm" id="conversation"></ul>
+                    </div>
+                </div>
+
+                <div class="border-top border-top-dashed">
+                    <div class="row g-2 mx-3 mt-2 mb-3">
+                        <div class="col">
+                            <div class="position-relative">
+                                <input type="text" class="form-control border-light bg-light message-input"
+                                    placeholder="Enter Message..." id="input" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-info" id="sendbotmsg">
+                                <i class="mdi mdi-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/chatbot.js"></script>
+    <script src="/assets/js/voiceRecognition.js"></script>
+    <script src="/assets/js/validate.js"></script>
+
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- aos js -->
+    <script src="/assets/libs/aos/aos.js"></script>
+    <!-- prismjs plugin -->
+    <script src="/assets/libs/prismjs/prism.js"></script>
+    <!-- animation init -->
+    <script src="/assets/js/pages/animation-aos.init.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
+    <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            chkLogin();
+
+            const iid = document.URL.split("/")[4];
+
+            var channel_List = null, channel_contact_list = {};
+
+            function filterChannelResult(val) {
+                let output = ``;
+                if (val.length > 0 && val.status_code != 404) {
+                    for (let i = 0; i < val.length; i++) {
+                        output += `<div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="card" id="${val[i].channelName}">
+                                        <div class="card-header bg-primary align-middle">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-grow-1">
+                                                    <h4 class="card-title mb-0 d-flex align-items-center text-white" id="abc">
+                                                        ${val[i].channelName}
+                                                    </h4>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <ul class="list-inline card-toolbar-menu d-flex align-items-center mb-0">
+                                                        <li class="list-inline-item">
+                                                            <button class="dropdown-item deleteChannel fs-15" data-id="${val[i].channel_id}">
+                                                                <span class="text-end text-white">
+                                                                    <i class="bx bxs-trash fs-5"></i>
+                                                                </span>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row mb-2 px-1">
+                                                <div class="col px-0">
+                                                    <div>
+                                                        <input type="search" class="searchContactChannel form-control" placeholder="Search in ${val[i].channelName}" data-search-channel-id="${val[i].channel_id}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto px-2">
+                                                    <button class="btn btn-soft-primary addcontact" data-id="${val[i].channel_id}" data-name="${val[i].channelName}" data-bs-toggle="modal" data-bs-target="#addcontactmodal">
+                                                        <i class="bx bx-user-plus align-middle fs-4"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-auto px-0">
+                                                    <button class="btn btn-soft-success importcontact" data-id="${val[i].channel_id}" data-name="${val[i].channelName}" data-bs-toggle="modal" data-bs-target="#importcontactmodal">
+                                                        <i class="bx bxs-file-import align-middle fs-4"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr class="my-1 mx-n3" />
+                                            <div data-simplebar data-simplebar-auto-hide="false" 
+                                                style="height: calc(100vh - 65vh);" class="mx-n3">
+                                                <ul class="list list-group list-group-flush mb-3"
+                                                    id="channel${val[i].channel_id}">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="mb-0 float-end">
+                                                <span class="text-muted">Total Contact :</span>
+                                                <span class="text-primary fw-bold" id="${val[i].channel_id}total"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                }
+                else {
+                    output += `<div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                    <div class="text-center">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                            colors="primary:#212529,secondary:#405189"
+                                            style="width: 75px; height: 75px"></lord-icon>
+                                        <h5 class="mt-2">No Channels Found</h5>
+                                    </div>
+                                </div>`;
+                }
+                $("#channelData").html(output);
+            }
+
+            function filterChannelContactResult(channel_id, val) {
+                let data = ``;
+                if (val.length > 0) {
+                    for (var i in val) {
+                        data += `<li class="list-group-item" data-id="${val[i].contact_id}" data-channel_id = "${channel_id}">
+                                    <div ${val[i].disable == 1 ? `class="d-flex opacity-75"` : 'class="d-flex"'}>
+                                        <div class="flex-shrink-0 d-flex align-items-center">
+                                            <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${val[i].name[0].toUpperCase()}</div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-2">
+                                            <h5 class="fs-13 mb-1 fw-semibold text-primary">
+                                                ${val[i].name}
+                                            </h5>
+                                            <p class="mb-0">
+                                                <img src="/assets/images/w_icon.svg" height="15" width="15" />
+                                                <span classs="fw-semibold text-muted" style="font-family: monospace;">${val[i].phone}</span>
+                                            </p>
+                                        </div>
+                                        <div class="flex-shrink-0 d-flex align-items-center me-2 delete_contact d-none" data-channel_id = "${channel_id}" data-contact_id="${val[i].contact_id}">
+                                            <i class="bx bx-user-minus text-danger fs-3 cursor-pointer"></i>
+                                        </div>
+                                    </div>
+                                </li>`;
+                    }
+                }
+                else {
+                    data += `<div class="noresult pt-5">
+                                <div class="text-center">
+                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                        colors="primary:#212529,secondary:#405189"
+                                        style="width: 75px; height: 75px"></lord-icon>
+                                    <h5 class="mt-2">No Contacts Added</h5>
+                                </div>
+                            </div>`;
+                }
+                $(`#${channel_id}total`).html(val.length);
+                $(`#channel${channel_id}`).html(data);
+            }
+
+            function channelContactDisplay(channel_id) {
+                $.ajax({
+                    url: "/get-channel-contact",
+                    method: "POST",
+                    data: {
+                        "channel_id": channel_id,
+                        "iid": iid
+                    },
+                    success: function (val) {
+                        let data = ``;
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+
+                            case '404': {
+                                channel_contact_list[`${channel_id}`] = [];
+                                filterChannelContactResult(channel_id, []);
+                                break;
+                            }
+                            default: {
+                                channel_contact_list[`${channel_id}`] = val;
+                                filterChannelContactResult(channel_id, val);
+                            }
+                        }
+                    }
+                })
+            }
+
+            function channelDataDisplay(obj) {
+                $.ajax({
+                    url: "/getData",
+                    method: "POST",
+                    data: {
+                        obj: obj
+                    },
+                    beforeSend: function () {
+                        $("#channelData").html(`<div class="d-flex align-items-center justify-content-center h-100 p-5">
+                                                    <div class="spinner-border text-primary" role="status">
+                                                        <span class="sr-only">Loading...</span>
+                                                    </div>
+                                                </div>`);
+                    },
+                    success: function (val) {
+                        var output = "", data = "";
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+
+                            default: {
+                                if (val.status_code == 404) {
+                                    channel_List = [];
+                                }
+                                channel_List = val;
+                                filterChannelResult(val);
+                                for (var i in val) {
+                                    channelContactDisplay(val[i].channel_id)
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            channelDataDisplay({
+                table: "channel",
+                paramstr: `instance_id = '${iid}'`,
+            });
+
+            enterKeyEvent('channel_name', 'createChannel');
+
+            $(".required").on('focusout', function () {
+                onfocusout_validation($(this).attr('id'));
+            });
+
+            $(".required").on('input', function () {
+                oninput_validation($(this).attr('id'));
+            });
+
+            $(document).on('mouseenter', '.list-group-item', function () {
+                const contact_id = $(this).attr('data-id');
+                const data_channel_id = $(this).attr('data-channel_id');
+                $(`.delete_contact[data-contact_id='${contact_id}'][data-channel_id='${data_channel_id}']`).toggleClass('d-none');
+            }).on('mouseleave', '.list-group-item', function () {
+                const contact_id = $(this).attr('data-id');
+                const data_channel_id = $(this).attr('data-channel_id');
+                $(`.delete_contact[data-contact_id='${contact_id}'][data-channel_id='${data_channel_id}']`).toggleClass('d-none');
+            });
+
+            let checksamename = false;
+            $(document).on('input', "#channel_name", function () {
+                $('#err_channel_name').html('').removeClass('form-control-danger form-control-success');
+                if (channel_List.length > 0 && channel_List.map(x => x.channelName.toLowerCase()).includes($(this).val().toLowerCase())) {
+                    checksamename = false;
+                    $('#err_channel_name').html('Channel Already exist');
+                    $('#channel_name, #err_channel_name').addClass('form-control-danger');
+                }
+                else {
+                    checksamename = true;
+                }
+            });
+
+
+            $(document).on("click", '#createChannel', function () {
+                nullfield_validation('channel_name');
+                if (objFlag.flag_channel_name == 0) {
+                    oninput_validation('channel_name');
+                    if (objFlag.flag_channel_name == 0 && checksamename) {
+                        $.ajax({
+                            url: "/createchannel",
+                            method: "POST",
+                            data: {
+                                "name": $('#channel_name').val().trim(),
+                                "iid": iid
+                            },
+                            success: function (val) {
+                                switch (val.status_code) {
+                                    case '401': {
+                                        InvalidUser();
+                                        break;
+                                    }
+
+                                    case '500': {
+                                        InternalServerError();
+                                        break;
+                                    }
+
+                                    case '201': {
+                                        $('#create_channel_close_btn').click();
+                                        swal({
+                                            title: "Channel created successfully",
+                                            type: "success",
+                                            timer: 2000,
+                                            showConfirmButton: false,
+                                        }).then(function () {
+                                            $('#channel_name').val('');
+                                            $('.required').removeClass('form-control-danger form-control-success');
+
+                                            channelDataDisplay({
+                                                table: "channel",
+                                                paramstr: `instance_id = '${iid}'`,
+                                            });
+                                        });
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    else {
+                        $('#err_channel_name').html('Channel Already exist');
+                        $('#channel_name, #err_channel_name').addClass('form-control-danger');
+                    }
+                }
+            });
+
+            $(document).on('click', '.editcontact', function () {
+                const channel_id = $(this).attr('data-id');
+                $(`.delete_contact[data-channel_id='${channel_id}']`).toggleClass('d-none');
+            });
+
+
+            function displayContactintoaddmodal(exclist) {
+                let data = ``;
+                if (remainingcontactlist.length === 0) {
+                    $('#search-and-addbtn-box').addClass('d-none');
+                    data += `
+                                    <div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#212529,secondary:#405189" style="width: 105px; height: 105px"></lord-icon>
+                                                <h5 class="mt-2">All Contacts added</h5>
+                                                </div>  
+                                        </div>`;
+                }
+                else {
+                    $('#search-and-addbtn-box').removeClass('d-none');
+                    for (var i in exclist) {
+                        if (i % 2 == 0) {
+                            data += `<li class="list-group-item p-2 d-flex">`;
+                        }
+                        data += `<label class="d-flex align-items-center gap-2 w-50" for="check${exclist[i].contact_id}">
+                                    <div class="form-check align-middle">
+                                        <input class="form-check-input" type="checkbox" name="contacts"
+                                            value="${exclist[i].contact_id}" id="check${exclist[i].contact_id}">
+                                    </div>
+                                    <div class="flex-shrink-0 d-flex align-items-center">
+                                        <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${exclist[i].name[0].toUpperCase()}</div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-13 mb-1 text-truncate w-100" style="max-width: 80%">
+                                            ${exclist[i].name}
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            ${exclist[i].phone}
+                                        </p>
+                                    </div>
+                                </label>`;
+                        if (i % 2 == 1) {
+                            data += `</li>`;
+                        }
+                    }
+                }
+                $('#addcontact-data').html(data);
+            }
+
+            let existcontact = [], contactlist = [], remainingcontactlist = [];
+
+            function getContactList() {
+                $.ajax({
+                    url: "/getData",
+                    method: "POST",
+                    data: {
+                        obj: {
+                            table: "contact",
+                            paramstr: `instance_id = '${iid}'`,
+                        }
+                    },
+                    success: function (val) {
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+
+                            case '404': {
+                                contactlist = [];
+                                break;
+                            }
+
+                            default: {
+                                contactlist = val;
+                            }
+                        }
+                    }
+                })
+            }
+            getContactList();
+
+            $(document).on('click', '.addcontact', function () {
+                existcontact = [], remainingcontactlist = [];
+
+                const channel_id = $(this).attr('data-id');
+
+                $('.channel_name').html($(this).attr('data-name'));
+                $('#addcontact').attr('data-id', channel_id);
+                $('#selectall-toggle-btn').removeClass('active');
+
+                $.ajax({
+                    url: "/get-channel-contact",
+                    method: "POST",
+                    data: {
+                        "channel_id": channel_id,
+                        "iid": iid
+                    },
+                    success: function (val) {
+                        switch (val.status_code) {
+                            case '401': {
+                                InvalidUser();
+                                break;
+                            }
+
+                            case '500': {
+                                InternalServerError();
+                                break;
+                            }
+                            case '404': {
+                                existcontact = [];
+                                break;
+                            }
+
+                            default: {
+                                for (var i in val) {
+                                    existcontact.push(val[i]);
+                                }
+                            }
+                        }
+                        let data = '', flag;
+                        if (contactlist.length <= 0) {
+                            $('#search-and-addbtn-box').addClass('d-none');
+                            data += `<div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                <div class="text-center">
+                                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
+                                        colors="primary:#212529,secondary:#405189"
+                                        style="width: 75px; height: 75px"></lord-icon>
+                                    <h5 class="mt-2">No Contacts Found</h5>
+                                    <a type="button" class="btn btn-soft-primary mt-2" href="/instance/${iid}/contact-list">
+                                        <i class="ri-add-circle-line align-middle me-1"></i>
+                                        Add contact
+                                    </a>
+                                </div>
+                            </div>`;
+                        }
+                        else {
+                            if (contactlist.length === existcontact.length) {
+                                $('#search-and-addbtn-box').addClass('d-none');
+                                data += `
+                                    <div class="noresult p-5 container d-flex align-items-center justify-content-center">
+                                            <div class="text-center">
+                                                <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#212529,secondary:#405189" style="width: 105px; height: 105px"></lord-icon>
+                                                <h5 class="mt-2">All Contacts added</h5>
+                                                </div>  
+                                        </div>`;
+                            }
+                            else {
+                                $('#search-and-addbtn-box').removeClass('d-none');
+                                var x = 0;
+                                for (var i in contactlist) {
+                                    for (var j in existcontact) {
+                                        if (contactlist[i].contact_id == existcontact[j].contact_id) {
+                                            flag = true;
+                                            break;
+                                        }
+                                        else {
+                                            flag = false;
+                                        }
+                                    }
+                                    if (flag) {
+                                        continue;
+                                    }
+                                    else {
+                                        remainingcontactlist.push(contactlist[i]);
+                                        if (x % 2 == 0) {
+                                            data += `<li class="list-group-item p-2 d-flex">`;
+                                        }
+                                        data += `<label class="d-flex align-items-center gap-2 w-50" for="check${contactlist[i].contact_id}">
+                                                    <div class="form-check align-middle">
+                                                        <input class="form-check-input" type="checkbox" name="contacts"
+                                                            value="${contactlist[i].contact_id}" id="check${contactlist[i].contact_id}">
+                                                    </div>
+                                                    <div class="flex-shrink-0 d-flex align-items-center">
+                                                        <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${contactlist[i].name[0].toUpperCase()}</div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="fs-13 mb-1 text-truncate w-100" style="max-width: 80%">
+                                                            ${contactlist[i].name}
+                                                        </h5>
+                                                        <p class="text-muted mb-0">
+                                                            ${contactlist[i].phone}
+                                                        </p>
+                                                    </div>
+                                                </label>`;
+                                        if (x % 2 == 1) {
+                                            data += `</li>`;
+                                        }
+                                    }
+                                    x++;
+                                }
+                            }
+                        }
+                        $('#addcontact-data').html(data);
+                    }
+                })
+            })
+
+            $(document).on('click', '.importcontact', function () {
+                existcontact = [], remainingcontactlist = [];
+                $('.channel_name').html($(this).attr('data-name'));
+                const channel_id = $(this).attr('data-id');
+                $('#importcontactbtn').attr('data-id', channel_id);
+                $('#csvfile').removeClass('form-control-success form-control-danger').val(null);
+                $('#import-contact-status').html(``);
+                $('#tblcsvdata').html(`<h5 class="d-flex justify-content-center text-muted text-center p-5">
+                                            Preview of the data will show here after you select the
+                                            CSV File
+                                        </h5>`);
+            });
+
+            let excont = [], newcont = [];
+            $(document).on('change', "#csvfile", function (e) {
+                excont = [], newcont = []
+                $('#csvfile').removeClass('form-control-success form-control-danger');
+                $('#err_csvfile').html('');
+                const filedata = document.getElementById("csvfile").files[0];
+
+                if (filedata && filedata.type == 'text/csv') {
+                    $('#csvfile').addClass('form-control-success');
+
+                    let formdata = new FormData();
+                    formdata.append("csvfile", filedata);
+
+                    if (filedata) {
+                        Papa.parse(filedata, {
+                            header: true,
+                            dynamicTyping: true,
+                            complete: function (results) {
+                                const colnames = results.meta.fields;
+
+                                let allRequiredColumnsIncluded = ["name", "phone"].every(reqCol =>
+                                    colnames.some(col => col.toLowerCase() === reqCol)
+                                );
+
+                                if (allRequiredColumnsIncluded) {
+                                    let matchingColumn = colnames.find(c => c.toLowerCase() === "phone");
+                                    results.data.pop();
+
+                                    const channel_id = $('#importcontactbtn').attr('data-id');
+
+                                    $.ajax({
+                                        url: "/get-channel-contact",
+                                        method: "POST",
+                                        data: {
+                                            "channel_id": channel_id,
+                                            "iid": iid
+                                        },
+                                        success: function (val) {
+                                            switch (val.status_code) {
+                                                case '401': {
+                                                    InvalidUser();
+                                                    break;
+                                                }
+
+                                                case '500': {
+                                                    InternalServerError();
+                                                    break;
+                                                }
+                                                case '404': {
+                                                    existcontact = [];
+                                                    break;
+                                                }
+
+                                                default: {
+                                                    for (var i in val) {
+                                                        existcontact.push(val[i]);
+                                                    }
+                                                }
+                                            }
+
+                                            const validContactsSet = new Set();
+                                            const validContactList = [];
+                                            const removedList = [];
+
+                                            const existingPhones = new Set(contactlist.map(contact => contact.phone.toString()));
+
+                                            results.data.forEach(entry => {
+                                                const contact = entry[matchingColumn].toString();
+                                                if (contact.length === 10) {
+                                                    if (!validContactsSet.has(contact) && !existcontact.find(item => item.phone == contact)) {
+                                                        validContactsSet.add(contact);
+                                                        validContactList.push(entry);
+                                                    } else {
+                                                        removedList.push(entry);
+                                                    }
+                                                } else {
+                                                    removedList.push(entry);
+                                                }
+                                            });
+
+                                            // Function to compare and split contacts
+                                            function splitContacts(portalContacts, newContacts) {
+                                                const portalPhones = new Set(portalContacts.map(contact => contact.phone));
+                                                const existingContacts = [];
+                                                const newUniqueContacts = [];
+
+                                                newContacts.forEach(contact => {
+                                                    if (portalPhones.has(contact.phone)) {
+                                                        existingContacts.push(contact);
+                                                    } else {
+                                                        newUniqueContacts.push(contact);
+                                                    }
+                                                });
+
+                                                return { existingContacts, newUniqueContacts };
+                                            }
+
+                                            const { existingContacts, newUniqueContacts } = splitContacts(contactlist, validContactList);
+
+                                            const updatedArray = existingContacts.map(existingItem => {
+                                                const matchingContact = contactlist.find(contactItem => contactItem.phone === existingItem.phone);
+                                                return matchingContact ? { ...existingItem, contact_id: matchingContact.contact_id } : existingItem;
+                                            });
+
+                                            excont = updatedArray;
+                                            newcont = newUniqueContacts;
+
+                                            let contacts = validContactList.slice(0, 200), data = ``;
+
+                                            $('#import-contact-status').html(`
+                                                    <div class="fs-16 p-2 mb-2 bg-soft-info border border-2 rounded-3 border-info">
+                                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                                            <div>
+                                                                <i class="ri-contacts-book-fill text-primary fs-20 align-middle me-2"></i>
+                                                                <span class="fs-15 fw-normal text-muted">Total Contacts</span>
+                                                            </div>
+                                                            <span class="fw-semibold text-primary">${results.data.length}</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                                            <div>
+                                                                <i class="ri-checkbox-circle-fill text-success fs-20 align-middle me-2"></i>
+                                                                <span class="fs-15 fw-normal text-muted">Valid Contacts</span>
+                                                            </div>
+                                                            <span class="fw-semibold text-success">${validContactList.length}</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                                            <div>
+                                                                <i class="ri-close-circle-fill text-danger fs-20 align-middle me-2"></i>
+                                                                <span class="fs-15 fw-normal text-muted">Invalid Contacts</span>
+                                                            </div>
+                                                            <span class="fw-semibold text-danger">${removedList.length}</span>
+                                                        </div>
+                                                    </div>`);
+
+                                            clientobj = contacts;
+                                            if (contacts.length > 0) {
+                                                for (var i in contacts) {
+                                                    if (i % 2 == 0) {
+                                                        data += `<li class="list-group-item p-2 d-flex">`;
+                                                    }
+                                                    data += `<div class="d-flex align-items-center gap-2 w-50 contactSelect" data-phone="${contacts[i].phone}" style="cursor: pointer;">
+                                                        <div class="flex-shrink-0 d-flex align-items-center">
+                                                            <div class="rounded-circle avatar-xs d-flex align-items-center justify-content-center fs-5 text-white bg-gradient bg-primary">${contacts[i].name[0].toUpperCase()}</div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="fs-13 mb-1" 
+                                                                style="width:95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                                ${contacts[i].name}
+                                                                ${!existingContacts.find(x => x.phone == contacts[i].phone) ? '<span class="badge bg-success">New</span>' : ''}
+                                                            </h5>
+                                                            <p class="text-muted mb-0">
+                                                                ${contacts[i].phone}
+                                                            </p>
+                                                        </div>
+                                                    </div>`;
+                                                    if (i % 2 == 1) {
+                                                        data += `</li>`;
+                                                    }
+                                                }
+                                            }
+                                            else {
+                                                data += `<div class="d-flex justify-content-center text-danger text-center pt-5">
+                                                                    <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                                        trigger="loop" colors="primary:#f06548"
+                                                                        state="morph-intro-cross" style="width:70px;height:70px">
+                                                                    </lord-icon>
+                                                                </div>
+                                                                <p class="fs-15 text-center text-muted">
+                                                                    No unique data found in CSV file
+                                                                </p>`;
+                                            }
+
+                                            $('#tblcsvdata').html(data);
+                                        }
+                                    })
+                                }
+                                else {
+                                    $('#tblcsvdata')
+                                        .html(`<div class="d-flex justify-content-center text-danger text-center pt-5">
+                                                                    <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
+                                                                        trigger="loop" colors="primary:#f06548"
+                                                                        state="morph-intro-cross" style="width:70px;height:70px">
+                                                                    </lord-icon>
+                                                                </div>
+                                                                <p class="fs-15 text-center text-muted">
+                                                                    There is no such column like name, phone in this CSV File
+                                                                </p>`);
+                                    $('#csvfile').addClass('form-control-danger');
+                                }
+                            },
+                            error: function (error) {
+                                console.error('Error:', error);
+                            }
+                        });
+                    }
+                }
+                else {
+                    swal({
+                        title: "Select Different File",
+                        html: `Only <span class="text-danger">CSV</span> File allowed.`,
+                        type: 'error',
+                        timer: 2000,
+                        showConfirmButton: false,
+                    }).then(() => {
+                        $('#csvfile').val('').addClass('form-control-danger');
+                    })
+                }
+            })
+
+            $(document).on('click', '#importcontactbtn', function () {
+                const channel_id = $(this).attr("data-id");
+
+                if (excont.length > 0 && newcont.length >= 0) {
+                    $.ajax({
+                        url: "/api/contacts/addcontacttochannelbycsv",
+                        method: "POST",
+                        data: {
+                            "channel_id": atob(channel_id),
+                            "iid": atob(iid),
+                            "excont": excont,
+                            "newcont": newcont,
+                        },
+                        success: function (result) {
+                            if (result.success) {
+                                $('#close-modal-import').click();
+                                swal({
+                                    title: "Contact Imported successfully",
+                                    type: "success",
+                                    timer: 2000,
+                                    showConfirmButton: false,
+                                }).then(function () {
+                                    channelContactDisplay(channel_id);
+                                });
+                            }
+                        }, error: (error) => {
+                            if (error.status === 500) InternalServerError();
+                            if (error.status === 401) InvalidUser();
+                            if (error.status === 400) {
+                                if (!error.success) {
+                                    swal({
+                                        title: "Error in import contact",
+                                        text: error.responseJSON.message,
+                                        type: "error",
+                                        timer: 2000,
+                                        showConfirmButton: false,
+                                    })
+                                }
+                            }
+                        }
+                    });
+                }
+                else {
+                    $('#csvfile').addClass('form-control-danger');
+                    $('#err_csvfile').html('Select contact');
+                }
+            })
+
+            $(document).on('click', '#addcontact', function () {
+                const channel_id = $(this).attr("data-id");
+
+                let contactdata = getCheckedCheckboxesFor('contacts');
+
+                if (contactdata.length > 0) {
+                    $.ajax({
+                        url: "/addcontact2channel",
+                        method: "POST",
+                        data: {
+                            "id": channel_id,
+                            "iid": iid,
+                            "contacts": contactdata
+                        },
+                        success: function (val) {
+                            switch (val.status_code) {
+                                case '401': {
+                                    InvalidUser();
+                                    break;
+                                }
+
+                                case '500': {
+                                    InternalServerError();
+                                    break;
+                                }
+
+                                case '200': {
+                                    $('#close-modal-add').click();
+                                    channelContactDisplay(channel_id);
+                                    break;
+                                }
+                            }
+                        }
+                    });
+                }
+            })
+
+            $(document).on("click", ".delete_contact", function () {
+                let contact_id = $(this).attr('data-contact_id');
+                let channel_id = $(this).attr('data-channel_id');
+
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to access this anymore..!!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it',
+                    cancelButtonText: 'No, cancel',
+                    confirmButtonClass: 'btn btn-success mx-2',
+                    cancelButtonClass: 'btn btn-outline-danger mx-2',
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        $.ajax({
+                            url: "/deleterecord",
+                            method: "delete",
+                            data: {
+                                obj: {
+                                    "table": "contact_channel",
+                                    "paramstr": `contact_id = '${contact_id}' AND channel_id = '${channel_id}' AND instance_id= '${iid}'`,
+                                }
+                            },
+                            success: function (val) {
+                                switch (val.status_code) {
+                                    case '401': {
+                                        InvalidUser();
+                                        break;
+                                    }
+                                    case '500': {
+                                        InternalServerError();
+                                        break;
+                                    }
+                                    case '200': {
+                                        swal({
+                                            title: "Contact Removed from channel",
+                                            type: "success",
+                                            timer: 2000,
+                                            showConfirmButton: false,
+                                        }).then(() => {
+                                            channelContactDisplay(channel_id);
+                                        });
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                })
+            });
+
+            $(document).on("click", ".deleteChannel", function () {
+                const id = $(this).attr("data-id");
+                swal({
+                    title: 'Are you sure?',
+                    text: "You won't be able to access this anymore..!!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it',
+                    cancelButtonText: 'No, cancel',
+                    confirmButtonClass: 'btn btn-success mx-2',
+                    cancelButtonClass: 'btn btn-outline-danger mx-2',
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        $.ajax({
+                            url: "/deleterecord",
+                            method: "delete",
+                            data: {
+                                obj: {
+                                    "table": "channel",
+                                    "paramstr": `channel_id = '${id}'`,
+                                }
+                            },
+                            success: function (val) {
+                                switch (val.status_code) {
+                                    case '401': {
+                                        InvalidUser();
+                                        break;
+                                    }
+                                    case '500': {
+                                        InternalServerError();
+                                        break;
+                                    }
+                                    case '200': {
+                                        swal({
+                                            title: "Channel Removed.",
+                                            type: "success",
+                                            timer: 2000,
+                                            showConfirmButton: false,
+                                        }).then(() => {
+                                            channelDataDisplay({
+                                                table: "channel",
+                                                paramstr: `instance_id = '${iid}'`,
+                                            });
+                                        });
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                })
+            });
+
+            $(document).on("click", "#selectall-toggle-btn", function () {
+                for (let i in remainingcontactlist) {
+                    $(`#check${remainingcontactlist[i].contact_id}`).click();
+                }
+            });
+
+            // Search Functionality below
+
+            $(document).on('input', '#searchChannel', function () {
+                let val = $('#searchChannel').val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return channel_List.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(val);
+
+                if (val == null || val == "") {
+                    filterChannelResult(channel_List);
+                    for (var i in channel_List) {
+                        filterChannelContactResult(channel_List[i].channel_id, channel_contact_list[channel_List[i].channel_id])
+                    }
+                }
+                else {
+                    filterChannelResult(Searchresult)
+                    for (var i in Searchresult) {
+                        filterChannelContactResult(Searchresult[i].channel_id, channel_contact_list[Searchresult[i].channel_id])
+                    }
+                }
+            })
+
+            $(document).on('input', '.searchContactChannel', function () {
+                const channel_id = $(this).attr('data-search-channel-id');
+                let search_val = $(`.searchContactChannel[data-search-channel-id="${channel_id}"]`).val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return channel_contact_list[channel_id].filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(search_val);
+
+                if (search_val == null || search_val == "") {
+                    filterChannelContactResult(channel_id, channel_contact_list[channel_id])
+                }
+                else {
+                    filterChannelContactResult(channel_id, Searchresult)
+                }
+            })
+
+            $(document).on('input', '.searchaddcontact', function () {
+                const channel_id = $(this).attr('data-search-channel-id');
+                let search_val = $(`.searchaddcontact`).val().trim();
+
+                function search(query) {
+                    query = query.toLowerCase();
+                    return remainingcontactlist.filter(function (obj) {
+                        for (var key in obj) {
+                            if (obj.hasOwnProperty(key) && typeof obj[key] === 'string' && obj[key].toLowerCase().includes(query)) {
+                                return true;
+                            }
+                            else if (obj.hasOwnProperty(key) && typeof obj[key] === 'number' && obj[key].toString().includes(query)) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    });
+                }
+
+                let Searchresult = search(search_val);
+
+                if (search_val == null || search_val == "") {
+                    displayContactintoaddmodal(remainingcontactlist)
+                }
+                else {
+                    displayContactintoaddmodal(Searchresult)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
