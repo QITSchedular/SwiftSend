@@ -6,7 +6,7 @@ const tableData = require("../function/commonQuery");
 
 const getallInstance = async (req, res) => {
     try {
-        const apikey = req.cookies.apikey;
+        const apikey = req.body.apikey || req.cookies.apikey;
         const q1 = `SELECT * from instance where apikey = '${apikey}' order by isRoot desc`;
         // const q1 = `SELECT * from instance where apikey = '${apikey}' and disabled = 0`;
 

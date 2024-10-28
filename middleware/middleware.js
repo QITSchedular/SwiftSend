@@ -47,5 +47,94 @@ const checkMsgLimit = (req, res, next) => {
     );
 }
 
+const checkFileType = (req, res, next) => {
+    const allowedMimeTypes = {
+        audio: ["audio/aac", "audio/mp4", "audio/mpeg", "audio/amr", "audio/ogg", "audio/opus"],
+        document: [
+            "application/vnd.ms-powerpoint", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/pdf", "text/plain", "application/vnd.ms-excel"
+        ],
+        image: ["image/jpeg", "image/png", "image/webp"],
+        video: ["video/mp4", "video/3gpp"],
+        sticker: ["image/webp"]
+    };
 
-module.exports = { checkMsgLimit, checkApi, checkAdmin };
+    const sizeLimits = {
+        audio: 16 * 1024 * 1024,     // 16 MB
+        document: 100 * 1024 * 1024,  // 100 MB
+        image: 5 * 1024 * 1024,       // 5 MB
+        sticker: 100 * 1024,          // 100 KB
+        video: 16 * 1024 * 1024       // 16 MB
+    };
+
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(400).json({
+            message: "No files were uploaded.",
+        });
+    }
+
+    if (Array.isArray(req.files.file)) {
+        return res.status(400).json({
+            message: "Only one file can be uploaded at a time.",
+        });
+    }
+
+
+    const uploadedFile = req.files.file;
+    const fileType = uploadedFile.mimetype;
+    const fileSize = uploadedFile.size;
+
+    console.log("type  :", fileType)
+    console.log("size  :", fileSize)
+
+    let mediaType;
+    for (const [type, mimes] of Object.entries(allowedMimeTypes)) {
+        if (mimes.includes(fileType)) {
+            mediaType = type;
+            break;
+        }
+    }
+
+    if (!mediaType) {
+        return res.status(400).json({
+            message: "Invalid file type. Accepted formats are: AAC, MP4 Audio, MPEG Audio, AMR, OGG, Opus, PowerPoint, Word Document, Excel, PDF, Plain Text, JPEG, PNG, WEBP, MP4 Video, and 3GPP Video.",
+            allowedTypes: [
+                "AAC", "MP4 Audio", "MPEG Audio", "AMR", "OGG", "Opus", "PowerPoint",
+                "Word Document", "Excel Spreadsheet", "PDF", "Plain Text",
+                "JPEG", "PNG", "WEBP", "MP4 Video", "3GPP Video"
+            ]
+        });
+    }
+
+    // Check file size
+    if (fileSize >= sizeLimits[mediaType]) {
+        return res.status(400).json({
+            message: `File size exceeds the allowed limit for ${mediaType}. Maximum allowed size is ${sizeLimits[mediaType] / (1024 * 1024)} MB.`,
+            allowedSizeMB: {
+                audio: 16,
+                document: 100,
+                image: 5,
+                sticker: 0.1,
+                video: 16
+            }
+        });
+    }
+    next();
+}
+
+const encodeDataMiddleware = (req, res, next) => {
+    try {
+        if (req.originalUrl === '/api/v1.0/signin') {
+            req.body.email = Buffer.from(req.body.email, 'ascii').toString('base64');
+            req.body.password = Buffer.from(req.body.password, 'ascii').toString('base64');
+            req.body.type = Buffer.from(req.body.type, 'ascii').toString('base64');
+        }
+        next();
+    } catch (error) {
+        res.status(400).send("Invalid encoded data");
+    }
+};
+
+
+module.exports = { checkMsgLimit, checkApi, checkAdmin, checkFileType, encodeDataMiddleware };

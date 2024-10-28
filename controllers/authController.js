@@ -43,7 +43,7 @@ const SignIn = async (req, res) => {
 
     const email = Buffer.from(req.body.email, "base64").toString("ascii");
     const password = Buffer.from(req.body.password, "base64").toString("ascii");
-    const type = Buffer.from(req.body.type, "ascii").toString("base64");
+    const type = Buffer.from(req.body.type, "base64").toString("ascii");
     const rememberme = req.body.rememberme;
 
     if (email && password && email != undefined && password != undefined) {

@@ -6,12 +6,11 @@ const logAPI = require("../../function/log");
 
 const genDocId = async (req, res) => {
     const version = "v19.0";
+    const apiKey = req.body.apikey || req.cookies.apikey;
+    const iid = req.body.iid;
 
     try {
-        const apiKey = req.cookies.apikey;
-        const iid = req.body.iid;
         const wabaCred = await setWabaCred(apiKey, iid);
-
         if (wabaCred.length <= 0) {
             logAPI(req.url, apiKey, iid, "E");
             return res.status(404).json({
@@ -51,12 +50,9 @@ const genDocId = async (req, res) => {
             });
         }
     } catch (error) {
-        console.error(
-            "Error uploading media:",
-            error.response ? error.response.data : error.message
-        );
+        console.error("Error uploading media:", error.response ? error.response.data : error.message);
         logAPI(req.url, apiKey, iid, "E");
-        return res.status(500).json({ error: "Internal server error" });
+        return res.status(500).json({ error: "Error in File uploading", detail: error.response ? error.response.data : error.message });
     }
 };
 

@@ -155,7 +155,6 @@ const createComponentPart = (data, paylodReq) => {
                         type: "image",
                         image: {
                             id: paylodReq.image,
-                            filename: paylodReq.filename || "Image"
                         },
                     };
                     // console.log("Header ", obj);

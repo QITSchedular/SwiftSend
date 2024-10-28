@@ -318,7 +318,7 @@
                     url: "/api/auth/signin",
                     method: "POST",
                     data: {
-                        "type": atob(type),
+                        "type": btoa(type),
                         "email": btoa(email.value),
                         "password": btoa(password.value),
                         "rememberme": remeberme
