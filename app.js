@@ -99,6 +99,7 @@ const contactAndChannelRoute = require("./routes/contactAndChannelRoute");
 
 
 const { checkMsgLimit, checkApi, checkAdmin } = require("./middleware/middleware");
+const { VerifyToken } = require("./middleware/verifyToken");
 
 // Use routes
 app.use("/api/message", checkApi, checkMsgLimit, sampleRoutes);
@@ -109,7 +110,7 @@ app.use("/api/broadcast", checkApi, broadcastRoutes);
 app.use("/api/instance", checkApi, instanceRoutes);
 app.use("/api/landing", landingRoutes);
 app.use("/api/auth", signIn2);
-app.use("/api/v1.0/", checkApi, checkMsgLimit, onlyapiRoutes);
+app.use("/api/v1.0/", VerifyToken, checkMsgLimit, onlyapiRoutes);
 app.use("/api/admin/", checkAdmin, adminRoutes);
 app.use("/api/contacts/", checkApi, contactAndChannelRoute);
 

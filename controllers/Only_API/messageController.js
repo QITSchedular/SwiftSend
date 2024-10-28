@@ -79,6 +79,7 @@ const transformResponseData = (data) => {
 
                         break;
                     case "DOCUMENT":
+                        objTemp.header.push("Document");
                         //console.log("This is a DOCUMENT.");
                         break;
                     default:
@@ -154,6 +155,18 @@ const createComponentPart = (data, paylodReq) => {
                         type: "image",
                         image: {
                             id: paylodReq.image,
+                            filename: paylodReq.filename || "Image"
+                        },
+                    };
+                    // console.log("Header ", obj);
+                    headercompo.parameters.push(obj);
+                }
+                else if (headerType === "Document") {
+                    var obj = {
+                        type: "document",
+                        document: {
+                            id: paylodReq.document,
+                            filename: paylodReq.filename || "Document"
                         },
                     };
                     // console.log("Header ", obj);
@@ -196,7 +209,7 @@ const createComponentPart = (data, paylodReq) => {
                 console.log("Unknown fruit.");
         }
     });
-    console.log("A : ", components)
+    // console.log("A : ", components)
     return components;
 };
 
@@ -277,7 +290,7 @@ const sendMessage = async (req, res) => {
                     waba_message_id: messageId,
                     single_id: Single_id,
                     apikey: apikey,
-                    reciver_number: to,
+                    reciver_number: `91${to}`,
                     message_type: "single",
                     status: "sent",
                 };

@@ -10660,6 +10660,38 @@ fieldset:disabled .btn {
     --vz-bg-opacity: 1
 }
 
+.bg-primary-subtle {
+    background-color: var(--vz-primary-bg-subtle) !important
+}
+
+.bg-secondary-subtle {
+    background-color: var(--vz-secondary-bg-subtle) !important
+}
+
+.bg-success-subtle {
+    background-color: var(--vz-success-bg-subtle) !important
+}
+
+.bg-info-subtle {
+    background-color: var(--vz-info-bg-subtle) !important
+}
+
+.bg-warning-subtle {
+    background-color: #fef4e4 !important;
+}
+
+.bg-danger-subtle {
+    background-color: var(--vz-danger-bg-subtle) !important
+}
+
+.bg-light-subtle {
+    background-color: var(--vz-light-bg-subtle) !important
+}
+
+.bg-dark-subtle {
+    background-color: var(--vz-dark-bg-subtle) !important
+}
+
 .bg-gradient {
     background-image: var(--vz-gradient) !important
 }

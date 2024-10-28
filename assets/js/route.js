@@ -20,6 +20,10 @@ router.get("/signin", (req, res) => {
   res.sendFile(`${path}/signin.html`);
 });
 
+router.get("/privacy-policy", (req, res) => {
+  res.sendFile(`${path}/privacypolicy.html`);
+});
+
 
 /*-------------------------------------------------*/
 

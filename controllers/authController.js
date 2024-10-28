@@ -2,6 +2,7 @@ const conn = require("../DB/connection");
 const status = require("../assets/js/status");
 const bcrypt = require("bcrypt");
 const geoip = require('geoip-lite');
+const jwt = require("jsonwebtoken");
 
 const cloudinary = require("cloudinary").v2;
 const crypto = require("crypto");
@@ -135,12 +136,25 @@ const SignIn = async (req, res) => {
                             userAgent: req.get('User-Agent')
                         }
                     }));
+                    const tokenPayload = {
+                        apikey: result[0].apikey,
+                        instance_id: result[0].instance_id,
+                    };
+
+                    const options = {
+                        algorithm: "HS256", // Symmetric algorithm
+                        expiresIn: "15m", // Corrected the typo and set it to 1 hour
+                    };
+
+                    const value = "swiftsend-secret";
+                    const authToken = jwt.sign(tokenPayload, value, options)
                     return res.status(200).send(Object.assign(status.ok(), {
                         data: {
                             detail: `Login Successful`,
                             apikey: result[0].apikey,
                             iid: result[0].instance_id,
                             isRoot: result[0].isRoot,
+                            token: authToken
                         },
                         success: true
                     }));
