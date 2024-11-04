@@ -65,10 +65,8 @@ const getTemplateByIdAPI = async (req, res) => {
                 "Content-Type": "application/json",
             }
         });
-        console.log("Res : ", response)
 
         if (response.status === 200) {
-            console.log(response.data);
             return res.status(200).json({
                 success: true,
                 data: response.data,
