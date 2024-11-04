@@ -11,10 +11,10 @@ const conn = mysql.createConnection({
 
 conn.connect((err) => {
     if (err) {
-        console.error("Error connecting to the database:", err);
+        console.error("🔴 : \x1b[31mError connecting to the database\x1b[0m :", err);
         return;
     }
-    console.log("Connected to the database");
+    console.log("🟢 : \x1b[32mDatabase Connected\x1b[0m");
 });
 
 module.exports = conn;

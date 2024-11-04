@@ -344,7 +344,7 @@
 
             function getContactNameByNumber(contacts, val) {
                 const contact = contacts.find(contact => contact.phone == val);
-                return contact ? contact.name : '';
+                return contact ? `<span class="text-primary">(${contact.name})</span>` : '';
             }
 
             function MessageDisplay(val) {
@@ -374,15 +374,14 @@
                                 : `-`
                             }
                                     </td>
-                                    <td class="w-10 fw-semibold" style="font-family: monospace;">
+                                    <td class="w-1 fw-semibold" style="font-family: monospace;">
                                         ${val[i].reciver_number
                                 ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
-                                        ${val[i].reciver_number.slice(2)} 
-                                        <br />${getContactNameByNumber(ContactList, val[i].reciver_number.slice(2))}
-                                        `
+                                        ${val[i].reciver_number.length > 10 ? val[i].reciver_number.slice(2) : val[i].reciver_number}
+                                        ${getContactNameByNumber(ContactList, val[i].reciver_number.length > 10 ? val[i].reciver_number.slice(2) : val[i].reciver_number)}`
                                 : `-`
                             }
-                                    </td>                                    
+                                    </td>                                  
                                     <td class="w-10">
                                         ${val[i].template_name}
                                     </td>

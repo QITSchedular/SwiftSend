@@ -1945,8 +1945,9 @@ app.use((req, res) => {
 });
 
 server.listen(port, () => {
-    console.log(`${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}`);
-    console.log(`Your server is up and running on : ${port}`);
-    console.log(`http://localhost:${port}/signin`);
-    console.log(`https://swift-send.click`);
+    console.log(`📅 : \x1b[1m\x1b[2m${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }).toUpperCase().split(',')[0]}\x1b[0m`);
+    console.log(`⏱️  : \x1b[1m\x1b[2m${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }).toUpperCase().split(',')[1].trim()}\x1b[0m`);
+    console.log(`🛠️  :\x1b[32mYour server is up and running on\x1b[0m \x1b[35m${port}\x1b[0m`);
+    console.log(`🌐 : \x1b[33mhttp://localhost:${port}/signin\x1b[0m`);
+    console.log(`⚡ : \x1b[34mhttps://swift-send.click\x1b[0m`);
 });

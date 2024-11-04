@@ -211,7 +211,7 @@ const getAllTemplateID = async (req, res) => {
     const wabaCred = await setWabaCred(apikey, email);
 
     if (wabaCred.length <= 0) {
-        logAPI(req.url, apikey, iid, "E");
+        // logAPI(req.url, apikey, iid, "E");
         return res.status(404).json({
             success: false,
             message: "An error occurred while fetching templates",

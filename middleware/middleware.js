@@ -85,9 +85,6 @@ const checkFileType = (req, res, next) => {
     const fileType = uploadedFile.mimetype;
     const fileSize = uploadedFile.size;
 
-    console.log("type  :", fileType)
-    console.log("size  :", fileSize)
-
     let mediaType;
     for (const [type, mimes] of Object.entries(allowedMimeTypes)) {
         if (mimes.includes(fileType)) {
