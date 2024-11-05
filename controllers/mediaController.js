@@ -117,7 +117,6 @@ const uploadMedia = async (req, res) => {
                 }
             } catch (err) {
                 logAPI(req.url, apiKey, iid, "E");
-                console.log(" err : ", err.response.data);
                 return res.status(400).json({ success: false, message: "Invalid File Type. supported type : [image | PDF | XML]" });
             }
         });

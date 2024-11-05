@@ -218,6 +218,7 @@
                                             <th>Sender</th>
                                             <th>Receiver</th>
                                             <th>Template</th>
+                                            <th>Source</th>
                                             <th>Status</th>
                                             <th>Time</th>
                                         </tr>
@@ -371,38 +372,30 @@
                                         ${val[i].phone
                                 ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
                                         ${val[i].phone}`
-                                : `-`
-                            }
+                                : `-`}
                                     </td>
-                                    <td class="w-1 fw-semibold" style="font-family: monospace;">
+                                    <td class="w-10 text-truncate fw-semibold" style="font-family: monospace; max-width: 180px;">
                                         ${val[i].reciver_number
                                 ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
                                         ${val[i].reciver_number.length > 10 ? val[i].reciver_number.slice(2) : val[i].reciver_number}
                                         ${getContactNameByNumber(ContactList, val[i].reciver_number.length > 10 ? val[i].reciver_number.slice(2) : val[i].reciver_number)}`
-                                : `-`
-                            }
+                                : `-`}
                                     </td>                                  
-                                    <td class="w-10">
+                                    <td class="w-10 text-truncate" style="max-width: 200px;">
                                         ${val[i].template_name}
+                                    </td>
+                                    <td class="w-10 text-truncate" style="max-width: 100px;">
+                                        ${val[i].fromapp
+                                ? `<div class="badge bg-soft-warning text-warning">Application</div>`
+                                : `<div class="badge bg-soft-info text-info">API</div>`}
                                     </td>
                                     <td class="w-10 text-${val[i].status == "read"
                                 ? `info`
-                                : val[i].status == "delivered"
-                                    ? `muted`
-                                    : val[i].status == "sent"
-                                        ? `muted`
-                                        : `danger`
-                            }">
+                                : val[i].status == "delivered" ? `muted` : val[i].status == "sent" ? `muted` : `danger`}">
                                         <i class="${val[i].status == "read"
-                                ? `ri-check-double-line`
-                                : val[i].status == "delivered"
-                                    ? `ri-check-double-line`
-                                    : val[i].status == "sent"
-                                        ? `ri-check-line`
-                                        : `ri-error-warning-fill`
-                            } fs-17 align-middle"></i>
-                                        <span class="text-muted">${val[i].status
-                            }</span>
+                                ? `ri-check-double-line` : val[i].status == "delivered" ? `ri-check-double-line`
+                                    : val[i].status == "sent" ? `ri-check-line` : `ri-error-warning-fill`} fs-17 align-middle"></i>
+                                        <span class="text-muted">${val[i].status}</span>
                                     </td>
                                     <td class="w-15 fw-semibold" style="font-family: monospace;">
                                         ${formattedTime}
@@ -445,7 +438,6 @@
 
                             default: {
                                 ContactList = val;
-                                console.log(ContactList[0])
                             }
                         }
                     }

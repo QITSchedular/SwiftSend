@@ -8,8 +8,8 @@ const { setWabaCred } = require("./userController");
 
 // Function to insert data into single_message table
 const insertIntoSingleMessage = async (apikey, templateName, Single_id, iid) => {
-    const query = `INSERT INTO single_message (single_id, apikey, template_name, time, instance_id) VALUES (?, ?, ?, CURRENT_TIMESTAMP,?)`;
-    const values = [Single_id, apikey, templateName, iid];
+    const query = `INSERT INTO single_message (single_id, apikey, template_name, time, instance_id, fromapp) VALUES (?, ?, ?, CURRENT_TIMESTAMP,?,?)`;
+    const values = [Single_id, apikey, templateName, iid, true];
 
     return new Promise((resolve, reject) => {
         conn.query(query, values, (error, results, fields) => {
@@ -90,7 +90,7 @@ const sendSimpleTextTemplate = async (req, res) => {
                 },
             });
 
-            console.log("A : ", response.data)
+            // console.log("A : ", response.data)
 
             if (response.status === 200) {
                 const singleMessageId = await insertIntoSingleMessage(apikey, templateName, Single_id, iid);
