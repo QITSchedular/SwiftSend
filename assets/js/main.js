@@ -799,6 +799,29 @@ $(document).ready(function () {
         }
     }
 
+    const ws = new WebSocket('wss://swift-send.click');
+
+    ws.onopen = function () {
+        // console.log('WebSocket connection opened');
+    };
+
+    ws.onmessage = function (event) {
+        const data = JSON.parse(event.data);
+        if (data.clientId) {
+            ws.clientId = data.clientId;  // Store the client ID for later use
+        } else {
+            displayDailylimit('daily-limit-count');
+        }
+    };
+
+    ws.onerror = function (error) {
+        console.error('WebSocket error:', error);
+    };
+
+    ws.onclose = function () {
+        // console.log('WebSocket connection closed');
+    };
+
     $(document).on('click', '.light-dark-mode', () => {
         // $('.logo-light,.logo-dark').addClass('d-none');
         if (sessionStorage.getItem("data-layout-mode") == "dark") {
