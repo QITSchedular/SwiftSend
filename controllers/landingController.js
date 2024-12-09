@@ -63,9 +63,17 @@ const getLandingData = async (req, res) => {
         conn.query(q2, function (err, result) {
             if (err) return res.status(500).send(status.internalservererror());
             // if (result.length <= 0) return res.send(status.nodatafound());
+            let total = 0, btotal = 0;
+            for (let i in result) {
+                total += result[i].total_count;
+                btotal += result[i].boardcast_number_count;
+            }
             res.status(200).json({
                 success: true,
-                data: result,
+                data: {
+                    total: total,
+                    btotal: btotal
+                },
             });
         });
     } catch (error) {

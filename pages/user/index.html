@@ -555,21 +555,18 @@
 							DailyReportDataList = val.data;
 							let ins_list = ``;
 
-							if (val.data)
-
+							if (val.data.length > 0) {
 								for (let i = 0; i < val.data.length; i++) {
 									ins_list += `<option id="${val.data[i].iid}" value="${val.data[i].iid}" class="text-${(val.data[i].i_name == "Main") ? `warning` : `primary`} fw-semibold">
-								${val.data[i].i_name}
-								</option>`
+										${val.data[i].i_name}
+										</option>`
 								}
+
+								const instance_data = val.data.filter(x => x.iid === val.data[0].iid)[0] || null;
+								insByLimitGraph(instance_data)
+							}
 							$('#instance_balance_list').html(ins_list);
 							(val.data.length <= 0) ? $('#instance_balance_list').addClass('d-none') : ``;
-
-							const instance_data = val.data.filter(x => x.iid === val.data[0].iid)[0] || null;
-
-							insByLimitGraph(instance_data)
-
-
 						}
 					}, error: (error) => {
 						if (error.status === 500) InternalServerError();
@@ -627,7 +624,6 @@
 			$(document).on('change', '#instance_balance_list', function () {
 				const iid = $(this).val();
 				const instance_data = DailyReportDataList.filter(x => x.iid === iid)[0] || null;
-
 				insByLimitGraph(instance_data);
 			});
 

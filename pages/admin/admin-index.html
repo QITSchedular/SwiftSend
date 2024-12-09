@@ -668,13 +668,8 @@
                 method: "GET",
                 success: function (val) {
                     if (val.success) {
-                        let total = 0, btotal = 0;
-                        for (let i in val.data) {
-                            total += val.data[i].total_count;
-                            btotal += val.data[i].boardcast_number_count;
-                        }
-                        $('#msgcard').html(total).attr('data-target', total);
-                        $('#broadcastcard').html(btotal).attr('data-target', btotal);
+                        $('#msgcard').html(val.data.total).attr('data-target', val.data.total);
+                        $('#broadcastcard').html(val.data.btotal).attr('data-target', val.data.btotal);
                     }
                 }
             })

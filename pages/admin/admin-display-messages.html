@@ -14,6 +14,8 @@
 
     <!-- Layout config Js -->
     <script src="/assets/js/layout.js"></script>
+    <!-- Template Css-->
+    <link href="/assets/css/template.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap Css -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -145,6 +147,15 @@
                                         Messages
                                     </h4>
                                     <div class="d-flex justify-content-end gap-2">
+                                        <button class="btn btn-soft-primary filterbtn position-relative"
+                                            data-bs-toggle="modal" id="filtermodalbtn" data-bs-target="#filterModal">
+                                            <i class="mdi mdi-filter align-middle"></i>
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1 d-none"
+                                                id="badge-box-dot">
+                                                <span class="visually-hidden">unread messages</span>
+                                            </span>
+                                        </button>
                                         <div class="search-box">
                                             <input type="text" class="form-control" id="searchInstance"
                                                 placeholder="Search Message Data ..." />
@@ -164,6 +175,7 @@
                                                     <th>Sender</th>
                                                     <th>Receiver</th>
                                                     <th>Template</th>
+                                                    <th>Source</th>
                                                     <th>Status</th>
                                                     <th>Time</th>
                                                 </tr>
@@ -177,6 +189,97 @@
                                                     style="width: 75px; height: 75px">
                                                 </lord-icon>
                                                 <h5 class="mt-2">No Message Found</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Filter Model -->
+                            <div class="modal modal-md zoomIn" id="filterModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-soft-info p-3">
+                                            <h5 class="modal-title" id="modallbl">Filter Data</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div id="alert-main-box"></div>
+                                            <label for="message_date">Date Range</label>
+                                            <input type="text" id="datetrangepicker" class="form-control mb-2"
+                                                data-provider="flatpickr" data-date-format="d/m/Y"
+                                                data-range-date="true" placeholder="Select Date range" />
+                                            <hr />
+                                            <label for="status">Status</label>
+                                            <div class="d-block">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="status" type="radio" id="sent"
+                                                        value="sent">
+                                                    <label class="form-check-label" for="sent">
+                                                        <span>Sent</span>
+                                                        <i class="ri-check-line align-middle text-muted"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="status" type="radio"
+                                                        id="delivered" value="delivered">
+                                                    <label class="form-check-label" for="delivered">
+                                                        <span>Delivered</span>
+                                                        <i class="ri-check-double-line align-middle text-muted"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="status" type="radio" id="read"
+                                                        value="read">
+                                                    <label class="form-check-label" for="read">
+                                                        <span>Read</span>
+                                                        <i class="ri-check-double-line align-middle text-info"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="status" type="radio"
+                                                        id="failed" value="failed">
+                                                    <label class="form-check-label" for="failed">
+                                                        <span>Failed</span>
+                                                        <i class="ri-error-warning-fill align-middle text-danger"></i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="d-block">
+                                                <label for="message_date">Sourse Type</label><br />
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="sourse" type="radio" id="api"
+                                                        value="api">
+                                                    <label class="form-check-label" for="api">
+                                                        <div class="badge bg-soft-info text-info">API</div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="sourse" type="radio" id="app"
+                                                        value="app">
+                                                    <label class="form-check-label" for="app">
+                                                        <div class="badge bg-soft-warning text-warning">Application
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="hstack gap-2 justify-content-end">
+                                                <button class="btn btn-soft-danger fs-12" id="clrfilter_btn">
+                                                    <span>
+                                                        <i class="ri-close-line align-bottom me-1 "></i>
+                                                        Clear
+                                                    </span>
+                                                </button>
+                                                <button class="btn btn-primary fs-12" id="applyfilter_btn"
+                                                    data-bs-dismiss="modal" aria-label="Close">
+                                                    <span>
+                                                        <i class="mdi mdi-filter align-bottom me-1"></i>
+                                                        Apply
+                                                    </span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -217,6 +320,7 @@
     <script src="/assets/libs/node-waves/waves.min.js"></script>
     <script src="/assets/libs/feather-icons/feather.min.js"></script>
     <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/assets/js/plugins.js"></script>
 
     <!-- aos js -->
     <script src="/assets/libs/aos/aos.js"></script>
@@ -227,6 +331,12 @@
 
     <script src="/assets/sweetalert2/sweet-alert.init.js"></script>
     <script src="/assets/sweetalert2/sweetalert2.all.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -263,8 +373,11 @@
                                         ${val[i].reciver_number ? `<img src="/assets/images/w_icon.svg" height="20" width="20" />
                                         ${val[i].reciver_number.slice(2)}` : `-`}
                                     </td>                                    
-                                    <td class="w-10">
+                                    <td class="w-10 text-truncate" style="max-width: 200px;">
                                         ${val[i].template_name}
+                                    </td>
+                                    <td class="w-10 text-truncate" style="max-width: 100px;">
+                                        ${val[i].fromapp ? `<div class="badge bg-soft-warning text-warning">Application</div>` : `<div class="badge bg-soft-info text-info">API</div>`}
                                     </td>
                                     <td class="w-10 text-${(val[i].status == "read") ? `info` : ((val[i].status == "delivered")) ? `muted` : ((val[i].status == "sent")) ? `muted` : `danger`}">
                                         <i class="${(val[i].status == "read") ? `ri-check-double-line` : ((val[i].status == "delivered")) ? `ri-check-double-line` : ((val[i].status == "sent")) ? `ri-check-line` : `ri-error-warning-fill`} fs-17 align-middle"></i>
@@ -337,6 +450,66 @@
                 else {
                     MessageDisplay(Searchresult)
                 }
+            })
+
+            $(document).on("click", "#applyfilter_btn", function () {
+                $('#alert-main-box').html(``);
+                $('#badge-box-dot').addClass('d-none');
+                const daterange = $('#datetrangepicker').val();
+                const status = $('input[name="status"]:checked').val();
+                const sourse = $('input[name="sourse"]:checked').val();
+                if (daterange === "" && status === undefined && sourse === undefined) {
+                    $('#alert-main-box').html(`<div class="alert alert-danger alert-dismissible alert-label-icon label-arrow fade"
+                                            role="alert" id="filteralertbox">
+                                    <i class="ri-error-warning-line label-icon"></i>Select
+                                    atleast one filter
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>`);
+                    $('#filteralertbox').addClass('show');
+                }
+                else {
+                    isfiltered = true;
+                    $('#badge-box-dot').removeClass('d-none');
+                    $('#alert-main-box').html(``);
+                    filterMsgList = MessageList;
+
+                    if (status !== undefined) {
+                        filterMsgList = filterMsgList.filter(x => x.status == status)
+                    }
+
+                    if (sourse !== undefined) {
+                        let chksourse = (sourse === "app") ? 1 : 0;
+                        filterMsgList = filterMsgList.filter(x => x.fromapp == chksourse);
+                    }
+
+                    if (daterange !== "") {
+                        let sdate = daterange.split('to')[0].trim()
+                        let edate = daterange.split('to')[1].trim()
+
+                        const fromDate = new Date(sdate.split("/").reverse().join("-"));
+                        const toDate = new Date(edate.split("/").reverse().join("-")).setHours(23, 59, 59, 999);
+
+                        filterMsgList = filterMsgList.filter(x => {
+                            const itemDate = new Date(x.time);
+                            if (itemDate >= fromDate && itemDate <= toDate) {
+                                console.log(itemDate)
+                            }
+                            return itemDate >= fromDate && itemDate <= toDate;
+                        });
+                        console.log(filterMsgList)
+                    }
+                    MessageDisplay(filterMsgList);
+                }
+            })
+
+            $(document).on("click", "#clrfilter_btn", function () {
+                $('#datetrangepicker').val('');
+                $('input[name="status"]').prop('checked', false);
+                $('input[name="sourse"]').prop('checked', false);
+                MessageDisplay(MessageList);
+                $('#badge-box-dot').addClass('d-none');
+                isfiltered = false;
             })
         })
     </script>

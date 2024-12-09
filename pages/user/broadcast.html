@@ -306,7 +306,7 @@
                                     <div class="sendmsgbtn ms-sm-1">
                                         <button id="sendmsg" class="btn btn-primary btn-load">
                                             <i class="mdi mdi-send me-lg-2 me-md-2"></i>
-                                            <span class="d-none d-lg-inline-block d-md-inline-block">
+                                            <span class="">
                                                 Send
                                             </span>
                                         </button>
@@ -463,7 +463,6 @@
                     success: function (val) {
                         if (val.success) {
                             limitObject = val;
-                            console.log(limitObject)
                         }
                     },
                     error: (error) => {
@@ -655,7 +654,7 @@
                                 }
                             }
                             else {
-                                $("#localfile_data").html(`<div class="d-flex justify-content-center text-danger text-center pt-5">
+                                $("#contact_data").html(`<div class="d-flex justify-content-center text-danger text-center pt-5">
                                                 <lord-icon src="https://cdn.lordicon.com/nhfyhmlt.json"
                                                     trigger="loop" colors="primary:#f06548"
                                                     state="morph-intro-cross" style="width:70px;height:70px">

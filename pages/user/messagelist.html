@@ -201,14 +201,23 @@
                         <div class="card-header d-flex align-items-center justify-content-between">
                             <h4 class="mb-0">Messages Status</h4>
                             <div class="d-flex justify-content-end gap-2">
-                                <button class="btn btn-soft-primary filterbtn position-relative" data-bs-toggle="modal"
-                                    id="filtermodalbtn" data-bs-target="#filterModal">
+                                <button class="btn btn-soft-primary filterbtn position-relative btn-icon"
+                                    data-bs-toggle="modal" id="filtermodalbtn" data-bs-target="#filterModal">
                                     <i class="mdi mdi-filter align-middle"></i>
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1 d-none"
                                         id="badge-box-dot">
                                         <span class="visually-hidden">unread messages</span>
                                     </span>
+                                </button>
+                                <button type="button" class="btn btn-soft-warning btn-icon waves-effect waves-light"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Export" id="exportgrid">
+                                    <i class="bx bxs-file-export fs-5"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-success btn-icon waves-effect waves-light"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Refersh"
+                                    id="refreshgrid">
+                                    <i class="ri-restart-line fs-5"></i>
                                 </button>
                                 <div class="search-box">
                                     <input type="text" class="form-control" id="searchInstance"
@@ -253,8 +262,8 @@
                             <div class="modal-content">
                                 <div class="modal-header bg-soft-info p-3">
                                     <h5 class="modal-title" id="modallbl">Filter Data</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="close-modal"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div id="alert-main-box"></div>
@@ -325,8 +334,7 @@
                                                 Clear
                                             </span>
                                         </button>
-                                        <button class="btn btn-primary fs-12" id="applyfilter_btn"
-                                            data-bs-dismiss="modal" aria-label="Close">
+                                        <button class="btn btn-primary fs-12" id="applyfilter_btn">
                                             <span>
                                                 <i class="mdi mdi-filter align-bottom me-1"></i>
                                                 Apply
@@ -388,6 +396,9 @@
 
     <!-- App js -->
     <script src="/assets/js/app.js"></script>
+
+    <!-- Table to excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -600,6 +611,7 @@
                     $('#filteralertbox').addClass('show');
                 }
                 else {
+
                     isfiltered = true;
                     $('#badge-box-dot').removeClass('d-none');
                     $('#alert-main-box').html(``);
@@ -623,13 +635,10 @@
 
                         filterMsgList = filterMsgList.filter(x => {
                             const itemDate = new Date(x.time);
-                            if (itemDate >= fromDate && itemDate <= toDate) {
-                                console.log(itemDate)
-                            }
                             return itemDate >= fromDate && itemDate <= toDate;
                         });
-                        console.log(filterMsgList)
                     }
+                    $('#close-modal').click();
                     MessageDisplay(filterMsgList);
                 }
             })
@@ -641,6 +650,16 @@
                 MessageDisplay(MessageList);
                 $('#badge-box-dot').addClass('d-none');
                 isfiltered = false;
+            })
+
+            $(document).on("click", "#refreshgrid", function () {
+                GETMessageAdminAPI();
+            })
+
+            $(document).on("click", "#exportgrid", function () {
+                const table = document.getElementById("table-fixed-header");
+                const workbook = XLSX.utils.table_to_book(table);
+                XLSX.writeFile(workbook, "table.xlsx");
             })
 
         });

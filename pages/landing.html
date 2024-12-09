@@ -873,105 +873,10 @@
                 method: "GET",
                 success: function (val) {
                     if (val.success) {
-                        let total = 0, btotal = 0;
-                        for (let i in val.data) {
-                            total += val.data[i].total_count;
-                            btotal += val.data[i].boardcast_number_count;
-                        }
-                        $('#totalmessage').html(total);
-                        $('#totalmessage').attr('data-target', total);
-                        $('#totalbroadcast').html(btotal);
-                        $('#totalbroadcast').attr('data-target', btotal);
+                        $('#totalmessage').html(val.data.total).attr('data-target', val.data.total);
+                        $('#totalbroadcast').html(val.data.btotal).attr('data-target', val.data.btotal);
                     }
                 }
-            })
-
-            function planDataDisplay(type, str) {
-                $.ajax({
-                    url: "/getDataWithCondition",
-                    method: "POST",
-                    data: {
-                        "table": `plans`,
-                        "paramstr": `plan_type = '${type}'`
-                    },
-                    success: function (val) {
-                        let result = ``;
-                        for (let i in val) {
-                            result += `<div class="col-lg-4 col-md-4 col-sm-12">
-                                        <div class="card pricing-box card-animate">
-                                            <div class="card-body bg-light m-2 p-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-grow-1 text-center">
-                                                        <h3 class="text-primary">${val[i].pname}</h3>
-                                                    </div>
-                                                </div>
-                                                <h4 class="text-center">${val[i].price} &#8377;</h4>
-                                                <ul class="list-unstyled vstack gap-3">
-                                                    <li class="mt-2">
-                                                        <div class="d-flex">
-                                                            <div class="flex-shrink-0 text-success me-1">
-                                                                <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                            </div>
-                                                            <div class="flex-grow-1">
-                                                                Valid for 
-                                                                <span class="text-primary">
-                                                                    ${val[i].durationMonth} Month
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="mt-2">
-                                                        <div class="d-flex">
-                                                            <div class="flex-shrink-0 text-success me-1">
-                                                                <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                            </div>
-                                                            <div class="flex-grow-1">
-                                                                ${val[i].totalMessage} Messages Limit
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="mt-2">
-                                                        <div class="d-flex">
-                                                            <div class="flex-shrink-0 text-success me-1">
-                                                                <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                            </div>
-                                                            <div class="flex-grow-1">
-                                                                Send Media / documents
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="mt-2">
-                                                        <div class="d-flex">
-                                                            <div class="flex-shrink-0 text-success me-1">
-                                                                <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
-                                                            </div>
-                                                            <div class="flex-grow-1">
-                                                                ${val[i].totalInstance} Instances Limit
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="mt-4">
-                                                    <button class="btn btn-info w-100" onclick="window.location.href='/signup'">
-                                                        SUBSCRIBE
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>`;
-                        }
-                        $(`#${str}_data`).html(result);
-                    }
-                })
-            }
-            planDataDisplay('Monthly', 'month');
-
-            $(document).on('click', '#year_tab', function () {
-                planDataDisplay('Yearly', 'year');
-            })
-
-            $(document).on('click', '#month_tab', function () {
-                planDataDisplay('Monthly', 'month');
             })
         })
     </script>

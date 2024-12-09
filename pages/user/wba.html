@@ -195,9 +195,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" id="msgform" style="height: calc(100vh - 215px);">
+                    <div class="card" id="msgform" style="max-height: calc(100vh - 220px);">
                         <h3 class="card-header text-center">Message</h3>
-                        <div class="card-body">
+                        <div class="card-body scrollbar-custom"
+                            style="max-height: calc(100vh - 220px); overflow-y: scroll;">
                             <div class="row h-100">
                                 <div class="col-lg-4 col-md-6 col-sm-12 preview">
                                     <div class="d-flex align-items-center background-image gap-2 scrollbar-custom"
@@ -263,7 +264,7 @@
                                     <input type="search" class="searchContactChannel form-control"
                                         placeholder="Search contacts" id="select_contact_search" />
                                     <div data-simplebar data-simplebar-auto-hide="false" data-simplebar-track="primary"
-                                        style="max-height: 300px;" class="mx-n3">
+                                        style="max-height: 350px;" class="mx-n3">
                                         <ul class="list list-group list-group-flush" id="selectcontact-data"></ul>
                                     </div>
                                 </div>
